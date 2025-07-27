@@ -10,10 +10,22 @@
     <p>Tente abrir esse site em vários dispositivos direrentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
 
 
-    <picture>
-        <source media="(max-width: 750px)" srcset="img/foto-p.png"><!--Se o tamanho máximo for 750, carrega a imagem p-->
-        <source media="(max-width: 1050px)" srcset="img/foto-m.png">
-        <img src="img/foto-g.png" alt="Imagem flexível">
+    <picture><!--O elemento picture permite definir várias fontes de imagem para diferentes condições de visualização -->
+        <source media="(max-width: 750px)" srcset="img/foto-p.png"><!--Se o tamanho máximo for 750, carrega a imagem -->
+        <source media="(max-width: 1050px)" srcset="img/foto-m.png"><!--Se o tamanho máximo for 1050, carrega a imagem -->
+        <img src="img/foto-g.png" alt="Imagem flexível"><!--Se nenhum dos tamanhos anteriores for atingido, carrega a imagem padrão -->
     </picture>
+    
+
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" autoplay controls loop><!--O atributo preload indica que o áudio deve ser carregado antes de ser reproduzido, autoplay inicia a reprodução automaticamente, controls exibe os controles do player e loop faz o áudio repetir -->
+        <source src="midia/I Might Be Late - Jeremy Black.mp3" type="audio/mpeg"><!--Se o navegador não suportar mp3, tenta o ogg -->
+        <source src="midia/I Might Be Late - Jeremy Black.ogg" type="audio/ogg"><!--Se o navegador não suportar ogg, tenta o wav -->
+        <source src="midia/I Might Be Late - Jeremy Black.wav" type="audio/wav"><!--Se o navegador não suportar wav, não faz nada -->
+    </audio>
+        <p>Seu navegador não suporta o elemento.<code>audio</code></p><!--Se o navegador não suportar nenhum dos formatos, exibe essa mensagem -->
+
 </body>
 </html>
