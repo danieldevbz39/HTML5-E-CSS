@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeos com HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <H1>Inserindo vídeos hospedados localmente</H1>
     <p>Este vídeo está hospedado no meu próprio servidor.</p>
 
-    <video width="500" poster="img/uni.png" controls>"><!-- O atributo width define a largura do vídeo, controls carrega os controles-->
+    <video width="560" poster="img/uni.png" controls altoplay loop> <!-- O atributo width define a largura do vídeo, controls carrega os controles-->
         <source src="videos/meuvideo.mp4" type="video/mp4"><!-- O atributo type especifica o tipo de vídeo -->
         <source src="videos/meuvideo.webm" type="video/webm"><!-- O atributo type especifica o tipo de vídeo -->
         <source src="videos/meuvideo.ogv" type="video/ogg"><!-- O atributo type especifica o tipo de vídeo -->
-        <p>Seu navegador não suporta o elemento. <code>video</code></p><!-- Mensagem exibida se o navegador não suportar o elemento video -->
+        <p>Seu navegador não suporta o elemento.</p><!-- Mensagem exibida se o navegador não suportar o elemento video -->
+    </video>
+
+        <h1>Inserindo vídeos do youtube</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jPWsBuiy1rE?si=l1zHkhZFuRR6E3dJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/201240576?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="2016 Animation Reel"></iframe>
 </body>
 </html>
