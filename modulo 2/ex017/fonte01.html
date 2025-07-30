@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontes em CSS</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=work+Sans:ita,wght@0,100;,0,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
         body {
-            font-family: Arial, Helvetica, sans-serif;        
+            font-family: 'work Sans',Arial, Helvetica, sans-serif;
+        /*Medidas absolutas
+        cm, mm, in, px, pt, pc
+        
+        Medidas Relativas
+        em, ex, rem, vw, vh, %
+        16px = 1em
+
+        w3c recomenta "px" e "em" como medidas padrão
+        */ 
+        /*font-size: 1em; /*altura da fonte*/
+        /*font-weight: normal; /*peso da fonte (lighter, nomal, bold, bolder)*/
+        /*font-style: normal;
+        text-decoration: underline; /*sublinhado*/
         }
         h1 {
-            font-family: 'Times New Roman', Times, serif;
+            /*shorthand font
+            -font-style -> font-weight -> font-size -> font-family*/
+            /*font:italic bolder 3em 'work sans' sans-serif;*/
+            font:italic bolder 3em 'work sans' sans-serif;
         }
         h2 {
-            font-family: Georgia, 'Times New Roman', Times, serif
+            font:bold 2em 'work sans';
         }
         p {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font:italic bolder 3em 'work Sans' sans-serif;
         }
+        
     </style>
 </head>
 <body>
