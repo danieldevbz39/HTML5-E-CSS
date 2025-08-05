@@ -13,56 +13,87 @@
         header {/* Estilo do cabeçalho */
             background-color: rgb(255, 255, 255);
             padding: 10px;
-            margin: 30px;
+            margin: 10px;
+        }
+        hr {/* Estilo das linhas horizontais */
+            border: none; /* Remove a borda padrão */
+            height: 1.5px; /* Define a altura da linha */
+            background-color: #000; /* Cor da linha */
+            margin: 0px 0px; /* Margem acima e abaixo da linha */
         }
         nav {/* Estilo do menu de navegação */
-            padding: 3px;
+            font-size: 0.35em; /* Reduz o tamanho da fonte do menu para caber na página */
+            font-family: Helvetica, sans-serif;/* Fonte do menu */
+            font-style: normal; /* Estilo normal da fonte */
+            line-height: 1.2;/* Altura da linha do menu */
+            white-space: nowrap; /* Mantém o texto do menu em uma única linha */
+            letter-spacing: 0px;/* Espaçamento entre letras do menu */
+            font-weight: 700;/* Peso da fonte do menu */
+            color: #333;/* Cor do texto do menu */
+            text-transform: uppercase;/* Transforma o texto do menu em maiúsculas */
+            text-align: justify;/* Alinhamento do texto do menu */
+            padding: .25rem 0.75rem;/* Preenchimento interno do menu */
+            border-style: solid;/* Estilo da borda do menu */
+            border-color: transparent;/* Cor da borda do menu */
+            border-width: 3px;/* Largura da borda do menu */
+            border-bottom: none;/* Remove a borda inferior do menu */
         }
         h1 {/* Título principal do site */
             color: rgb(0, 0, 0);
-            text-align: left;
+            text-align: ;
+            padding: 0px;
+            margin: 0px;
         }
         nav > a {/* Links do menu */
             text-decoration: none;
-            color: whitesmoke;
+            color: rgb(3, 3, 3);
             font-weight: bold;
             margin-right: 30px;
-            
+            padding-right: 0px;
+            padding-left: 1px;
         }
         nav {
-            background-color: rgb(153, 152, 152);/* Cor de fundo do menu */
-            padding: 3px;/* Espaçamento interno do menu */
-            margin: 10px; /* Margem ao redor do menu */
+            color: #333; /* Cor do texto do menu */
+            font-size: 7.9px; /* Tamanho da fonte do menu */
+            text-align: justify; /* Alinha o texto do menu ao centro */
+            padding: 2px;/* Espaçamento interno do menu */
+            margin: 2px; /* Margem ao redor do menu */
             display: flex; /* Alinha os itens do menu em linha */
-            justify-content: center; /* Centraliza os itens horizontalmente */
-            gap: 30px; /* Espaçamento entre os links */
+            justify-content: justify; /* Centraliza os itens horizontalmente */
+            gap: 1px; /* Espaçamento entre os links */
         }
         nav > a {/* Links do menu */
             text-decoration: none;/* Remove o sublinhado dos links */
             color: black;/* Cor do texto dos links */
             font-weight: bold;/* Negrito para os links */
+            display: flex; /* Usa flexbox para alinhar os links */
+            justify-content: center; /* Centraliza os links horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
         }
         nav > a:hover {/* Efeito ao passar o mouse sobre os links */
             text-decoration: underline;/* Sublinha os links ao passar o mouse */
             color: rgba(0, 17, 255, 0.596);/* Muda a cor do texto ao passar o mouse */
         }
         main {/* Estilo do conteúdo principal */
-            background-color: dimgray;/* Cor de fundo do conteúdo principal */
-            padding: 10px;/* Espaçamento interno do conteúdo principal */
-            margin: 10px;/* Margem ao redor do conteúdo principal */
+            
         }
-        section {/* Estilo das seções */
-            background-color: rgb(255, 255, 255);
+        section#assuntos {/* Seção de assuntos */
+            background-color: rgb(240, 240, 240);
+            font-size: 15px;
+            text-align: justify;
             padding: 5px;
-            margin: 5px;
+            margin-bottom: 20px;
         }
-        section > h2 {/* Título das seções */
-            color: rgb(0, 17, 255);
-            text-align: center;
+        section#notícias h2{/* Título das seções */
+            color: rgb(133, 0, 0);
+            text-align: right;
         }
-        hr {/* Estilo da linha horizontal */
-            border: 1px solid rgb(255, 255, 255);/* Borda da linha horizontal */
+        section#notícias p {/* Parágrafo dentro das seções de notícias */
+            font-size: 15px; /* Tamanho da fonte reduzido */
+            color: rgb(0, 0, 0); /* Cor do texto */
+            text-align: justif; /* Alinhamento do texto */
         }
+        
         article {/* Estilo dos artigos */
             background-color: white;
             padding: 5px;
@@ -72,32 +103,47 @@
         }
 
         footer {/* Estilo do rodapé */
-            background-color: rgb(255, 255, 255);
-            color: white;
-            text-align: center;
-            padding: 1px;
-            margin: 0px;
+
         }
         
     </style>
 </head>
 <body>
     <header><!--Cabeçalho do site-->
-        <h1>Menu do site</h1><!-- Menu do site -->
-        <hr><!-- Linha horizontal -->
+        <h1>MS</h1>
+        <h2>Menu do site</h2><!-- Menu do site -->
+        <hr id="b1"><!-- Linha horizontal -->
         <nav><!-- Navegação do site -->
-            <a href="#">Home</a><!-- Link para a página inicial -->
-            <a href="#">Sobre</a><!-- Link para a página sobre -->
-            <a href="#">Contato</a><!-- Link para a página de contato -->
+            <a href="#">PRODUTOS</a><!-- Link para a página inicial -->
+            <a href="#">FLASH</a><!-- Link para a página sobre -->
+            <a href="#">NOTÍCIAS</a><!-- Link para a página de contato -->
+            <a href="#">POLÍTICAS</a><!-- Link para a página de serviços -->
+            <a href="#">CARROS</a>
+            <a href="#">ECONOMIA</a>
+            <a href="#">FOLHA</a>
+            <a href="#">ESPORTE</a>
+            <a href="#">SPLASH</a>
+            <a href="#">UNIVERSA</a>
+            <a href="#">VIVABEM</a>
+            <a href="#">TILT</a>
+            <a href="#">ECOA</a>
+            <a href="#">CANAL UOL</a>
+            <a href="#">NOSSA</a>
+            <a href="#">TAB</a>
+            <a href="#">PRIME</a>
+            <a href="#">TOCA</a>
+            <a href="#">APOSTA</a>
+            <a href="#">GUIA DE COMPRAS</a>
         </nav><!-- Fim da navegação -->
-        <hr>
+        <hr id="b2"><!-- Linha horizontal -->
     </header><!-- Fim do cabeçalho -->
     <main><!-- Conteúdo principal do site -->
         <section id="assuntos"><!-- Seção de assuntos -->
             <h2>Assuntos</h2><!-- Título da seção de assuntos -->
-            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis officiis totam pariatur esse similique tempore corporis iste voluptates! Cumque temporibus in commodi quasi a nemo deserunt labore eum eos dignissimos!</p>
             <section id="notícias"><!-- Subseção de notícias -->
                 <h2>Notícias</h2><!-- Título da subseção de notícias -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis officiis totam pariatur esse similique tempore corporis iste voluptates! Cumque temporibus in commodi quasi a nemo deserunt labore eum eos dignissimos!</p>
                 <p>Últimas notícias do dia.</p><!-- Parágrafo de introdução às notícias -->
                 <article><!-- Artigo de notícia -->
                     <h3>Notícias Internacionais</h3><!-- Título do artigo -->
