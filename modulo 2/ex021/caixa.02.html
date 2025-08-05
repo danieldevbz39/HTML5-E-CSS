@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {/* Estilo geral do corpo da página */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0px;
+        }
+        header {/* Estilo do cabeçalho */
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            margin: 30px;
+        }
+        nav {/* Estilo do menu de navegação */
+            padding: 3px;
+        }
+        h1 {/* Título principal do site */
+            color: rgb(0, 0, 0);
+            text-align: left;
+        }
+        nav > a {/* Links do menu */
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: bold;
+            margin-right: 30px;
+            
+        }
+        nav {
+            background-color: rgb(153, 152, 152);/* Cor de fundo do menu */
+            padding: 3px;/* Espaçamento interno do menu */
+            margin: 10px; /* Margem ao redor do menu */
+            display: flex; /* Alinha os itens do menu em linha */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            gap: 30px; /* Espaçamento entre os links */
+        }
+        nav > a {/* Links do menu */
+            text-decoration: none;/* Remove o sublinhado dos links */
+            color: black;/* Cor do texto dos links */
+            font-weight: bold;/* Negrito para os links */
+        }
+        nav > a:hover {/* Efeito ao passar o mouse sobre os links */
+            text-decoration: underline;/* Sublinha os links ao passar o mouse */
+            color: rgba(0, 17, 255, 0.596);/* Muda a cor do texto ao passar o mouse */
+        }
+        main {/* Estilo do conteúdo principal */
+            background-color: dimgray;/* Cor de fundo do conteúdo principal */
+            padding: 10px;/* Espaçamento interno do conteúdo principal */
+            margin: 10px;/* Margem ao redor do conteúdo principal */
+        }
+        section {/* Estilo das seções */
+            background-color: rgb(255, 255, 255);
+            padding: 5px;
+            margin: 5px;
+        }
+        section > h2 {/* Título das seções */
+            color: rgb(0, 17, 255);
+            text-align: center;
+        }
+        hr {/* Estilo da linha horizontal */
+            border: 1px solid rgb(255, 255, 255);/* Borda da linha horizontal */
+        }
+        article {/* Estilo dos artigos */
+            background-color: white;
+            padding: 5px;
+        }
+        article > aside {/* Estilo da barra lateral dentro dos artigos */
+            background-color: rgb(255, 0, 0);
+        }
+
+        footer {/* Estilo do rodapé */
+            background-color: rgb(255, 255, 255);
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header><!--Cabeçalho do site-->
+        <h1>Menu do site</h1><!-- Menu do site -->
+        <hr><!-- Linha horizontal -->
+        <nav><!-- Navegação do site -->
+            <a href="#">Home</a><!-- Link para a página inicial -->
+            <a href="#">Sobre</a><!-- Link para a página sobre -->
+            <a href="#">Contato</a><!-- Link para a página de contato -->
+        </nav><!-- Fim da navegação -->
+        <hr>
+    </header><!-- Fim do cabeçalho -->
+    <main><!-- Conteúdo principal do site -->
+        <section id="assuntos"><!-- Seção de assuntos -->
+            <h2>Assuntos</h2><!-- Título da seção de assuntos -->
+            
+            <section id="notícias"><!-- Subseção de notícias -->
+                <h2>Notícias</h2><!-- Título da subseção de notícias -->
+                <p>Últimas notícias do dia.</p><!-- Parágrafo de introdução às notícias -->
+                <article><!-- Artigo de notícia -->
+                    <h3>Notícias Internacionais</h3><!-- Título do artigo -->
+                    <p>Atualizações sobre eventos globais.</p><!-- Parágrafo do artigo -->
+                    <aside><!-- Barra lateral com informações adicionais -->
+                        <h2>Notícias sobre o Brasil</h2><!-- Título da barra lateral -->
+                        <p>Últimas atualizações e eventos importantes.</p><!-- Parágrafo da barra lateral -->
+                    </aside><!-- Fim da barra lateral -->
+                </article><!-- Fim do artigo de notícia -->
+                <section id="esportes"><!-- Subseção de esportes -->
+                    <h2>Esportes</h2><!-- Título da subseção de esportes -->
+                    <p>Notícias e atualizações sobre esportes.</p><!-- Parágrafo de introdução aos esportes -->
+                    <article><!-- Artigo de esporte -->
+                        <h3>Futebol</h3><!-- Título do artigo -->
+                        <p>Resultados e análises dos jogos recentes.</p><!-- Parágrafo do artigo -->
+                    </article><!-- Fim do artigo de esporte -->
+                    <article><!-- Artigo de esporte -->
+                        <h3>Basquete</h3><!-- Título do artigo -->
+                        <p>Destaques e estatísticas das partidas.</p><!-- Parágrafo do artigo -->
+                    </article><!-- Fim do artigo de esporte -->
+                </section><!-- Fim da subseção de esportes -->
+                <section id="tecnologia"><!-- Subseção de tecnologia -->
+                    <h2>Tecnologia</h2><!-- Título da subseção de tecnologia -->
+                    <p>Novidades e tendências tecnológicas.</p><!-- Parágrafo de introdução à tecnologia -->
+                <article><!-- Artigo de tecnologia -->
+                    <h3>Inovações</h3><!-- Título do artigo -->
+                    <p>Descubra as últimas inovações no mundo da tecnologia.</p><!-- Parágrafo do artigo -->
+                </article><!-- Fim do artigo de tecnologia -->
+            </section><!-- Fim da subseção de tecnologia -->
+        </section><!-- Fim da seção de assuntos -->
+        <h2>Conteúdo Principal</h2><!-- Título do conteúdo principal -->
+        <p>Este é o conteúdo principal da página.</p><!-- Parágrafo do conteúdo principal -->
+    </main><!-- Fim do conteúdo principal -->
+    <footer><!-- Rodapé do site -->
+        <p>Todos os direitos reservados.</p><!-- Informação de direitos autorais -->
+    </footer><!-- Fim do rodapé -->
+</body>
+</html>
