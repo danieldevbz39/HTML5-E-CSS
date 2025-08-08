@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,63 +8,138 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            /* Define a fonte principal do site */
             background-color: dimgray;
+            /* Cor de fundo da página */
             margin: 0px;
+            /* Remove margens padrão do body */
+            text-align: center;
+            /* Centraliza o texto do body */
         }
+
         header {
             background-color: white;
+            /* Fundo branco para o cabeçalho */
             padding: 10px;
+            /* Espaçamento interno do header */
             margin: 10px;
+            /* Espaçamento externo do header */
         }
-        h1  {
-            box-shadow: inset 6px 9px 19px 0px rgba(70, 70, 70, 0.548);
-            padding: 10px;
-        }
+
         nav {
             background-color: rgb(102, 102, 102);
+            /* Cor de fundo do menu de navegação */
             padding: 3px;
-            box-shadow: 1px 3px 15px 0px black;
+            /* Espaçamento interno do nav */
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+            /* Sombra para o nav */
+        }
 
-        }
-        nav > a {
+        nav>a {
             text-decoration: none;
+            /* Remove sublinhado dos links */
             color: white;
+            /* Cor do texto dos links */
             font-weight: bold;
+            /* Negrito nos links */
             margin-right: 30px;
+            /* Espaço à direita de cada link */
         }
-        nav > a :hover {
+
+        nav>a:hover {
             text-decoration: underline;
+            /* Sublinha o link ao passar o mouse */
         }
+
         main {
             background-color: white;
+            /* Fundo branco para o conteúdo principal */
             padding: 10px;
+            /* Espaçamento interno do main */
             margin: 10px;
+            /* Espaçamento externo do main */
+            border-radius: 22px 84px 22px 0px;
+            /* Bordas arredondadas do main */
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+            /* Sombra para o main */
         }
+
         article {
             background-color: lightblue;
-
+            /* Fundo azul claro para artigos */
         }
+
         aside {
             background-color: rgba(82, 171, 201, 0.308);
+            /* Fundo azul translúcido para aside */
         }
+
         footer {
             background-color: black;
+            /* Fundo preto para o rodapé */
             color: white;
+            /* Texto branco no rodapé */
             text-align: center;
+            /* Centraliza o texto do rodapé */
             padding: 4px;
+            /* Espaçamento interno do footer */
             margin: 0px;
+            /* Remove margens do rodapé */
         }
+
         footer p {
             margin: 0px;
+            /* Remove margens do parágrafo no rodapé */
+        }
+
+        #bola {
+            margin: 20px;
+            /* Margem para separar do conteúdo principal */
+            display: flex;
+            /* Exibe os links lado a lado */
+            justify-content: center;
+            /* Centraliza os links horizontalmente */
+            gap: 10px;
+            /* Espaço entre as bolas */
+        }
+        /* Estilos para os ícones sociais em bolas */
+        #bola {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        #bola a {
+            text-decoration: none;
+        }
+        #bola .social-ball {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.15); /* Sombra leve para destaque */
+            transition: box-shadow 0.2s;
+        }
+        #bola .social-ball:hover {
+            box-shadow: 2px 4px 12px 0px rgba(0,0,0,0.25); /* Sombra ao passar o mouse */
+        }
+        #bola img {
+            max-width: 65%;
+            max-height: 65%;
+            display: block;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Meu site</h1>
         <nav>
-            <a href="#home">Início</a> 
-            <a href="#sobre">Sobre</a> 
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -74,11 +150,13 @@
         <section id="notícias">
             <article>
                 <h2>Notícias sobre o Brasil</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae modi, voluptas tempora ipsum facilis quae repellat nam enim, sed harum soluta eligendi rem blanditiis tempore sequi ex. Nostrum, vitae id?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae modi, voluptas tempora ipsum facilis
+                    quae repellat nam enim, sed harum soluta eligendi rem blanditiis tempore sequi ex. Nostrum, vitae
+                    id?</p>
                 <aside>
                     <p>Artigo escrito por Eduardo Nonofre</p>
                 </aside>
-                <article>                    
+                <article>
                 </article>
             </article>
         </section>
@@ -86,5 +164,29 @@
     <footer>
         <p>Desenvolvido por Daniel dos Santos Siqueira</p>
     </footer>
+    <div id="bola">
+        <!-- Cada link em uma bola separada, lado a lado, abrindo em nova aba -->
+        <a href="https://www.facebook.com/profile.php?id=61552562361341&ref=pl_edit_ig_profile_ac" target="_blank" rel="noopener">
+            <div class="social-ball">
+                <img src="img/facebook.png" alt="Facebook">
+            </div>
+        </a>
+        <a href="https://github.com/danieldevbz39" target="_blank" rel="noopener">
+            <div class="social-ball">
+                <img src="img/github.png" alt="GitHub">
+            </div>
+        </a>
+        <a href="https://www.instagram.com/daniel.s.siqueira/" target="_blank" rel="noopener">
+            <div class="social-ball">
+                <img src="img/instagram.png" alt="Instagram">
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-santos-289ba0298/" target="_blank" rel="noopener">
+            <div class="social-ball">
+                <img src="img/linkedin.png" alt="LinkedIn">
+            </div>
+        </a>
+    </div>
 </body>
+
 </html>
