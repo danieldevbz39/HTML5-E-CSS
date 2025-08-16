@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    text-align: center;
+}
+h5 {
+    color: black;
+}
+
+header h1{
+    color: rgb(255, 0, 0);
+}
+
+header h2{
+    color: rgb(4, 0, 255);
+}
+
+nav a{
+    color: rgb(255, 0, 157);
+}
+
+main article {
+    color: rgb(83, 61, 1);
+}
+
+footer{
+    color: #ac0000;
+}
+
+footer h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+footer h4 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
