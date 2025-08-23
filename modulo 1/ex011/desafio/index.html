@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box imagem</title>
-</head>
-<body>
-    <img src="imagens/espaco.jpg" alt="">
+    <style>
+    header {
+        position: relative;/**/
+        width: 1350px; /**/
+        margin: 0 auto;
+    }
 
-    <img src="imagens/astronauta.png" alt="">
+    </style>
+</head>
+<body>    
+    <header>
+        <img src="imagens/espaco.jpg" alt="" style="display: block; width: 100%;">
+        <img src="imagens/astronauta.png" alt="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    </header>
 </body>
 </html>
