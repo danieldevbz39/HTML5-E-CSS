@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+strong {
+    color: red;
+}
+div.conteiner {
+    background-color: lightsalmon;
+    border-radius: 10px;
+    display: flex; /*ajusta tamanho*/
+    height: 100px;
+}
+div.item {
+    background-color: lightblue;/*fundo box*/
+    border: 1px solid black; /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+    flex: auto; /*ajustar largura total*/
+    height: 20px;
+}
