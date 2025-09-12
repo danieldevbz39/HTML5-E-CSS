@@ -5,33 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox centralizado</title>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
+        * { /* Seletor universal - aplica a todos os elementos */
+            margin: 0px; /* Remove a margem padrão de todos os elementos */
+            padding: 0px; /* Remove o preenchimento (padding) padrão de todos os elementos */
+            box-sizing: border-box; /* Inclui padding e borda dentro do tamanho total dos elementos */
         }
+
         body {
-            background-color: lightsalmon;
+            background-color: lightsalmon; /* Define a cor de fundo do corpo da página como salmão claro */
         }
 
         main {
-            background-color: lightgreen;
-            height: 100vh; /*altura da tela*/
-            width: 100vw; /*largura da tela*/
+            background-color: lightgreen; /* Define a cor de fundo do elemento <main> como verde claro */
+            height: 100vh; /* Define a altura como 100% da altura da viewport (tela) */
+            width: 100vw; /* Define a largura como 100% da largura da viewport (tela) */
 
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
+            display: flex; /* Aplica o modelo de layout Flexbox ao elemento */
+            flex-flow: row nowrap; /* Define a direção dos itens em linha e impede a quebra de linha */
+            justify-content: center; /* Centraliza os itens horizontalmente dentro do <main> */
+            align-items: center; /* Centraliza os itens verticalmente dentro do <main> */
         }
 
         section {
-            background-color: lightseagreen;
-            height: 200px;
-            width: 200px;
+            background-color: lightseagreen; /* Define a cor de fundo da <section> como verde-mar claro */
+            height: 200px; /* Define a altura da <section> como 200 pixels */
+            width: 200px; /* Define a largura da <section> como 200 pixels */
         }
+</style>
 
-    </style>
 </head>
 <body>
     <main>
