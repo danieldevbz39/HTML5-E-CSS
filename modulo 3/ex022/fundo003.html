@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição dos Fundos</title>
+    <style>
+        div.bloco {
+            background-image: url('imagens/wallpaper003.jpg'); /*fundo do retângulo*/
+            height: 130px; /*altura do retângulo*/
+            border: 1px solid black; /*borda e cor da borda*/
+            border-radius: 10px; /*arredondando as bordas*/
+            margin: 10px; /*espaço entre eles*/            
+        }
+
+        div#q1 {
+            background-position: left top; /*alinhando imagem esquerda, topo*/
+        }
+
+        div#q2 {
+            background-position: left center;/*alinhando imagem esquerda, centro*/
+        }
+
+        div#q3 {
+            background-position: right bottom; /*alinhando imagem direita, base*/
+        }
+
+        div#q4 {
+            background-position: center center; /*alinhando imagem centro, centro*/
+        }
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1"> </div> <!--cada div uma class e id-->
+
+    <div class="bloco" id="q2"> </div>
+
+    <div class="bloco" id="q3"> </div>
+
+    <div class="bloco" id="q4"> </div>
+</body>
+</html>
