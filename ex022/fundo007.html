@@ -6,15 +6,27 @@
     <title>Alinhamento vertical</title>
     <style>
         #container {
-            height: 500px; /*altura do container*/
+            position: relative; /*necessário para o alinhamento vertical*/
+            height: 96vh; /*altura do container*/
             padding: 10px; /*espaço*/
+
+            background-size: 100% 100%;
             background-color: purple; /*fundo container*/
         }
 
         #conteudo {
+
+
+            position: absolute; /*necessário para o alinhamento vertical*/
             height: 200px;/*altua do conteudo*/
             width: 400px;/*largura do conteudo*/
+            background-size: 100% 100%; /**/
             background-color: yellow; /*fundo do conteudo*/
+            
+            left: 50%; /*posição esquerda da página*/
+            top: 50%; /*posição topo da página*/
+
+            transform: translate(-50px -50px);
         }
     </style>
 
