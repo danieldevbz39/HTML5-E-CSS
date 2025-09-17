@@ -7,26 +7,67 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
 
-body {
-
+html, body {
+    min-height: 100vh; /*100% da altura*/
+    background-color: darkgray;
 }
 
 header {
-
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
-main {
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;/*colocando todas letras maiúsculas destacando inicial*/
+}
 
+header > p {
+    padding-bottom: 50px; /*distância do parágrafo para final da borda*/
+}
+
+header a, footer a {
+    color: white; /*cor do link*/
+    text-decoration: none; /* remove o sublinhado dos links */
+    font-weight: bolder;/*deixando texto negrito*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline; /*passando mouser em cima, vira um subrilhado*/
 }
 
 section {
-
+    padding-top: 10vh; /*distância entre parágrafos*/
+    padding-bottom: 10vh; /*distância entre parágrafos*/
+    line-height: 2em;/*espaçamento entre linhas*/
+    padding-left: 30px;/*espaçamento na esquerda*/
 }
 
-article {
-
+section.normal {
+    background-color: white;
+    color: black;
 }
+
+section.imagem {
+    background-color: rgb(100, 100, 100);
+    color:white
+}
+
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
 
