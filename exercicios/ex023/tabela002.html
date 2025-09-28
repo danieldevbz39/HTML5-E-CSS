@@ -18,6 +18,19 @@
             border: 1px solid black;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em; /*tamanho da fonte*/
+            font-weight: bold; /*negrito*/
+            padding: 10px; /*espaço nos cantos*/
+            background-color: lightgray; /*cor da targa*/
+        }
+        tbody > tr:nth-child(odd) { /*odd "impa" ou 2n-1 */
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) {/* even "par" 2n pula de 2 em 2 preenchendo a cor*/
+            background-color: lightgray;
+        }
 
         thead, tfoot {
             background-color: gray;
@@ -33,8 +46,9 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
     ANATOMIA PARA TABELAS GRANDES
-
+    
     TABLE
+        CAPTION "Legenda da tabela"
         THEAD Cabeça
             tr, td, th
         TBODY Corpo
@@ -44,10 +58,11 @@
     -->
 
     <table>
+            <caption>População das Unidades Federativas</caption>
             <thead>
                 <tr>
-                    <th>Estado</th>
-                    <th>População</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 50px;">População</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,8 +81,8 @@
             </tbody>
             <tfoot>
                 <tr>
-                     <th>Total de Habitantes</th>
-                     <td class="num">0000</td>
+                     <th scope="row">Total de Habitantes</th>
+                     <td class="num">80 448 935</td>
                 </tr>
             </tfoot>
     </table>
