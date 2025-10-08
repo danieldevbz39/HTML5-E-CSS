@@ -6,12 +6,13 @@
     <title>tabelas</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;            
         }
-        
+
         table {
-            width: 600px; /*largura da tabela*/
-            border-collapse: collapse;
+            width: 300px; /*largura da tabela*/
+            border-spacing: 2px 2px;  
+            border-collapse: separate;
             text-align: center;
         }
         tr {
@@ -20,6 +21,12 @@
         td {
             border: 2px solid black; /*tamanho da borda, cor*/
             padding: 8px; /*espço interno na tabela*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        td a {
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -30,6 +37,8 @@
             <td><a href="tabela001.html">Hieraquia de tabelas</a></td>
             <td><a href="tabela001.1.html">Alinhamento de Tabelas</a></td>
             <td><a href="tabela002.html">Uso de tabelas grandes</a></td>
+            <td><a href="tabela003.html">Mesclagem de Células</a></td>
+            <td><a href="tabela004.html">Tabelas de Filmes</a></td>
         </tr>
     </table>
 
