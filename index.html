@@ -4,11 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus exercicios e desafios</title>
+    <style>
+        body {
+            /* Define a altura mínima para ocupar a tela inteira */
+            min-height: 100vh;
+            margin: 0;
+
+            /* --- A MÁGICA ACONTECE AQUI --- */
+
+            /* 1. Uma cor de fundo base para preencher os espaços */
+            background-color: #e6e6fa; /* Um tom de lavanda claro */
+
+            /* 2. Múltiplos gradientes radiais em camadas */
+            background-image:
+            /* "Mancha" de cor rosa no centro */
+            radial-gradient(
+            circle at 45% 55%,
+            hsla(330, 100%, 92%, 0.8), /* Cor rosa, com 80% de opacidade */
+            transparent 30%            /* Transição para transparente a 30% do raio */
+            ),
+            /* "Mancha" de cor azul no canto superior esquerdo */
+            radial-gradient(
+            circle at 10% 20%,
+            hsla(190, 100%, 85%, 0.7), /* Cor azul, com 70% de opacidade */
+            transparent 40%
+            ),
+            /* "Mancha" de cor verde no canto superior direito */
+            radial-gradient(
+            circle at 85% 25%,
+            hsla(140, 100%, 90%, 0.6), /* Cor verde, com 60% de opacidade */
+            transparent 35%
+            ),
+            /* "Mancha" de cor roxa no canto inferior direito */
+            radial-gradient(
+            circle at 80% 80%,
+            hsla(260, 100%, 90%, 0.7), /* Cor roxa, com 70% de opacidade */
+            transparent 40%
+            );
+        }
+        table {
+            width: 250px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        caption {
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+        }
+        th {
+            background-color: gray;
+            color: white;
+            border: 1px solid black;
+            padding: 8px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            color: red;
+        }
+        td:hover {
+            background-color: black;
+            color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <h1>Exercicios e Desafios no curso HMTL5 e CSS3</h1>
-    <h3>Clique abaixo nos links</h3>
-    <a href="exercicios/exercicios.html" target="_self" rel="_blank">Exercicios</a><br><br>
-    <a href="desafios/desafios.html">Desafios</a>
+    <table>
+    <tr>
+        <td><a href="exercicios/exercicios.html" target="_self" rel="_blank">Exercicios</a></td>
+        <td><a href="desafios/desafios.html">Desafios</a></td>
+    </tr>
+    </table>
 </body>
 </html>

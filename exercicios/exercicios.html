@@ -6,10 +6,44 @@
     <title>Exercicios</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            /* Define a altura mínima para ocupar a tela inteira */
+            min-height: 100vh;
+            margin: 0;
+
+            /* --- A MÁGICA ACONTECE AQUI --- */
+
+            /* 1. Uma cor de fundo base para preencher os espaços */
+            background-color: #e6e6fa; /* Um tom de lavanda claro */
+
+            /* 2. Múltiplos gradientes radiais em camadas */
+            background-image:
+            /* "Mancha" de cor rosa no centro */
+            radial-gradient(
+            circle at 45% 55%,
+            hsla(330, 100%, 92%, 0.8), /* Cor rosa, com 80% de opacidade */
+            transparent 30%            /* Transição para transparente a 30% do raio */
+            ),
+            /* "Mancha" de cor azul no canto superior esquerdo */
+            radial-gradient(
+            circle at 10% 20%,
+            hsla(190, 100%, 85%, 0.7), /* Cor azul, com 70% de opacidade */
+            transparent 40%
+            ),
+            /* "Mancha" de cor verde no canto superior direito */
+            radial-gradient(
+            circle at 85% 25%,
+            hsla(140, 100%, 90%, 0.6), /* Cor verde, com 60% de opacidade */
+            transparent 35%
+            ),
+            /* "Mancha" de cor roxa no canto inferior direito */
+            radial-gradient(
+            circle at 80% 80%,
+            hsla(260, 100%, 90%, 0.7), /* Cor roxa, com 70% de opacidade */
+            transparent 40%
+            );
         }
         table {
-            width: 500px;
+            width: 550px;
             border-collapse: collapse;
         }
         caption {
@@ -17,52 +51,78 @@
             font-weight: bolder;
             padding: 8px;
         }
-        th, td {
+        th {
+            background-color: gray;
+            color: white;
+            border: 1px solid black;
+            padding: 8px;
+        }
+        td {
             border: 1px solid black;
             padding: 8px;
             color: red;
         }
+        td:hover {
+            background-color: black;
+            color: whitesmoke;
+        }
     </style>
 </head>
 <body>
+
+    
     
     <table>
 
         <caption><h3>Clique abaixo para abrir os exercícios</h3></caption>
 
         <tr>
-            <th colspan="6">Módulos</th>
+            <th colspan="6">Curso HTML5 e CSS3</th>
         </tr>
 
         <tr>            
-            <td><a href="ex001/index.html" target="_self" rel="_blank"></a>Olá, Mundo!</td>
-            <td><a href="ex002/index.html" target="_self" rel="_blank"></a>Parágrafos</td>
-            <td><a href="ex003/index.html" target="_self" rel="_blank"></a>Teste com imagens</td>
-            <td><a href="ex004/index.html" target="_self" rel="_blank"></a>Testando o ícone de Favoritos</td>
-            <td><a href="ex005/index.html" target="_self" rel="_blank"></a>Emoji no site</td>
+            <td><a href="ex001/index.html">01- Olá, Mundo!</a></td>
+            <td><a href="ex002/index.html">02- Parágrafos</a></td>
+            <td><a href="ex003/index.html">03- Teste com imagens</a></td>
+            <td><a href="ex004/index.html">04- Testando o ícone de Favoritos</a></td>
+            <td><a href="ex005/index.html">05- Emoji no site</a></td>
         </tr>
 
         <tr>
-            <td><a href="ex006/index.html"></a>Favicon</td>
-            <td><a href="ex007/index.html"></a>Exemplos de Semântica</td>
-            <td><a href="ex008/index.html"></a>Formatações</td>
-            <td><a href="ex009/index.html"></a>Listas</td>
-            <td><a href="ex010/index.html"></a>Trabalhando com links</td>
+            <td><a href="ex006/index.html">06- Favicon</a></td>
+            <td><a href="ex007/index.html">07- Exemplos de Semântica</a></td>
+            <td><a href="ex008/index.html">08- Formatações</a></td>
+            <td><a href="ex009/index.html">09- Listas</a></td>
+            <td><a href="ex010/index.html">10- Trabalhando com links</a></td>
         </tr>
 
         <tr>
-            <td><a href="ex011/index.html"></a>Mídias em HTML5</td>
-            <td><a href="ex012/index.html"></a>Vídeos no HTML</td>
-            <td><a href="ex013/index.html"></a>Estilos Inline</td>
-            <td><a href="ex014/index.html"></a>Estilos locais/Internos</td>
-            <td><a href="ex015/index.html"></a>Estilos locais/Internos_2</td>
+            <td><a href="ex011/index.html">11- Mídias em HTML5</a></td>
+            <td><a href="ex012/index.html">12- Vídeos no HTML</a></td>
+            <td><a href="ex013/index.html">13- Estilos Inline</a></td>
+            <td><a href="ex014/index.html">14- Estilos locais/Internos</a></td>
+            <td><a href="ex015/index.html">15- Estilos locais/Internos_2</a></td>
         </tr>
         <tr>
-            <td><a href="ex016/index.html"></a>Exercícios de cores</td>
-            <td><a href="ex017/index.html"></a>Fontes e alinhamento</td>
-            <td><a href="ex018/index.html"></a>Importando fontes</td>
-            <td><a href="ex019/index.html"></a>Seletores Personalizados</td>
-            <td><a href="ex020/index.html"></a></td>
+            <td><a href="ex016/index.html">16- Exercícios de cores</a></td>
+            <td><a href="ex017/index.html">17- Fontes e alinhamento</a></td>
+            <td><a href="ex018/index.html">18- Importando fontes</a></td>
+            <td><a href="ex019 /index.html">19- Seletores Personalizados</a></td>
+            <td><a href="ex020/index.html">20- Pseudo Classes</a></td>
+        </tr>
+        <tr>
+            <td><a href="ex021/index.html">21- Caixas</a></td>
+            <td><a href="ex022/index.html">22- Fundos e Alinhamento</a></td>
+            <td><a href="ex023/index.html">23- Caixas</a></td>
+            <td><a href="ex024/index.html">24- ...</a></td>
+            <td><a href="ex025/index.html">25- ...</a></td>
+        </tr>
+        <tr>
+            <td><a href="ex026/index.html">26- Flexible box</a></td>
+            <td><a href="ex027/index.html">27- Flex</a></td>
+            <td><a href="ex028/index.html">28- ...</a></td>
+            <td><a href="ex029/index.html">29- ...</a></td>
+            <td><a href="ex030/index.html">30- ...</a></td>
         </tr>
     </table>
 </body>
