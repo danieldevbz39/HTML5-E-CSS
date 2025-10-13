@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex020</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            margin: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            
+        }
+        caption {
+            border: 1px solid black;
+            font-size: 1.3em;
+            font-weight: bolder;
+            padding: 8px;
+            background-color: gray;
+            color: white;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        td:hover {
+            background-color: rgba(1, 255, 234, 0.63);
+        }
+    </style>
 </head>
 <body>
-    <a href="hover.html">
-        <br>hover</br>
-    </a>
-    <a href="links.html">
-        <br>links</br>
-    </a>
-    <a href="pseudoclasse.html">
-        <br>pseudoclasse</br>
-    </a>
+
+    <table>
+
+        <caption>Personalizando página</caption>
+
+        <tr>
+            <td><a href="hover.html">Exemplo de Hover</a></td>
+            <td><a href="links.html">Links</a></td>
+            <td><a href="pseudoclasse.html">Pseudo-classes</a></td>
+        </tr>
+    </table>
 </body>
 </html>
