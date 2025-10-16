@@ -11,8 +11,6 @@
             
             display: flex; /*ajusta tamanho*/
             flex-flow: row wrap;
-            align-items: flex-start;
-            height: 400px;
         }
         div.item {
             background-color: lightblue;/*fundo box*/
@@ -21,25 +19,25 @@
             padding: 20px;
         }
         div#i1 {
-            
+            order: 0;
         }
         div#i2 {
-            align-self: auto;
+            order: -2;
         }
         div#i3 {
-            align-self: flex-end;
+            order: 4;
         }
         div#i4 {
-            
+            order: 8;
         }
         div#i5 {
-            align-self: center;
+            order: 2;
         }
         div#i6 {
-            align-self: flex-start;
+            order: 0;
         }
         div#i7 {
-            align-self: stretch;
+            order: -4;
         }
 
     </style>
