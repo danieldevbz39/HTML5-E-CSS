@@ -27,13 +27,14 @@ header {
 }
 
 header > h1 {
-    border: 1px dotted rgba(255, 255, 255, 0.452);
+    /*border: 1px dotted rgba(255, 255, 255, 0.452);*/
     flex: 0 0 200px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
     
 }
 
 header > nav {
-    border: 1px dotted rgba(255, 255, 255, 0.301);
+    /*border: 1px dotted rgba(255, 255, 255, 0.301);*/ 
     flex-flow: row wrap ;
     display: flex;
     justify-content: flex-end;
