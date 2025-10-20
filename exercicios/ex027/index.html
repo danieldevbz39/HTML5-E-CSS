@@ -3,31 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flexible box</title>
+    <title>flexible box</title>    
     <style>
-        
         div.conteiner {
-            background-color: lightsalmon;            
+            background-color: lightsalmon; 
             display: flex; /*ajusta tamanho*/
             flex-flow: row nowrap;
-        }
+            padding: 10px;
+            margin: 10px;
+            
+        }        
         div.item {
             background-color: lightblue;/*fundo box*/
             border: 1px solid black; /*cor contorno*/
             text-align: center;
-            flex-basis: 250px;
-            flex-shrink: 1;
-            flex-grow: 1;
+            
         }
+        div#cx1 {
+            /*flex-shrink: 0;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
 
+            flex: 1 0 150px;
+        }
+        div#cx2 {
+            /*flex-shrink: 1;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+
+            flex: 1 1 150px;
+        }
+        div#cx3 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx4 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx5 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx6 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx7 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx8 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx9 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx10 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx11 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div#cx12 {
+            /*flex-shrink: 8;
+            /*flex-grow: 1;
+            /*flex-basis: 200px;*/
+            
+            flex: 8 1 auto;
+        }
+        div:hover {
+            background-color: rgb(0, 110, 255);
+        }
     </style>
     
 </head>
 <body>
     <div class="conteiner"> <!--área de fora-->
-        <div class="item">A</div> <!--área de dentro-->
-        <div class="item">B</div> <!--caixas-->
-        <div class="item">C</div>        
-    </div>    
+        <div class="item" id="cx1"><a href="flex001/index.html">Flex-box 1</a></div> <!--área de dentro-->
+        <div class="item" id="cx2"><a href="flex002/index.html">Flex-box 2</a></div> <!--caixas-->
+        <div class="item" id="cx3"><a href="flex003/index.html">Flex-box 3</a></div>
+    </div>
+
+    <div class="conteiner">
+        <div class="item" id="cx4"><a href="flex004/index.html">Flex-box 4</a></div>
+        <div class="item" id="cx5"><a href="flex005/index.html">Flex-box 5</a></div>
+        <div class="item" id="cx6"><a href="flex006/index.html">Flex-box 6</a></div>
+    </div>
+
+    <div class="conteiner">
+        <div class="item" id="cx7"><a href="flex007/index.html">Flex-box 7</a></div>
+        <div class="item" id="cx8"><a href="flex008/index.html">Flex-box 8</a></div>
+        <div class="item" id="cx9"><a href="flex009/index.html">Flex-box 9</a></div>
+    </div>
+
+    <div class="conteiner">
+        <div class="item" id="cx10"><a href="flex010/index.html">Flex-box 10</a></div>
+        <div class="item" id="cx11"><a href="flex011/index.html">Flex-box 11</a></div>
+        <div class="item" id="cx12"><a href="flex012/index.html">Flex-box 12</a></div>
+    </div>
+    
+
 </body>
 </html>

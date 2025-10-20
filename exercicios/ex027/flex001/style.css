@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-h4 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-strong {
-    color: red;
-}
 div.conteiner {
     background-color: lightsalmon;
     border-radius: 10px;
