@@ -7,68 +7,76 @@
     <style>
         body {
             /* Define a altura mínima para ocupar a tela inteira */
-            min-height: 100vh;
-            margin: 0;
-            background-image: url("img/v748-toon-106.jpg");
+                        
+            background-image: url("img/o-homem-com-jaqueta-amarela-coloca-no-topo-da-rocha.jpg");
             font-family: Arial, Helvetica, sans-serif;
-            padding: 20px;
-            margin: 20px;
+            padding: 10px;
+            margin: 10px;            
             
         }
-        table {
-            width: 600px;
-            border-collapse: collapse;
+        header h1{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            margin: 0px;
             text-align: center;
+        }
+        div.conteiner {            
+            display: flex;
+            flex-flow: row nowrap;
             
         }
-        caption {
-            font-size: 1.3em;
-            font-weight: bolder;
-            padding: 8px;
+        div.item {
+            background-color: rgb(251, 253, 117);
             border: 1px solid black;
-            background-color: grey;
-            color: white;
-        }
-        th {
-            background-color: gray;
-            color: white;
-            border: 1px solid black;
+            text-align: center;
+            width: 200px;
             padding: 8px;
+            
         }
-        td {
-            border: 1px solid black;
-            padding: 8px;
-            color: red;
+        div#cv {
+            flex: 1 1 auto;
+                        
         }
-        td:hover {
-            background-color: rgba(1, 255, 234, 0.63);
-        }
+        a {
+            text-decoration: none;
+            color: black;
+        }      
+        div:hover {
+            background-color: white;
+            transition: background-color .5s;            
+        }  
     </style>
 </head>
 <body>
-    <table>
-        <caption>Desafios do curso</caption>
-        <tr>
-            <td><a href="d001/index.html">01- Mensagens </a></td>
-            <td><a href="d002/index.html">02- Imagem</a></td>
-            <td><a href="d003/index.html">03- Mapa Mundi</a></td>
-            <td><a href="d004/index.html">04- Emoji</a></td>
-            <td><a href="d005/index.html">05- Redes sociais</a></td>            
-        </tr>
-        <tr>
-            <td><a href="d006/index.html">06- Tags HTML</a></td>
-            <td><a href="d007/index.html">07- Imagem Flexível</a></td>
-            <td><a href="d008/index.html">08- Navegação</a></td>
-            <td><a href="d009/index.html">09- Links de Vídeo</a></td>
-            <td><a href="d010/android.html">10- android</a></td>            
-        </tr>
-        <tr>
-            <td><a href="d011/index.html">11- Box imagem</a></td>
-            <td><a href="d012/index.html">12- Cordel Moderno</a></td>
-            <td><a href="d013/index.html">13- ...</a></td>
-            <td><a href="d014/index.html">14- ...</a></td>
-            <td><a href="d015/index.html">15- ...</a></td>
-        </tr>
-    </table>
+    <header>
+        <h1>Desafios do curso</h1>
+    </header>
+
+    <div class="conteiner">
+        <div class="item" id="cx"><a href="d001/index.html">01- Mensagens</a></div>
+        <div class="item" id="cx"><a href="d002/index.html">02- Imagem</a></div>
+        <div class="item" id="cx"><a href="d003/index.html">03- Mapa Mundi</a></div>
+        <div class="item" id="cx"><a href="d004/index.html">04- Emoji</a></div>
+        <div class="item" id="cx"><a href="d005/index.html">05- Redes Sociais</a></div>
+        <div class="item" id="cx"><a href="d006/index.html">06- Tags HTML</a></div>
+    </div>
+    <div class="conteiner">
+        <div class="item" id="cx"><a href="d007/index.html">07- Imagem Flexível</a></div>
+        <div class="item" id="cx"><a href="d008/index.html">08- Navegação</a></div>
+        <div class="item" id="cx"><a href="d009/index.html">09- Links de Vídeo</a></div>
+        <div class="item" id="cx"><a href="d010/android.html">10- Site Android</a></div>
+        <div class="item" id="cx"><a href="d011/index.html">11- Box Imagem</a></div>
+        <div class="item" id="cx"><a href="d012/index.html">12- Cordel Moderno</a></div>
+    </div>
+    <div class="conteiner">
+        <div class="item" id="cx"><a href="d013/index.html">13- Tabelas 01 e 02</a></div>
+        <div class="item" id="cx"><a href="d014/index.html">14- Tabela Notas</a></div>
+        <div class="item" id="cx"><a href="">15- ...</a></div>
+        <div class="item" id="cx"><a href="">16- ...</a></div>
+        <div class="item" id="cx"><a href="">17- ...</a></div>
+        <div class="item" id="cx"><a href="">18- ...</a></div>
+    </div>
+
 </body>
 </html>
