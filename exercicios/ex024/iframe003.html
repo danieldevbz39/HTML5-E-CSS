@@ -6,16 +6,17 @@
     <title>Uso de iframe</title>
     <style>
         body {
-            background-color: rgb(253, 252, 205);
+            background-color: rgb(255, 254, 209);
             font-family: Arial, Helvetica, sans-serif;
         }
 
         iframe#tela {
+            background-color: white;
             width: 95vw;             /* Define a largura como 95% da largura da viewport */
-            height: 250px;           /* Define a altura fixa de 250 pixels */
-            border: 2px solid rgba(0,0,0,0.6); /* Borda sólida de 2px com cor preta semi-transparente */
+            height: 350px;           /* Define a altura fixa de 250 pixels */
+            border: 3px solid rgba(0,0,0,0.6); /* Borda sólida de 2px com cor preta semi-transparente */
             border-radius: 16px;     /* Adiciona cantos arredondados de 16px */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Adiciona sombra com deslocamento vertical e blur */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.829); /* Adiciona sombra com deslocamento vertical e blur */
             overflow: hidden;        /* Esconde o conteúdo que ultrapassar os limites do iframe */
             display: block;          /* Define o iframe como elemento de bloco */
         }
@@ -33,7 +34,7 @@
     </ul>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis obcaecati neque, natus est, tempora saepe, vel qui iste quasi nam illum vero labore eos laborum nemo nihil sunt aut odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo assumenda et. In ad est, dicta autem repudiandae nemo id ipsa error quas, voluptas quasi dolores vitae architecto iusto dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt quaerat qui, quam quibusdam iste, quasi possimus ullam doloribus optio voluptates fugit dicta veritatis corporis sint harum! Quibusdam, ratione eaque.</p>
 
-    <iframe id="tela" name="frame" src="" >
+    <iframe id="tela" name="frame" srcdoc="<h1> Escolha uma das opções acima</h1> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ad earum porro nisi saepe deleniti pariatur exercitationem illum modi ipsum. Facilis architecto illum porro rerum ipsa exercitationem aliquam, repellendus voluptatum.</p><img src ='img/lohg.jpg' >
         <p>"Infelizmente seu navegador não é compatível com isso."</p> 
     </iframe>
 
