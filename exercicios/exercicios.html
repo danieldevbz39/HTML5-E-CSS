@@ -25,18 +25,24 @@
             padding: 20px;
             text-align: center;
         }
+
+        header h1 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+        }
+
         table {
-            width: 700px;
+            width: 90%;
+            max-width: 900px;
             border-collapse: collapse;
             padding: 20px;
-            margin: 20px;
-            align-items: center;
-            
+            margin: 20px auto;
             
         }
         a {
             text-decoration: none;
             text-align: center;
+            display: block;
+            font-size: clamp(0.75rem, 2vw, 1rem);
         }
 
         th {
@@ -55,6 +61,43 @@
         }
         td:hover {
             background-color: rgba(1, 255, 234, 0.63);
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+
+            th, td {
+                padding: 6px;
+            }
+
+            a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            table {
+                width: 98%;
+                margin: 10px auto;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+
+            a {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
@@ -118,3 +161,4 @@
     </table>
 </body>
 </html>
+
