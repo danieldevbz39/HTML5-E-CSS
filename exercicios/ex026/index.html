@@ -1,33 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flexible box</title>
+    <title>carregando exercicios</title>
     <style>
-        div.conteiner {
-            background-color: lightsalmon;
-            
-            display: flex;
-        }
-        div.item {
-            background-color: lightblue;/*fundo box*/
-            border: 1px solid black; /*cor contorno*/
-            text-align: center; /*centraliza texto*/
-            flex: auto; /*ajustar todos ao box*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            background-color: rgb(255, 244, 181);
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+
+        h3 {
+            margin-left: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        table {
+            background-color: white;
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        caption {
+            font-size: 1.4em;
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 8px;
+            background-color: rgb(206, 0, 0);
+            color: white;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            display: block;
+            word-wrap: break-word;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.9em;
+            }
+            td {
+                padding: 8px;
+            }
+            caption {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h3 {
+                font-size: 1.1em;
+                margin-left: 5px;
+            }
+            table {
+                font-size: 0.85em;
+            }
+            td {
+                padding: 7px;
+            }
+            caption {
+                font-size: 1.1em;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h3 {
+                margin-left: 0;
+                font-size: 1em;
+            }
+            table {
+                font-size: 0.75em;
+            }
+            td {
+                padding: 5px;
+            }
+            caption {
+                font-size: 0.95em;
+            }
+            a {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 320px) {
+            body {
+                padding: 5px;
+            }
+            h3 {
+                font-size: 0.9em;
+                margin-bottom: 15px;
+            }
+            table {
+                font-size: 0.7em;
+            }
+            td {
+                padding: 4px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
-    </div>
+    <h3>Clique no link abaixo para ver os exercícios 👇</h3>
+
+    <table>
+        <caption>Configurações de site</caption>
+        <tr>
+            <td><a href="mq001/index.html">1 - Aprendendo criar Media Queries</a></td>
+        </tr>
+
+        <tr>            
+            <td><a href="">6 - xxxx"</a></td>
+        </tr>
+    </table>
+
 </body>
 </html>
