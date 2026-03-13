@@ -33,7 +33,6 @@ async function gerarCodigo() {
 
     blocoCodigo.textContent = resultado
     resultadoCodigo.srcdoc = resultado   
-
 }
 
 botao.addEventListener("click", gerarCodigo)
