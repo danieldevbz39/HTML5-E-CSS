@@ -1,3 +1,26 @@
 @charset "UTF-8";
 
 /* configurações gerais */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    color: white;
+    text-shadow: 3px 3px 0px rgb(133, 98, 1);
+    padding: 10px;
+
+}
