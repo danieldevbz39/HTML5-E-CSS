@@ -42,7 +42,7 @@ Games telas: acima de 1200px*/
 }
 
 
-@media screen and (max-width: 768px) and (max-width: 992px) { /* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) { /* TABLET */
     body {
         background-image: url(../img/back-tablet.jpg);
     }
@@ -66,7 +66,6 @@ Games telas: acima de 1200px*/
     img#print {display: none;}
     img#pc {display: block;}
     img#tv {display: none;}
-}
 }
 
 @media screen and (min-width: 1200px) { /* GRANDES TELAS*/
