@@ -1,10 +1,10 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define a codificação de caracteres como UTF-8 */
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* { /* Seletor universal - aplica a todos os elementos */
+    padding: 0px; /* Remove o preenchimento padrão */
+    margin: 0px; /* Remove a margem padrão */
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
 }
 
 /* 
@@ -13,138 +13,131 @@
     lilas: #5f2c82 
 */
 
-body, html {
-    background-color: #5f2c82;
-    height: 100vw;
-    width: 100vw;
+body, html { /* Estilos para body e html */
+    background-color: #5f2c82; /* Cor de fundo roxa */
+    height: 100vw; /* Altura igual a 100% da largura da janela */
+    width: 100vw; /* Largura igual a 100% da largura da janela */
 }
 
-main {
-    position: relative;
-    height: 100vw;
-    width: 100vw;
+main { /* Estilos para o elemento main */
+    position: relative; /* Posicionamento relativo */
+    height: 100vw; /* Altura igual a 100% da largura da janela */
+    width: 100vw; /* Largura igual a 100% da largura da janela */
 }
 
-section#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    width: 250px;
-    height: 580px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-    transition: width .3s, height .3s;
-    transition-timing-function: ease ;
+section#login { /* Estilos para a seção com id login */
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Distância de 50% do topo */
+    left: 50%; /* Distância de 50% da esquerda */
+    transform: translate(-50%, -50%); /* Centraliza o elemento */
+    background-color: white; /* Cor de fundo branca */
+    width: 250px; /* Largura de 250px */
+    height: 620px; /* Altura de 600px */
+    border-radius: 20px; /* Cantos arredondados de 20px */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /* Sombra ao redor do elemento */
+    transition: width .3s, height .3s; /* Transição suave de largura e altura em 0.3s */
+    transition-timing-function: ease; /* Função de timing suave */
 }
 
-section#login > div#imagem {
-    display: block;
-    background: #5f2c82 url(../img/lion-portrait-ai-generated.jpg);
-    background-size: cover;
-    background-position: left bottom;
-    height: 200px;
-
+section#login > div#imagem { /* Estilos para a div imagem dentro de section login */
+    display: block; /* Exibe como bloco */
+    background: #5f2c82 url(../img/lion-portrait-ai-generated.jpg); /* Cor de fundo e imagem */
+    background-size: cover; /* Imagem cobre todo o espaço */
+    background-position: left bottom; /* Posição da imagem */
+    height: 200px; /* Altura de 200px */
 }
 
-section#login > div#formulario {
-    display: block;
-    padding: 10px;
-
-
+section#login > div#formulario { /* Estilos para a div formulario dentro de section login */
+    display: block; /* Exibe como bloco */
+    padding: 10px; /* Preenchimento interno de 10px */
 }
 
-div#formulario > h1 {
-    text-align: center;
-    margin-bottom: 10px;
+div#formulario > h1 { /* Estilos para h1 dentro de div formulario */
+    text-align: center; /* Texto centralizado */
+    margin-bottom: 10px; /* Margem inferior de 10px */
 }
 
-div#formulario > p {
-    font-size: 0.8em;
+div#formulario > p { /* Estilos para p dentro de div formulario */
+    font-size: 0.8em; /* Tamanho da fonte em 0.8em */
 }
 
-form > div.campo {
-    background-color: #5f2c82;
-    border: 2px solid #5f2c82;
-    width: 100%;
-    display: block;
-    height: 40px;
-    border-radius: 8px;
-    margin: 5px 0px;
-
+form > div.campo { /* Estilos para div com classe campo dentro de form */
+    background-color: #5f2c82; /* Cor de fundo roxa */
+    border: 2px solid #5f2c82; /* Borda roxa de 2px */
+    width: 100%; /* Largura 100% do containerário */
+    display: block; /* Exibe como bloco */
+    height: 40px; /* Altura de 40px */
+    border-radius: 8px; /* Cantos arredondados de 8px */
+    margin: 5px 0px; /* Margem superior e inferior de 5px */
 }
 
-div.campo > label {
-    display: none;
+div.campo > label { /* Estilos para label dentro de div campo */
+    display: none; /* Esconde o elemento */
 }
 
-div.campo > i {
-    color: white;
-    /*background-color: black;*/
-    font-size: 2em;
-    width: 40px;
-    padding: 5px;
+div.campo > i { /* Estilos para ícone dentro de div campo */
+    color: white; /* Cor branca */
+    font-size: 2em; /* Tamanho da fonte em 2em */
+    width: 40px; /* Largura de 40px */
+    padding: 5px; /* Preenchimento de 5px */
 }
 
-div.campo > input {
-    background-color: aquamarine;
-    font-size: 1em;
-    width: calc(100% - 45px);
-    height: 100%;
-    border: none;
-    border-radius:8px ;
-    padding: 4px;
-    transform: translateY(-13px);
+div.campo > input { /* Estilos para input dentro de div campo */
+    background-color: aquamarine; /* Cor de fundo aquamarine */
+    font-size: 1em; /* Tamanho da fonte em 1em */
+    width: calc(100% - 45px); /* Largura 100% menos 45px */
+    height: 100%; /* Altura 100% da div pai */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Cantos arredondados de 8px */
+    padding: 4px; /* Preenchimento de 4px */
+    transform: translateY(-13px); /* Move 13px para cima */
 }
 
-div.campo > input:focus-within {
-    background-color: white;
-    
+div.campo > input:focus-within { /* Estilos quando input recebe foco */
+    background-color: white; /* Cor de fundo branca */
 }
 
-form > input[type=submit] {
-    display: block;
-    font-size: 1em;
-    width: 100%;
-    height: 40px;
-    background-color: rgb(160, 0, 0);
-    color: whitesmoke;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-decoration: none;
-
+form > input[type=submit] { /* Estilos para botão submit */
+    display: block; /* Exibe como bloco */
+    font-size: 1em; /* Tamanho da fonte em 1em */
+    width: 100%; /* Largura 100% do container */
+    height: 40px; /* Altura de 40px */
+    background-color: rgb(160, 0, 0); /* Cor de fundo vermelha */
+    color: whitesmoke; /* Cor do texto branca acinzentada */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados de 5px */
+    cursor: pointer; /* Cursor em forma de mão */
+    border: 1px solid black; /* Borda preta de 1px */
+    border-radius: 5px; /* Cantos arredondados de 5px (repetido) */
+    text-decoration: none; /* Sem decoração de texto */
 }
 
-form > input[type=submit]:hover {
-    background-color: white;
-    color: rgb(160, 0, 0);
+form > input[type=submit]:hover { /* Estilos quando mouse passa sobre submit */
+    background-color: white; /* Cor de fundo branca */
+    color: rgb(160, 0, 0); /* Cor do texto vermelha */
 }
 
-form >a.botao {
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    width: 100%;
-    height: 40px;
-    padding-top: 5px;
-    margin-top: 5px;
-    background-color: rgb(160, 0, 0);
-    color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-decoration: none;
+form > a.botao { /* Estilos para link com classe botao dentro de form */
+    display: block; /* Exibe como bloco */
+    text-align: center; /* Texto centralizado */
+    font-size: 1em; /* Tamanho da fonte em 1em */
+    width: 100%; /* Largura 100% do container */
+    height: 40px; /* Altura de 40px */
+    padding-top: 5px; /* Preenchimento superior de 5px */
+    margin-top: 5px; /* Margem superior de 5px */
+    background-color: rgb(160, 0, 0); /* Cor de fundo vermelha */
+    color: whitesmoke; /* Cor do texto branca acinzentada */
+    border: 1px solid black; /* Borda preta de 1px */
+    border-radius: 5px; /* Cantos arredondados de 5px */
+    text-decoration: none; /* Sem decoração de texto */
 }
 
-form > a.botao:hover {
-    background-color: white;
-    color: rgb(160, 0, 0);
+form > a.botao:hover { /* Estilos quando mouse passa sobre link botao */
+    background-color: white; /* Cor de fundo branca */
+    color: rgb(160, 0, 0); /* Cor do texto vermelha */
 }
 
-form > a.botao > i {
-    font-size: 0.8em;
+form > a.botao > i { /* Estilos para ícone dentro de link botao */
+    font-size: 0.8em; /* Tamanho da fonte em 0.8em */
 }

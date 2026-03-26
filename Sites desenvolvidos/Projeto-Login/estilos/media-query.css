@@ -1,56 +1,61 @@
-@charset "UTF-8" ;
+@charset "UTF-8" ; /* Define a codificação de caracteres como UTF-8 */
 
+/* Media query para telas de tablet (largura entre 768px e 992px) */
 @media screen and (min-width: 768px) and (max-width: 992px) {
-/* telas tablet */
+    /* telas tablet */
     body {
+        /* Define um gradiente linear de cima para baixo com cores verde e roxo */
         background-image: linear-gradient(to top, #144100, #351947);
-        
     }
     
     section#login {
-        width: 80vw;
-        height: 300px;
+        width: 80vw; /* Define a largura como 80% da largura da viewport */
+        height: 300px; /* Define a altura como 300 pixels */
     }
 
     section#login > div#imagem {
-        float: left;
-        width: 30%;
-        height: 100%;
+        float: left; /* Flutua o elemento para a esquerda */
+        width: 30%; /* Define a largura como 30% do elemento pai */
+        height: 100%; /* Define a altura como 100% do elemento pai */
     }
     
     section#login > div#formulario {
-        float: right;
-        width: 70%;
+        float: right; /* Flutua o elemento para a direita */
+        width: 70%; /* Define a largura como 70% do elemento pai */
     }
 }
 
+/* Media query para telas grandes (largura a partir de 992px) */
 @media screen and (min-width: 992px) {
-/* grandes */    
+    /* grandes */    
     body {
+        /* Define um gradiente linear de cima para baixo com cores vermelho e marrom */
         background-image: linear-gradient(to top, #f80000, #474419);
     }
 
     section#login {
-        width: 950px;
+        width: 950px; /* Define a largura fixa em 950 pixels */
     }
 
     section#login > div#imagem {
-        float: right;
-        width: 50%;
-        height: 100%;
+        float: right; /* Flutua o elemento para a direita */
+        width: 50%; /* Define a largura como 50% do elemento pai */
+        height: 100%; /* Define a altura como 100% do elemento pai */
     }
     
     section#login > div#formulario {
-        float: left;
-        width: 50%;
+        float: left; /* Flutua o elemento para a esquerda */
+        width: 50%; /* Define a largura como 50% do elemento pai */
     }
 }
+
+/* Seletor para o elemento h1 dentro de div#formulario */
 div#formulario > h1 {
-    font-size: 2em;
+    font-size: 2em; /* Define o tamanho da fonte como 2 vezes o tamanho padrão */
 }
 
-
+/* Seletor para o elemento p dentro de div#formulario */
 div#formulario > p {
-    font-size: 1.2em;
-    margin: 20px 0px;
+    font-size: 1.2em; /* Define o tamanho da fonte como 1.2 vezes o tamanho padrão */
+    margin: 20px 0px; /* Define margem de 20px no topo e rodapé, 0px nos lados */
 }
