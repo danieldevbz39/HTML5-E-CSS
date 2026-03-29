@@ -203,4 +203,10 @@ textarea {
         width: 40vh;
         height: auto;
     }
+
+    .header a:hover {
+    color: #c51111;
+    transition: 0.5s ease-in-out;
+    font-size: 22px;
+}
 }
