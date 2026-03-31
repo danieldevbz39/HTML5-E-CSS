@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,21 @@
     <link rel="icon" href="img/pedro ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
 </head>
+
 <body>
 
     <div class="video-background" aria-hidden="true">
         <video autoplay muted loop playsinline>
-            <source src="img/Desenho_De_Leão_Realista_Em_Vídeo.mp4" type="video/mp4">
+            <source src="img/Seu_Vídeo_Está_Pronto.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
     </div>
 
     <header class="header-main">
         <div class="header-inner">
-            <a href="#home" class="logo">Pedro Moreira Taekwondo</a>
+            <a href="#home" class="logo">
+                <img src="img/PEDRO MOREIRA LOGO-cabecario 2.png" alt="Logo Pedro Moreira" class="logo-img">
+            </a>
             <nav class="nav-menu" aria-label="Menu principal">
                 <a href="#sobre">Sobre Nós</a>
                 <a href="#metodologia">Metodologia</a>
@@ -26,7 +30,6 @@
                 <a href="#cursos">Cursos</a>
                 <a href="#competicoes">Competições</a>
                 <a href="#parcerias">Parcerias</a>
-                <a href="#contato" class="btn-nav">Contato</a>
             </nav>
         </div>
     </header>
@@ -34,83 +37,120 @@
     <main class="content-wrapper" id="home">
 
         <section class="hero" id="hero">
-            <h1>Conquiste mais que medalhas. Transforme sua vida.</h1>
-            <p>Disciplina, foco e alta performance com quem entende de formação de campeões.</p>
-            <a href="#contato" class="btn-cta">AGENDE SUA AULA EXPERIMENTAL GRATUITA</a>
+            <div class="hero-left">
+                <h1>Conquiste mais que medalhas. Transforme sua vida.</h1>
+                <p>Disciplina, foco e alto rendimento com quem forma campeões no Taekwondo.</p>
+                <a href="#contato" class="btn-cta">AGENDE SUA AULA EXPERIMENTAL GRATUITA</a>
+
+                <div class="hero-numbers">
+                    <div><strong>+11 anos</strong><span>Liderando Campeões</span></div>
+                    <div><strong>+1.400</strong><span>Vidas Transformadas</span></div>
+                    <div><strong>Metodologia</strong><span>Valida por faixa preta</span></div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-card">
+                    <img src="img/pedro-med.png" alt="Treinador Pedro Moreira" class="hero-photo">
+                </div>
+            </div>
         </section>
 
-        <section class="stats" id="nossos-numeros">
-            <article>
-                <h3>+11 anos</h3>
-                <p>Liderando campeões</p>
-            </article>
-            <article>
-                <h3>+1.400</h3>
-                <p>Vidas transformadas</p>
-            </article>
-            <article>
-                <h3>Metodologia</h3>
-                <p>Valida por faixa preta especialista</p>
-            </article>
-        </section>
-
-        <section class="services" id="treinos">
+        <section class="services" id="quatro-servicos">
             <h2>Carrossel Highlights</h2>
-            <div class="service-grid">
-                <article>
-                    <h3>Treinos</h3>
-                    <p>Aulas para todos os níveis, do iniciante ao avançado, focadas em técnica e condicionamento.</p>
-                </article>
-                <article id="cursos">
-                    <h3>Cursos</h3>
-                    <p>Workshops e especializações exclusivas em Taekwondo para quem busca ir além do básico.</p>
-                </article>
-                <article id="competicoes">
-                    <h3>Competições</h3>
-                    <p>Preparação de elite para destaque em torneios nacionais e internacionais.</p>
-                </article>
-                <article id="parcerias">
-                    <h3>Quarentreinos</h3>
-                    <p>Treinos online e conteúdos digitais para manter a forma onde você estiver.</p>
-                </article>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <article class="carousel-slide">
+                        <div class="circle-photo" style="background-image: url('img/pedro-med.png');"></div>
+                        <div class="circle-desc">
+                            <h3>Treinos</h3>
+                            <p>Aulas para todos os níveis: iniciante ao avançado, com foco em técnica e performance.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-slide">
+                        <div class="circle-photo"
+                            style="background-image: url('img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg');"></div>
+                        <div class="circle-desc">
+                            <h3>Cursos</h3>
+                            <p>Workshops práticos e especializações em Taekwondo para evolução constante.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-slide">
+                        <div class="circle-photo"
+                            style="background-image: url('img/PEDRO MOREIRA LOGO-cabecario 2.png');"></div>
+                        <div class="circle-desc">
+                            <h3>Competições</h3>
+                            <p>Preparo de elite para apresentações e torneios nacionais/internacionais.</p>
+                        </div>
+                    </article>
+                    <article class="carousel-slide">
+                        <div class="circle-photo" style="background-image: url('img/log.png');"></div>
+                        <div class="circle-desc">
+                            <h3>Quarentreinos</h3>
+                            <p>Treinos online e conteúdos exclusivos para praticar em qualquer lugar.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="carousel-controls">
+                    <button id="prevSlide" aria-label="Anterior">&#10094;</button>
+                    <button id="nextSlide" aria-label="Próximo">&#10095;</button>
+                </div>
             </div>
         </section>
 
         <section class="testimonials" id="depoimentos">
             <h2>Campeões da Vida</h2>
             <div class="testimonial-grid">
-                <article>
-                    <p>"O Taekwondo mudou minha disciplina e foco nos estudos. Hoje sou muito mais confiante."</p>
-                    <span>– Pedro M.</span>
+                <article class="testimonial-card">
+                    <div class="circle-photo" style="background-image: url('img/pedro-med.png');"></div>
+                    <div class="circle-desc">
+                        <h3>Pedro M.</h3>
+                        <p>"O Taekwondo mudou minha disciplina e foco nos estudos. Hoje sou muito mais confiante."</p>
+                    </div>
                 </article>
-                <article>
-                    <p>"A metodologia do Pedro Moreira é diferenciada. Ele não ensina só a lutar, ensina a viver."</p>
-                    <span>– Lauany E.</span>
+                <article class="testimonial-card">
+                    <div class="circle-photo"
+                        style="background-image: url('img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg');"></div>
+                    <div class="circle-desc">
+                        <h3>Lauany E.</h3>
+                        <p>"A metodologia do Pedro Moreira é diferenciada. Ele não ensina só a lutar, ensina a viver."
+                        </p>
+                    </div>
                 </article>
-                <article>
-                    <p>"Encontrei uma família e um propósito. Treinar aqui foi a melhor decisão que tomei."</p>
-                    <span>– Cláudio S.</span>
+                <article class="testimonial-card">
+                    <div class="circle-photo" style="background-image: url('img/PEDRO MOREIRA LOGO-cabecario 2.png');">
+                    </div>
+                    <div class="circle-desc">
+                        <h3>Cláudio S.</h3>
+                        <p>"Encontrei uma família e um propósito. Treinar aqui foi a melhor decisão que tomei."</p>
+                    </div>
                 </article>
             </div>
         </section>
 
         <section class="contact" id="contato">
-            <h2>Junte-se à nossa Família</h2>
-            <form id="contactForm" novalidate>
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <div class="contact-left">
+                <h2>Junte-se à nossa Família</h2>
+                <p>Preencha o formulário e garanta sua avaliação gratuita.</p>
+                <form id="contactForm" novalidate>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
 
-                <label for="telefone">Telefone (com WhatsApp)</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(51) 9XXXX-XXXX" required>
+                    <label for="telefone">Telefone (com WhatsApp)</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(51) 9XXXX-XXXX" required>
 
-                <label for="mensagem">Mensagem (opcional)</label>
-                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                    <label for="mensagem">Mensagem (opcional)</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
 
-                <button type="submit" class="btn-cta">ENVIAR MINHA INSCRIÇÃO</button>
-            </form>
+                    <button type="submit" class="btn-cta">ENVIAR MINHA INSCRIÇÃO</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <video src="img/video.mp4" autoplay muted loop></video>
+            </div>
         </section>
 
     </main>
@@ -118,27 +158,29 @@
     <footer class="footer">
         <div class="footer-content">
             <div>
-                <h3>Contato</h3>
-                <p>📞 (51) 9XXXX-XXXX</p>
-                <p>🔗 <a href="https://bit.ly/moreirataekwondo" target="_blank" rel="noopener">bit.ly/moreirataekwondo</a></p>
+                <h3>Contato Info</h3>
+                <p>📞 (31) 99842-7266</p>
             </div>
             <div>
                 <h3>Redes Sociais</h3>
-                <p><a href="#">Instagram</a> • <a href="#">YouTube</a> • <a href="#">WhatsApp</a></p>
+                <p><a href="https://www.instagram.com/pedro.moreiratkd/">Instagram</a> • <a
+                        href="https://www.youtube.com/@pedromoreiratkd">YouTube</a> • <a
+                        href="https://wa.link/8t47rh">WhatsApp</a></p>
             </div>
             <div>
                 <h3>Localização</h3>
-                <p>Endereço da academia</p>
-                <p><a href="https://www.google.com/maps" target="_blank" rel="noopener">Mapa Integrado</a></p>
+                <p>R. Antônio Mariano de Abreu, 798 - Paulo VI, Belo Horizonte - MG, 31995-000</p>
+                <p><a href="https://maps.app.goo.gl/jDM4zf2doncwUsgM9" target="_blank" rel="noopener">Ver no mapa</a></p>
             </div>
         </div>
         <p class="footer-copy">© 2024 Pedro Moreira Taekwondo - Formando Campeões da Vida.</p>
     </footer>
 
-    <a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank" rel="noopener">
+    <a href="https://wa.link/8t47rh" class="whatsapp-float" target="_blank" rel="noopener">
         <img src="img/whatsapp.png" alt="WhatsApp">
     </a>
 
     <script src="estilos/scripts.js"></script>
 </body>
+
 </html>
