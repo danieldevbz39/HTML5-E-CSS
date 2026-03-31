@@ -1,212 +1,154 @@
-@charset "UTF-8";
+/* Reset e base */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #f4f4f4;
+    background: #0f0f0f;
+    line-height: 1.5;
 }
 
-.caixa-mae {
-    display: flex;
-    padding: 100px;
-    align-items: center;
-    justify-content: space-around;
-}
-.caixa-principal {
-    width: 50% ;
-    
-}
-.caixa-video {
+a { color: #fff; text-decoration: none; }
+a:hover { opacity: 0.85; }
+
+.video-background {
     position: fixed;
-    top: 0;
-    z-index: -1;
-
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1; overflow: hidden;
 }
 
-video {
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-    top: 0;
+.video-background video {
+    width: 100%; height: 100%; object-fit: cover;
 }
 
-img {
-    height: 200px;
+.video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.72);
 }
 
-p {
-    color: whitesmoke;
-}
-button {
-    background-color: rgb(133, 7, 7);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-top: 30px;
-
+.header-main {
+    width: 100%; background: rgba(0,0,0,0.62); position: sticky; top: 0; z-index: 20;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-button:hover {
-    background: red;
-    color: rgb(255, 217, 0);
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.5s ease-in-out;
+.header-inner {
+    max-width: 1200px; margin: auto; padding: 1rem;
+    display: flex; justify-content: space-between; align-items: center;
 }
 
-.imagem-mario-luigi {
-    height: 500px;
+.logo {
+    font-size: 1.25rem; font-weight: 700; color: #fff;
 }
 
-.mascara {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
-    position: fixed;
-    top: 0;
+.nav-menu a {
+    margin-left: 0.8rem; color: #fff; font-weight: 500;
 }
 
-.logo-mario {
-    height: 200px;
-    margin-left: 10px;
+.nav-menu .btn-nav {
+    margin-left: 1rem; padding: 0.6rem 1rem; background: #e63946; border-radius: 30px; color: #fff;
 }
 
-.link-whatsapp img{
-    height: 60px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
+.content-wrapper {
+    position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: auto;
 }
 
-.header {   
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin: 30px;
+.hero {
+    min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    padding: 120px 24px 80px;
 }
 
-.header img {
-    height: 60px;
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.75rem); color: #fff; font-weight: 900; line-height: 1.1;
 }
 
-.header a{
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+.hero p {
+    margin: 1rem 0 1.8rem; color: #e5e5e5; max-width: 760px;
 }
 
-.header a:hover {
-    color: #c51111;
-    transition: 0.5s ease-in-out;
-    font-size: 26px;
+.btn-cta {
+    background: #e63946; color: #fff; font-weight: 700; padding: 0.95rem 1.8rem; border-radius: 50px; transition: transform 0.25s ease;
 }
 
-.formulario-fale-conosco {
-    background-color: white;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    position: fixed;
-    top:30%;
-    left: -300px;
-    padding: 20px;
-    border-radius: 5px;
-    transition: left 1s ease-in-out;
-    /*
-    left: 50%;
-    transform: translateX(-50%);
-    */
+.btn-cta:hover { transform: translateY(-2px); }
+
+.stats,
+.services,
+.testimonials,
+.contact {
+    margin: 48px 0; padding: 40px 24px; background: rgba(16, 16, 16, 0.72); border-radius: 16px;
 }
 
-input {
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    padding-left: 5px;
-    outline-color: yellowgreen;
+.stats {
+    display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-textarea {
-    width: 270px;
-    height: 100px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    padding-left: 5px;
-    outline-color: yellowgreen;
-    padding: 10px;
+.stats article { border: 1px solid rgba(255,255,255,0.13); border-radius: 12px; padding: 22px; text-align: center; }
+
+.stats h3 { font-size: 2rem; color: #e63946; }
+
+.service-grid,
+.testimonial-grid {
+    display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.mascara-formulario {
-    visibility: hidden;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(109deg, rgba(10, 12,16, 0.99)15%, rgba(10, 12, 16, 0.7)50%, rgba(10, 12, 16, 0.99)85%);
-    transition: visiblity 1s ease-in-out;
+.services h2,
+.testimonials h2,
+.contact h2 { font-size: 2rem; margin-bottom: 1rem; }
+
+.services article,
+.testimonials article { background: rgba(0,0,0,0.42); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; }
+
+.testimonials p { margin-bottom: 0.75rem; }
+
+.testimonials span { color: #e63946; font-weight: 600; }
+
+.contact form {
+    display: grid; gap: 0.8rem; max-width: 560px; margin: auto;
 }
 
-/* Media query */
+.contact label { font-weight: 600; }
 
-/* max -> Valor menor que Npx, aplica o CSS do MEDIA 
-   min -> Valor maior que Npx, aplica o CSS do MEDIA
-*/
-
-@media(max-width: 1100px){
-    
-    p {
-        display: none;
-    }
-
-    .caixa-mae {
-        flex-direction:column;
-        padding: 10px;
-        justify-content: flex-start;
-    }
-
-    .caixa-principal {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .imagem-mario-luigi {
-        width: 50vw;
-        height: auto;
-        margin-top: 30px;
-    }
-
-    .header {
-        margin: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .header img{
-        display: none;
-    }
-
-    .header a {
-        font-size: 20px;
-    }
-
-    .logo-mario {
-        width: 40vh;
-        height: auto;
-    }
-
-    .header a:hover {
-    color: #c51111;
-    transition: 0.5s ease-in-out;
-    font-size: 22px;
+.contact input,
+.contact textarea {
+    width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.2); color: #fff;
+    padding: 0.8rem 0.9rem; border-radius: 8px;
 }
+
+.contact input:focus,
+.contact textarea:focus { outline: 2px solid #e63946; border-color: #e63946; }
+
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.1); padding: 2rem 24px; margin-top: 40px; color: #ddd;
+}
+
+.footer-content {
+    display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 1200px; margin: auto;
+}
+
+.footer-content h3 { color: #e63946; margin-bottom: 0.4rem; }
+
+.footer-copy { text-align: center; margin-top: 1.2rem; font-size: 0.9rem; opacity: 0.8; }
+
+.whatsapp-float {
+    position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; z-index: 100; border-radius: 50%; overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45); background: #25d366;
+}
+
+.whatsapp-float img {
+    width: 100%; height: 100%; object-fit: contain;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+@media(max-width: 840px) {
+    .header-inner { flex-wrap: wrap; gap: 0.7rem; }
+    .nav-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+    .hero { padding-top: 140px; }
 }

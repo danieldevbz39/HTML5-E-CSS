@@ -1,0 +1,73 @@
+Cabeçalho (Menu de Navegação)
+Logo: Pedro Moreira Taekwondo
+
+Links: Sobre Nós | Metodologia | Treinos | Cursos | Competições | Parcerias
+
+2. Seção Hero (Principal)
+Título de Impacto: Conquiste mais que medalhas. Transforme sua vida.
+
+Subtítulo: Disciplina, foco e alta performance com quem entende de formação de campeões.
+
+Botão (CTA): AGENDE SUA AULA EXPERIMENTAL GRATUITA
+
+3. Prova Social e Autoridade (Números)
+Destaque 1: Liderando campeões há mais de 11 anos.
+
+Destaque 2: Mais de 1.400 vidas transformadas através do esporte.
+
+Destaque 3: Metodologia validada por um Faixa Preta especialista.
+
+4. Carrossel de Serviços (Categorias)
+Treinos: Aulas para todos os níveis, do iniciante ao avançado, focadas em técnica e condicionamento.
+
+Cursos: Workshops e especializações exclusivas em Taekwondo para quem busca ir além do básico.
+
+Competições: Preparação de elite para destaque em torneios nacionais e internacionais.
+
+Quarentreinos: Treinos online e conteúdos digitais para manter a forma onde quer que você esteja.
+
+Parcerias: Projetos colaborativos e benefícios exclusivos para alunos da nossa rede.
+
+5. Depoimentos (Campeões da Vida)
+Depoimento 1: "O Taekwondo mudou minha disciplina e foco nos estudos. Hoje sou muito mais confiante." – Pedro M.
+
+Depoimento 2: "A metodologia do Pedro Moreira é diferenciada. Ele não ensina só a lutar, ensina a viver." – Lauany E.
+
+Depoimento 3: "Encontrei uma família e um propósito. Treinar aqui foi a melhor decisão que tomei." – Cláudio S.
+
+6. Formulário de Conversão
+Título: Junte-se à nossa Família
+
+Campos:
+
+Nome Completo
+
+E-mail
+
+Telefone (com WhatsApp)
+
+Mensagem (Opcional)
+
+Botão: ENVIAR MINHA INSCRIÇÃO
+
+7. Rodapé (Contato e Localização)
+Contato Info:
+
+📞 (51) 9XXXX-XXXX
+
+🔗 bit.ly/moreirataekwondo
+
+Redes Sociais: (Ícones de Instagram, YouTube e WhatsApp)
+
+Localização: (Mapa integrado mostrando o endereço da academia)
+
+Rodapé Final: © 2024 Pedro Moreira Taekwondo - Formando Campeões da Vida.
+
+Dica de Implementação:
+Para o site ficar idêntico à imagem, utilize uma paleta de cores Dark Mode:
+
+Fundo: Preto fosco (#121212)
+
+Destaques: Vermelho vibrante (#E63946) e Branco para legibilidade.
+
+Fontes: Use fontes sem serifa modernas (como Montserrat ou Roboto) para passar um ar esportivo e tecnológico.
