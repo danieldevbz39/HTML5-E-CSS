@@ -39,3 +39,43 @@ function handleFormSubmit(event) {
 if (contactForm) {
     contactForm.addEventListener('submit', handleFormSubmit);
 }
+
+const carouselTrack = document.getElementById('carouselTrack');
+const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+const prevSlide = document.getElementById('prevSlide');
+const nextSlide = document.getElementById('nextSlide');
+let currentIndex = 0;
+let carouselTimer = null;
+
+function updateCarousel(index) {
+    if (!carouselTrack || slides.length === 0) return;
+    const normalizedIndex = ((index % slides.length) + slides.length) % slides.length;
+    currentIndex = normalizedIndex;
+    const translateX = normalizedIndex * -25;
+    carouselTrack.style.transform = `translateX(${translateX}%)`;
+}
+
+function nextCarousel() {
+    updateCarousel(currentIndex + 1);
+}
+
+function prevCarousel() {
+    updateCarousel(currentIndex - 1);
+}
+
+function startCarouselAuto() {
+    carouselTimer = setInterval(nextCarousel, 5500);
+}
+
+function stopCarouselAuto() {
+    if (carouselTimer) { clearInterval(carouselTimer); carouselTimer = null; }
+}
+
+if (prevSlide && nextSlide && carouselTrack) {
+    prevSlide.addEventListener('click', () => { prevCarousel(); stopCarouselAuto(); startCarouselAuto(); });
+    nextSlide.addEventListener('click', () => { nextCarousel(); stopCarouselAuto(); startCarouselAuto(); });
+    carouselTrack.addEventListener('mouseenter', stopCarouselAuto);
+    carouselTrack.addEventListener('mouseleave', startCarouselAuto);
+    startCarouselAuto();
+}
+
