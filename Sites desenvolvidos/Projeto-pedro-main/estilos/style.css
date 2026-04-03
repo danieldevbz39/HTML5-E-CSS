@@ -399,12 +399,14 @@ textarea {
 
 @media (max-width: 768px) {
     .hero-left h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .btn-cta {
+        dis
         padding: 14px 22px;
         font-size: 0.9rem;
+        align-items: center;
     }
 
     .hero-numbers {
