@@ -30,6 +30,7 @@ const addTestimonialBtn = document.getElementById('addTestimonialBtn');
 addTestimonialBtn.addEventListener('click', () => {
     const name = document.getElementById('newTestimonialName');
     const text = document.getElementById('newTestimonialText');
+    const photoInput = document.getElementById('newTestimonialPhoto');
 
     if (!name.value.trim() || !text.value.trim()) {
         alert('Por favor, preencha nome e comentário.');
@@ -38,18 +39,38 @@ addTestimonialBtn.addEventListener('click', () => {
 
     const card = document.createElement('article');
     card.className = 'carousel-slide testimonial-card';
-    card.innerHTML = `
-        <div class="circle-photo"></div>
-        <div class="circle-desc">
-            <h3>${name.value.trim()}</h3>
-            <p>"${text.value.trim()}"</p>
-        </div>
-    `;
 
-    testimonialTrack.appendChild(card);
+    const photoDiv = document.createElement('div');
+    photoDiv.className = 'circle-photo';
 
-    name.value = '';
-    text.value = '';
+    if (photoInput.files && photoInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            photoDiv.style.backgroundImage = `url('${e.target.result}')`;
+            addCard();
+        };
+        reader.readAsDataURL(photoInput.files[0]);
+    } else {
+        photoDiv.classList.add('pedro');
+        addCard();
+    }
+
+    function addCard() {
+        card.innerHTML = '';
+        card.appendChild(photoDiv);
+        card.innerHTML += `
+            <div class="circle-desc">
+                <h3>${name.value.trim()}</h3>
+                <p>"${text.value.trim()}"</p>
+            </div>
+        `;
+
+        testimonialTrack.appendChild(card);
+
+        name.value = '';
+        text.value = '';
+        photoInput.value = '';
+    }
 });
 
 // Validação básica do formulário
