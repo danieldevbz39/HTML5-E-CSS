@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
 }
 
+
 /* VÍDEO DE FUNDO (BACKGROUND) */
 .video-background {
     position: fixed;
@@ -43,7 +44,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, transparent 20%, #000 100%);
+    background: rgba(0, 0, 0, 0.6); /* máscara preta semitransparente */
+    pointer-events: none; /* não bloqueia cliques */
+}
+
+/* Opcional: deixa uma suavidade maior no centro do vídeo */
+.video-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 80%);
+    pointer-events: none;
 }
 
 /* HEADER / NAVIGATION */
@@ -140,7 +151,6 @@ body {
 .hero-photo {
     width: 100%;
     max-width: 450px;
-    filter: drop-shadow(0 0 20px var(--primary-color));
 }
 
 /* CARROSSEL / SERVICES SECTION */
@@ -175,6 +185,15 @@ body {
     border: 3px solid var(--primary-color);
 }
 
+.circle-photo.treinos { background-image: url('../img/pedro-med.png'); }
+.circle-photo.cursos { background-image: url('../img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg'); }
+.circle-photo.competicoes { background-image: url('../img/PEDRO MOREIRA LOGO-cabecario 2.png'); }
+.circle-photo.quarentreinos { background-image: url('../img/log.png'); }
+
+.circle-photo.pedro { background-image: url('../img/pedro-med.png'); }
+.circle-photo.lauany { background-image: url('../img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg'); }
+.circle-photo.claudio { background-image: url('../img/PEDRO MOREIRA LOGO-cabecario 2.png'); }
+
 /* CONTACT SECTION */
 .contact {
     display: grid;
@@ -198,6 +217,35 @@ input, textarea {
     color: white;
     margin-bottom: 20px;
     border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero { flex-direction: column; padding: 60px 5%; min-height: auto; }
+    .hero-left, .hero-right { max-width: 100%; width: 100%; }
+    .header-inner { flex-wrap: wrap; gap: 10px; }
+    .nav-menu { width: 100%; display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .contact { grid-template-columns: 1fr; padding: 60px 5%; }
+    .services, .testimonials { padding: 40px 5%; }
+}
+
+@media (max-width: 768px) {
+    .hero-left h1 { font-size: 2rem; }
+    .btn-cta { padding: 14px 22px; font-size: 0.9rem; }
+    .hero-numbers { flex-direction: column; gap: 15px; }
+    .carousel-slide { min-width: 220px; padding: 20px; }
+    .circle-photo { width: 100px; height: 100px; }
+    .carousel-track { gap: 15px; }
+}
+
+@media (max-width: 480px) {
+    .header-main { padding: 12px 5%; }
+    .nav-menu a { margin-left: 8px; font-size: 0.8rem; }
+    .hero { padding: 40px 4%; }
+    .hero-left h1 { font-size: 1.6rem; }
+    .contact { padding: 40px 4%; }
+    .footer { padding: 30px 4% 15px; }
+    .whatsapp-float { width: 50px; bottom: 20px; right: 20px; }
 }
 
 /* WHATSAPP FLOAT */
