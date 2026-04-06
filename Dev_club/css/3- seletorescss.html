@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            margin: 10px;
+            padding: 10px;
+        }
+        h1 {
+            margin: 10px;
+            padding: 5px;
+            color: blue;
+        }
+        h3 {
+            margin: 10px;
+            padding: 5px;
+            color: red;
+            margin: 5px;
+        }
+        h4 {
+            margin: 10px;
+            padding: 5px;
+            color: red;
+            margin: 5px;
+        }
+        p {
+            font-size: 1rem;
+            padding-top: 10px;
+            margin: 10px;
+            padding: 5px;
+        }
+        p strong{
+            font-size: 1rem;
+            color: red;
+        }
+        .inicio{
+            border: 1px solid;
+            background-color: rgb(155, 252, 220);
+            border-radius: 5px;
+        }
+        .meio{
+            border: 1px solid;
+            background-color: rgb(208, 255, 187);
+            border-radius: 5px;
+        }
+        .fim{
+            border: 1px solid;
+            background-color: rgba(177, 188, 253, 0.486);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inicio">
+        <h1>Seletores padr ões</h1>
+        
+        <p>Seletor <strong>*</strong> aplica em todo site</p>
+        <h3>Seletores Básicos</h3>
+        <p>Estes são os "pães com manteiga" do CSS, usados em 90% do tempo.</p>
+        <p>* : Seletor Universal. Seleciona absolutamente todos os elementos da página. Muito usado para "resetar" margens e paddings.</p>
+        <p>h1 : Seletor de Tipo (Tag). Seleciona todos os elementos que possuem essa tag HTML específica (ex: todos os parágrafos, todos os títulos).</p>
+        <p>.minha-classe : Seletor de Classe. Seleciona todos os elementos que possuem o atributo class="minha-classe". É o mais versátil.</p>
+        <p>#meu-id : Seletor de ID. Seleciona o único elemento com o atributo id="meu-id". IDs devem ser únicos por página.</p>
+    </div>
+
+    <div class="meio">
+        <h4>Seletores Combinadores</h4>
+        
+        <p>Eles definem a relação de hierarquia entre os elementos.</p>
+        <p>div p : Descendente. Seleciona todos os <p> que estejam dentro de uma <div>, não importa quão fundo na hierarquia.</p>
+        <p>div > p : Filho Direto. Seleciona apenas os <p> que são filhos imediatos da <div>.</p>
+        <p>h1 + p : Irmão Adjacente. Seleciona o primeiro <p> que aparece imediatamente após um h1.</p>
+        <p>h1 ~ p : Irmão Geral. Seleciona todos os <p> que sejam irmãos de um h1 (que estejam no mesmo nível hierárquico e venham depois dele).</p>
+    </div>
+
+    <div class="fim">
+        <h3>Seletores de Atributo</h3>
+        
+        <p>Úteis quando você quer estilizar elementos com base em propriedades específicas.</p>
+        <p>input[type="text"] : Seleciona apenas campos de entrada que sejam do tipo texto.</p>
+        <p>a[href^="https"] : Seleciona links cujo endereço comece com "https" (links seguros).</p>
+        <p>img[alt] : Seleciona apenas imagens que possuam o atributo alt definido.</p>
+        <p>
+            Pseudo-classes e Pseudo-elementos
+            Eles estilizam estados especiais ou partes específicas de um elemento.
+        </p>
+        <p>a:hover : Seleciona o link apenas quando o usuário passa o mouse sobre ele.</p>
+        <p>li:nth-child(even) : Seleciona todos os itens de uma lista que ocupam posições pares (2, 4, 6...).</p>
+        <p>input:focus : Seleciona o campo que está com o cursor ativo no momento.</p>
+        <p>p::first-line : Seleciona e estiliza apenas a primeira linha de um parágrafo.</p>
+    </div>
+    
+
+</body>
+</html>
