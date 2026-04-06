@@ -500,3 +500,8 @@ textarea {
     color: #555555;
     font-size: 0.8rem;
 }
+
+iframe {
+    width: 350px;
+    height: auto;
+}
