@@ -47,7 +47,9 @@ header {
 .logo-img{
     width: 568px;
     height: auto;
+    border-radius: 10px 10px 0 10px;
     margin-left: 125px;
+    box-shadow: 0px 0px 100px 5px #07070149;
     display: inline-block;
 }
 
