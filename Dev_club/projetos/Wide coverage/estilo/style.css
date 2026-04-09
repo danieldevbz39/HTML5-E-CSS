@@ -2,9 +2,97 @@
 
 * {
     padding: 0;
-    margin: 0
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background-color: rgba(241, 241, 241, 0.986);
 }
 
 header {
-    
+    margin: 45px 0 110px 75px;
 }
+
+.link-header {
+    font-weight: 600;
+    line-height: 15px;
+    color: black;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.cabecario a:hover {
+    color: bisque;
+    transition: 0.4s;
+}
+
+.cabecario button:hover{
+    background: greenyellow;
+    color: black;
+    transition: 0.4s;
+}
+
+.button-header {
+    background: rgb(130, 216, 1);
+    color: white;
+    border-radius: 10.5px;
+    width: 140px;
+    height: 60px;
+    border: none;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 568px;
+    height: auto;
+    border-radius: 10px 10px 0 10px;
+    margin-left: 125px;
+    display: inline-block; 
+}
+
+section {
+    display: inline-block;
+    margin-left: 86px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 95px;
+    color: rgb(11, 11, 63);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 71px;
+    color: rgb(11, 11, 63);
+}
+
+p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    color: #5a5a5a;
+    width: 600px;
+    margin-top: 32px;
+    margin-bottom: 65px;
+
+}
+
+.button-main {
+    background: none;
+    border: none;
+    color: #76ad00b0;
+    width: 240px;
+    height: 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
+
