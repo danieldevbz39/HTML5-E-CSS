@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    border: 1px solid red;
+}
+
+input::placeholder {
+    color: green;
+}
+
+p {
+    color: blue;
+}
+
+p::first-letter {
+    color: yellow;
+}
+
+p::first-line {
+    color: tomato;
+}
+
+a {
+    color: rgb(173, 147, 0);
+}
+
+a::before {
+    content: ">>";
+    color: black;
+}
+
+a::after {
+    content: "!!!";
+    color: blue;
+}

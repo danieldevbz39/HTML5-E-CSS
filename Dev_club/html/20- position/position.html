@@ -16,16 +16,22 @@
             height: 350px;
             width: 350px;
             background-color: pink;
+            position: fixed;
+            top: 10px;            
         }
         .div-son {
             height: 150px;
             width: 150px;
             background-color: yellow;
+            position: absolute;
+            top: 50px;
         }
         .tatanan {
             background-color: red;
             height: 100px;
             width: 100px;
+            position: relative;
+            top: 20px;
         }
 
     </style>
@@ -35,6 +41,25 @@
         <div class="div-son"></div>
     </div>
     <div class="tatanan">        
+    </div>
+
+    <!-- Position: Static: (padão) - Não aceita valores de top, bottom, right e left.
+
+    Position: Fixed: Fixa o elemento na tela. 
+
+    Position: Sticky - age como um adesivo, fixa o elemento só ondeeu determinar. 
+    
+    Position: Relative - Posição relativa a posição inicial dele.
+    
+    Position: Absolute - Posição absoluta (fixa) a algum elemento ou página.
+        Se não tiver pai / Pai for static -> Posiciona refetente a página.
+        Se o pai NÃO for static -> Posiciona refetente ao pai.
+        
+        Propriedades:   -Top
+                        -Bottom
+                        -Left
+                        -Right
+        -->
     </div>
 </body>
 </html>
