@@ -7,6 +7,12 @@
     font-family: "Montserrat", sans-serif;
 
 }
+#menu-toggle, 
+.menu-icon {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
 header {
     margin: 44px 0 144px 76px;
@@ -93,4 +99,89 @@ p {
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        color: #515151;
+    }
+    .cabecario {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+        z-index: 10;
+        margin: 0;
+    }
+
+    #menu-toggle:checked ~.cabecario {
+        display: flex;
+    }
+    .link-header {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo-img {
+        width: 90%;
+        max-width: 359px;
+        height: auto;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+    }
+    section {
+        margin-left: 0;
+        padding: 0 20px;
+        display: block;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: normal;
+        margin-top: 10px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: normal;
+    }
+    p {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .button-main {
+        width: 100%;
+        max-width: 280px;
+    }
+    .cabecario h1 :hover {
+        color: #665AE1;
+    }
+}
+@media screen and (max-width: 2200px) {
+    /* O ícone aparece apenas no celular */
+    /* O checkbox continua invisível, mas funcional */
+    #menu-toggle {
+        display: none;
+    }
+    .link-header:hover, 
+    .link-header:active {
+        color: #000 !important; /* Garante que o texto fique legível */
+    }
 }
