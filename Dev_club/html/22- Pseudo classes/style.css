@@ -71,3 +71,27 @@ input :read-only {
 .container:empty {
     background-color: blue;
 }
+
+li:first-child {
+    color: red;
+}
+
+span:first-child {
+    color: rebeccapurple;
+}
+
+p:first-of-type {
+    color: blue;
+}
+
+li:last-child {
+    color: orangered;
+}
+
+.container :not(.esse){
+    color: pink;
+}
+
+.obj :nth-child(4) {
+    color: gold;
+}
