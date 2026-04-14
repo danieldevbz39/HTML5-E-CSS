@@ -6,93 +6,77 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-body {
-    background-color: rgba(241, 241, 241, 0.986);
-}
 
 header {
-    margin: 45px 0 110px 75px;
+    margin-top: 47;
+    margin-left: 42;
 }
 
-.link-header {
-    font-weight: 600;
-    line-height: 15px;
-    color: black;
+.link-menu {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.875;
+    color: #17233d;
     cursor: pointer;
-    margin-right: 25px;
+    margin: 32px;
 }
 
-.cabecario a:hover {
-    color: bisque;
-    transition: 0.4s;
-}
-
-.cabecario button:hover{
-    background: greenyellow;
-    color: black;
-    transition: 0.4s;
-}
-
-.button-header {
-    background: rgb(130, 216, 1);
+.button-sign-up {
+    background: #6FBF44;
+    border: 1px solid #4CB538;
+    border-radius: 6px;
+    width: 124px;
+    height: 51px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
     color: white;
-    border-radius: 10.5px;
-    width: 140px;
-    height: 60px;
-    border: none;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 30px;
-    cursor: pointer;
+    margin-top: 32px;
 }
 
 .logo-img {
-    width: 568px;
-    height: auto;
-    border-radius: 10px 10px 0 10px;
-    margin-left: 125px;
-    display: inline-block; 
+    margin: 123px 0 0 123px;
+    width: 300px;
+    display: inline-block;
 }
 
-section {
+div {
     display: inline-block;
-    margin-left: 86px;
+    margin-left: 85px;
+    width: 493px;
 }
 
 h1 {
-    font-weight: 700;
-    font-size: 80px;
-    line-height: 95px;
-    color: rgb(11, 11, 63);
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 58px;
-    line-height: 71px;
-    color: rgb(11, 11, 63);
+    font-weight: 850;
+    font-size: 52px;
+    line-height: 82px;
+    letter-spacing: 0.596154px;
+    color: #161A49;
+    margin-top: 47px;
+    margin-bottom: 55px;
+    
 }
 
 p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    letter-spacing: 0.5px;
+    color: #4B505A;
+    
+}
+
+.link-learn-more {
     font-weight: 500;
-    font-size: 22px;
-    line-height: 30px;
-    color: #5a5a5a;
-    width: 600px;
-    margin-top: 32px;
-    margin-bottom: 65px;
-
-}
-
-.button-main {
-    background: none;
-    border: none;
-    color: #76ad00b0;
-    width: 240px;
-    height: 65px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    color: #6FBF44;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 35px;
+    background: transparent;
+    border: none;
 }
-

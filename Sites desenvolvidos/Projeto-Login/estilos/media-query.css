@@ -6,22 +6,28 @@
     body {
         /* Define um gradiente linear de cima para baixo com cores verde e roxo */
         background-image: linear-gradient(to top, #144100, #351947);
+        padding: 10px;
     }
     
     section#login {
         width: 80vw; /* Define a largura como 80% da largura da viewport */
-        height: 300px; /* Define a altura como 300 pixels */
+        height: auto; /* Define a altura como 300 pixels */
+        display: flex;
+        flex-direction: column;
+        top: 100%;
     }
 
     section#login > div#imagem {
         float: left; /* Flutua o elemento para a esquerda */
         width: 30%; /* Define a largura como 30% do elemento pai */
         height: 100%; /* Define a altura como 100% do elemento pai */
+        display: none;
     }
     
     section#login > div#formulario {
         float: right; /* Flutua o elemento para a direita */
-        width: 70%; /* Define a largura como 70% do elemento pai */
+        width: 100%; /* Define a largura como 70% do elemento pai */
+        padding: 20px;
     }
 }
 
@@ -35,17 +41,23 @@
 
     section#login {
         width: 950px; /* Define a largura fixa em 950 pixels */
+        display: flex;
+        width: 80vw;
+        height: 400px;
+        top: 100%;
     }
 
     section#login > div#imagem {
         float: right; /* Flutua o elemento para a direita */
-        width: 50%; /* Define a largura como 50% do elemento pai */
+        width: 30%; /* Define a largura como 50% do elemento pai */
         height: 100%; /* Define a altura como 100% do elemento pai */
     }
     
     section#login > div#formulario {
         float: left; /* Flutua o elemento para a esquerda */
-        width: 50%; /* Define a largura como 50% do elemento pai */
+        width: 70%; /* Define a largura como 50% do elemento pai */
+        padding: 20px;
+        top: 100%;
     }
 }
 
