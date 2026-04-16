@@ -36,12 +36,10 @@
           ☰
         </button>
         <nav class="nav-menu" aria-label="Menu principal">
-          <a href="#sobre">Sobre Nós</a>
-          <a href="#metodologia">Metodologia</a>
-          <a href="#treinos">Treinos</a>
-          <a href="#cursos">Cursos</a>
-          <a href="#competicoes">Competições</a>
-          <a href="#parcerias">Parcerias</a>
+          <a href="#Treineconosco">Treine conosco</a>
+          <a href="#campeõesdavida">Campeões da Vida</a>
+          <a href="#deixeseucomentário">Deixe seu comentário</a>
+          <a href="#junte-seanossafamília">Junte-se à nossa Família</a>
         </nav>
       </div>
     </header>
@@ -64,14 +62,22 @@
             />
           </div>
         </div>
-        
       </section>
-      <div class="hero-numbers">
-            <div><strong>+11 anos</strong><span>Liderando Campeões</span></div>
-            <div><strong>+1.400</strong><span>Vidas Transformadas</span></div>
-          </div>
+
+      <section class="hero-numbers">
+        <div class="hero-number-card">
+          <strong>Liderando Campeões Mais de 11 anos</strong>
+        </div>
+
+        <div class="hero-number-card">
+          <strong>Mais de 1.400 Vidas Transformadas</strong>
+        </div>
+      </section>
+
       <section class="services" id="quatro-servicos">
-        <h2>Treine conosco</h2>
+        <div id="Treineconosco" class="alvo">
+          <h2>Treine conosco</h2>
+        </div>
         <div class="carousel-wrapper">
           <div class="carousel-track" id="carouselTrack">
             <article class="carousel-slide">
@@ -119,7 +125,9 @@
       </section>
 
       <section class="testimonials" id="depoimentos">
-        <h2>Campeões da Vida</h2>
+        <div id="campeõesdavida" class="alvo">
+          <h2>Campeões da Vida</h2>
+        </div>
         <div class="carousel-wrapper">
           <div class="carousel-track" id="testimonialTrack">
             <article class="carousel-slide testimonial-card">
@@ -155,7 +163,9 @@
           </div>
         </div>
         <div class="testimonial-form">
-          <h3>Deixe seu comentário</h3>
+          <div id="deixeseucomentário" class="alvo">
+            <h3>Deixe seu comentário</h3>
+          </div>
           <input type="text" id="newTestimonialName" placeholder="Seu nome" />
           <textarea
             id="newTestimonialText"
@@ -174,7 +184,9 @@
 
       <section class="contact" id="contato">
         <div class="contact-left">
-          <h2>Junte-se à nossa Família</h2>
+          <div id="junte-seanossafamília" class="alvo">
+            <h2>Junte-se à nossa Família</h2>
+          </div>
           <p>Preencha o formulário e garanta sua avaliação gratuita.</p>
           <form id="contactForm" novalidate>
             <label for="nome">Nome Completo</label>
@@ -270,15 +282,6 @@
         © 2024 Pedro Moreira Taekwondo - Formando Campeões da Vida.
       </p>
     </footer>
-
-    <a
-      href="https://wa.link/efeuqu"
-      class="whatsapp-float"
-      target="_blank"
-      rel="noopener"
-    >
-      <img src="img/whatsapp.png" alt="WhatsApp" />
-    </a>
 
     <script src="estilos/scripts.js"></script>
   </body>
