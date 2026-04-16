@@ -140,7 +140,7 @@ h6 {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 80px 10%;
     min-height: 90vh;
 }
@@ -198,8 +198,8 @@ h6 {
 }
 
 .hero-photo {
-    width: 100%;
-    max-width: 450px;
+    width: 150%;
+    max-width: 650px;
 }
 
 /* CARROSSEL / SERVICES SECTION */
@@ -460,8 +460,7 @@ textarea {
     }
 
     .hero-photo {
-        max-width: 320px;
-        height: auto;
+        max-width: 620px;
         margin: 0 auto;
     }
 
