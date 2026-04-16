@@ -174,9 +174,7 @@ h6 {
 
 .nav-menu a:hover {
   color: var(--primary-color);
-  background: rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  text-decoration: underline;
 }
 .alvo {
     transition: 1.5s;
@@ -286,11 +284,11 @@ h6 {
 }
 
 .carousel-slide {
-  min-width: 280px;
+  min-width: 300px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
+  padding: 50px;
   border-radius: 15px;
-  border: 1px solid #222;
+  border: 1px solid #222222bb;
   scroll-snap-align: start;
   transition: transform 0.3s ease;
 }
@@ -424,6 +422,7 @@ form {
 .footer {
     background: rgba(0, 0, 0, 0.92);
     padding: 60px 10%;
+    height: 400px;
     color: #f5f5f5;
 }
 
