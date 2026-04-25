@@ -7,15 +7,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-.container {
-    margin: 3px 3px 3px 0;
-}
-
-a {
-    color: black;
-    border: none;
-    padding: 3px 3px 3px 0;
-}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -25,9 +16,24 @@ body {
     width: 100vw;
 }
 
+.container {
+    margin: 3px 3px 3px ;
+    border-radius: 60px;
+}
+
+a {
+    color: black;
+    padding: 3px 3px 3px 0;
+}
+
+a:hover {
+    color: rgb(85, 85, 85);
+}
+
 h2, p {
     padding: 7px;
 }
+
 header {
     background-color: rgb(242, 184, 10);
     color: white;
@@ -35,8 +41,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
 }
 header h3 {
     flex: 0 0 221px;
@@ -48,23 +53,7 @@ header > nav {
     display: flex;
     justify-content: flex-end;
 }
-header > nav > a {
-    background-color: rgba(90, 77, 34, 0.247);
-    color: white;
-    border: 3px solid rgba(128, 103, 33, 0.062);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295);
-    padding: 5px;
-    margin: 2.5px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-}
 
-header > nav > a:hover {
-    background-color: white;
-    color: black;
-    transition: background-color .5s;
-}
 
 main {
     background-color: rgb(105, 41, 242) ;
@@ -81,4 +70,23 @@ main > p,strong {
 
 button {
     align-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: block;
+    }
+    .container a {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 27px;
+        margin: 10px;
+    }
+    .nav {
+        border-radius: 50px;
+    }
 }
