@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: wheat;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "header header" "nav nav" "sect side" "art side" "footer footer";
+}
+
+header, nav, section, article, aside, footer {
+    border: 2px solid #888;
+    padding: 20px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+header {
+    grid-area: header;
+    border-radius: 10px;
+}
+
+header:hover {
+    background: rgba(76, 76, 255, 0.26);
+}
+
+nav {
+    grid-area: nav;
+}
+nav:hover {
+    background: blue;
+    color: white;
+}
+
+a:hover {
+    background: blue;
+    color: white;
+}
+
+section {
+    grid-area: sect;
+    height: 180px;
+}
+section:hover {
+    background: blue;
+}
+
+article {
+    grid-area: art;
+    height: 180px;
+}
+article:hover {
+    background: blue;
+}
+
+aside {
+    grid-area: side;
+    
+}
+
+aside:hover {
+    background: blue;
+}
+
+
+footer {
+    grid-area: footer;
+}
+
+footer:hover {
+    background: blue;
+}
+
+p:hover {
+    color: white;
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "nav" "sect" "art" "side" "footer";
+    }
+}
