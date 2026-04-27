@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "montserraf", sans-serif;
+  color: white;
 }
 
 :root {
@@ -299,11 +300,11 @@ h6 {
 .carousel-slide {
   min-width: 300px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 50px;
+  padding: 10px;
   border-radius: 15px;
   border: 1px solid #222222bb;
   scroll-snap-align: start;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease .2;
 }
 
 .carousel-slide:hover {
