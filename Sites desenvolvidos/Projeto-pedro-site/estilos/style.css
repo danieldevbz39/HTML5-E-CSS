@@ -1,3 +1,63 @@
+/* --- AJUSTES DE RESPONSIVIDADE ADICIONAIS --- */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Garante que nenhum elemento estoure a largura da tela */
+.content-wrapper, .hero, .services, .testimonials, .contact, .site-footer, .footer-container {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Ajuste para evitar rolagem lateral em carrossel */
+.carousel-track {
+  max-width: 100vw;
+}
+
+/* Ajuste para botões em telas pequenas */
+@media (max-width: 480px) {
+  .btn-cta {
+    font-size: 0.95rem;
+    padding: 12px 8px;
+  }
+  .hero-photo {
+    max-width: 95vw;
+  }
+  .carousel-slide {
+    min-width: 180px;
+    padding: 18px;
+  }
+  .testimonial-form {
+    padding: 10px;
+  }
+}
+
+/* Menu mobile: garantir que o menu hamburguer funcione */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Fontes menores para títulos em telas muito pequenas */
+@media (max-width: 400px) {
+  .hero-left h1 {
+    font-size: 1.2rem;
+  }
+}
 /* RESET E DEFINIÇÕES GERAIS */
 * {
   margin: 0;
@@ -408,7 +468,7 @@ h6 {
 
 .contact-right video {
   width: 100%;
-  height: 550px;
+  height: 400px;
   display: block;
   border-radius: 10px;
   opacity: 0.7;
@@ -419,27 +479,89 @@ form {
   flex-direction: column;
 }
 
-.footer-content {
-    background: rgba(0, 0, 0, 0.92);
-    color: white;
-    padding: 20px 0;
+/* Estilo Geral do Footer */
+.site-footer {
+    background-color: #000; /* Fundo preto conforme a imagem */
+    color: #ffffff;
+    padding: 10px 10% 10px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #333;
+}
+
+.footer-container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content:space-between; /* Espaça o contato do mapa */
+    align-items: flex-start;
+    max-width: 1200px;
+    padding: 16px;
+    height: auto;
+    flex-wrap: wrap; /* Responsividade para telas menores */
+}
+
+/* Coluna de Informações */
+.footer-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: none;
+    display: block;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Ícones Sociais */
+.social-icons {
     display: flex;
-    flex-direction: column;
+    gap: 15px;
 }
 
-.footer-col {
-  width: 45%;
+.social-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    background: #a31a2a; /* Vermelho escuro do logo */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.footer-copy {
-  text-align: center;
-  border-top: 1px solid #555;
-  padding-top: 15px;
-  margin-top: 10px;
+.social-icons a:hover {
+    background: #ff0000;
 }
-footer a {
-  text-decoration: none;
-  color: white;
+
+/* Mapa */
+.footer-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-map {
+        margin-top: 30px;
+    }
 }
 
 /* RESPONSIVE */
