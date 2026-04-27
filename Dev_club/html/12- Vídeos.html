@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos</title>
+    <style>
+        header {
+            width: 100vw;
+            height: 100vh;
+            background: yellowgreen;
+            display: flex;
+            color: white;
+            text-align: center center;
+        }
+        video {
+            width: 50%;
+            flex: 1;
+            padding: 5px;
+        }
+
+        .ret {
+            width: 50%;
+            height: 50%;
+            background: red;
+        }
+    </style>
 </head>
-<body>
-    <video width = "300" src="img/Desenho_De_Leão_Realista_Em_Vídeo.mp4" controls controlsList="nodowload" autoplay muted loop ></video>
+<body><header>
+    
+        <video width = "100vw" src="img/Desenho_De_Leão_Realista_Em_Vídeo.mp4" controls controlsList="nodowload" autoplay muted loop ></video>
+    
+        <div class="ret">red</div>
+</header>
 </body>
 </html>
