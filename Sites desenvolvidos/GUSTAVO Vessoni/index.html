@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stilo/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -19,7 +20,8 @@
         <div class="informacoes">
             <h4>Informações do evento:</h4>
             <p><img src="img/data-limite.png" alt="icon-data" width="15x"> <strong>Data:</strong> 16/05/2026 às 22h</p>
-            <p><img src="img/mapa 2.png" alt="icon-mapa" width="14px"> <strong>Local: </strong> Automóvel Clube - Av. Afonso
+            <p><img src="img/mapa 2.png" alt="icon-mapa" width="14px"> <strong>Local: </strong> Automóvel Clube - Av.
+                Afonso
                 Pena, 1394, Centro - Belo Horizonte (MG)</p>
         </div>
 
@@ -57,17 +59,29 @@
             </div>
             <br>
             <div id="info-text">
-                <p> <img src="img/em-formacao.png" alt="icon-inf" width="15px"> <strong>Certifique-se de que a foto;</strong></p>
+                <p> <img src="img/em-formacao.png" alt="icon-inf" width="15px"> <strong>Certifique-se de que a
+                        foto;</strong></p>
                 <p>• Tenha boa qualidade e boa iluminação.</p>
                 <p>• Mostre bem o rosto, na posição frontal.</p>
                 <p>• Seja infividual - apenas a pessoa cadastrada esteja na foto.</p>
                 <p>• Seja atual, sem óculos, máscara ou boné.</p>
             </div>
 
-            <div class="checkbox-group">
-                <input type="checkbox" id="privacy" required>
-                <label for="privacy">Aceito a <strong>política de privacidade</strong> da plataforma e o tratamento dos
-                    meus dados (LGPD) para controle de entrada no evento 16/05/2026.</label>
+            <div class="privacy-container">
+                <h3>Política de Privacidade <small>(clique para aceitar) *</small></h3>
+
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" required>
+                    <span class="label-text">
+                        Aceito a <strong>política de privacidade</strong> da plataforma e o tratamento dos meus dados
+                        pessoais de acordo com os artigos 7° e 11° da Lei n° 13.709/2018 com as finalidades de controle
+                        de entrada e futuras comunicações deste evento. Estou de acordo com o compartilhamento dos meus
+                        dados única e exclusivamente com o organizador do evento. A entrada do evento só será permitida
+                        através de apresentação de QR Code Único que será enviado por e-mail e whatsapp após aprovação
+                        do anfitrião. Após o evento, os dados serão excluídos desta plataforma.
+                    </span>
+                </label>
+                <p class="required-msg">* campos obrigatórios</p>
             </div>
 
             <div class="captcha-section">
@@ -80,8 +94,56 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn-submit">Continuar</button>
+            <div class="footer-container">
+                <!-- Link de Idioma -->
+                <div class="language-switch">
+                    <img src="https://flagcdn.com/w20/us.png" alt="EUA">
+                    <a href="#">English Version</a>
+                </div>
+
+                <!-- Bloco de Texto -->
+                <div class="info-text">
+                    <p>Problemas ao enviar o formulário?</p>
+                    <p>Confira se todos os campos estão preenchidos ou reinicie a página e envie os dados novamente.</p>
+                    <p>Caso o problema persista, clique no balão de chat que se encontra no canto inferior direito</p>
+                    <p>ou envie um e-mail para <a
+                            href="mailto:contato@codemyparty.com.br">contato@codemyparty.com.br</a>.</p>
+                </div>
+
+                <!-- Política de Privacidade -->
+                <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar</button>
         </form>
+
+        <section class="footer-section">
+  <!-- Botão de Envio Principal -->
+  <button class="btn-enviar">Enviar</button>
+
+  <!-- Seção de Suporte e Idioma -->
+  <div class="support-info">
+    <div class="lang-switch">
+      <img src="https://flagcdn.com/w20/us.png" alt="USA Flag">
+      <a href="#">English Version</a>
+    </div>
+    <p>Problemas ao enviar o formulário?</p>
+    <p>Confira se todos os campos estão preenchidos ou reinicie a página e envie os dados novamente.</p>
+    <p>Caso o problema persista, clique no balão de chat que se encontra no canto inferior direito</p>
+    <p>ou envie um e-mail para <a href="mailto:contato@codemyparty.com.br">contato@codemyparty.com.br</a>.</p>
+    <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+  </div>
+
+  <!-- Faixa de Encerramento com Logo -->
+  <footer class="bottom-bar">
+    <img src="img/code my party.png" alt="Code My Party" class="footer-logo" >
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp -->
+  <a href="https://wa.me/seunumero" class="whatsapp-btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+</section>
     </div>
 
 </body>
