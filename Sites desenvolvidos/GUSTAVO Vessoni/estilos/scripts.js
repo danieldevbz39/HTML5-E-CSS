@@ -52,18 +52,11 @@ function validateForm(event) {
 }
 
 document.querySelector("form").addEventListener("submit", function (e) {
-  var response = grecaptcha.getResponse();
   var emailIsValid = validateEmailField();
 
   if (!emailIsValid) {
     e.preventDefault();
     return;
-  }
-
-  if (response.length == 0) {
-    // reCAPTCHA não foi clicado
-    e.preventDefault();
-    alert("Por favor, verifique o reCAPTCHA antes de enviar.");
   }
 });
 

@@ -1,211 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>formulário</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css">
-</head>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<body>
-
+    <link rel="stylesheet" href="estilos/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <DIV class="confirmacao">
-            <h1>Confirmação de Presença</h1>
-            <p class="subtitle">Você vai comparecer ao evento? <br>Complete o formuário abaixo.</p>
-        </DIV>
+      <div class="confirmacao">
+        <h1>Confirmação de Presença</h1>
+        <p class="subtitle">
+          Você vai comparecer ao evento? <br />Complete o formuário abaixo.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="informacoes">
+        <h4>Informações do evento:</h4>
+        <p>
+          <img src="img/data-limite.png" alt="icon-data" width="15x" />
+          <strong>Data:</strong> 16/05/2026 às 22h
+        </p>
+        <p>
+          <img src="img/mapa 2.png" alt="icon-mapa" width="14px" />
+          <strong>Local: </strong> Automóvel Clube - Av. Afonso Pena, 1394, Centro - Belo Horizonte (MG)
+        </p>
+      </div>
+
+      <form>
+        <div class="row">
+          <div class="nome_s">
+            <div class="nome">
+              <input
+                type="text"
+                placeholder="Nome"
+                required
+                class="camp"
+                id="nome"
+              />
+              <div class="error-msg-field">
+                <span class="error-icon">ⓘ</span> Insira o seu nome.
+              </div>
+            </div>
+            <div class="sobre">
+              <input
+                type="text"
+                placeholder="Sobrenome"
+                required
+                class="camp"
+                id="sobrenome"
+              />
+              <div class="error-msg-field">
+                <span class="error-icon">ⓘ</span> Insira o seu sobrenome.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-select-container">
+          <div class="floating-label-group">
+            <label for="country-list">País/região</label>
+            <select id="country-list" required>
+              <option value="" disabled selected hidden></option>
+              <!-- Países serão inseridos pelo JavaScript -->
+            </select>
+            <div class="error-msg-field">
+              <span class="error-icon">ⓘ</span> Insira o seu país/região.
+            </div>
+            <div class="select-arrow"></div>
+          </div>
+        </div>
+
+        <div class="birth-date-section">
+          <label>Data de nascimento</label>
+          <div class="date-selectors">
+            <div class="date-field-wrapper">
+              <select id="day" class="date-input" required>
+                <option value="" disabled selected>Dia</option>
+              </select>
+              <div class="error-msg-field">
+                <span class="error-icon">ⓘ</span> Insira um dia válido.
+              </div>
+            </div>
+
+            <div class="date-field-wrapper">
+              <select id="month" class="date-input" required>
+                <option value="" disabled selected>Mês</option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+              </select>
+              <div class="error-msg-field">
+                <span class="error-icon">ⓘ</span> Insira um mês válido.
+              </div>
+            </div>
+
+            <div class="date-field-wrapper">
+              <select id="year" class="date-input" required>
+                <option value="" disabled selected>Ano</option>
+              </select>
+              <div class="error-msg-field">
+                <span class="error-icon">ⓘ</span> Insira um ano válido.
+              </div>
+            </div>
+          </div>
+          <div id="date-error-msg" class="error-container">
+            <span class="error-icon">ⓘ</span> Insira uma data de nascimento
+            válida.
+          </div>
+        </div>
+        <div class="divider"></div>
+
+        <div class="email-container">
+          <input
+            type="email"
+            placeholder="nome@example.com"
+            required
+            id="email"
+          />
+          <div class="error-msg-field">
+            <span class="error-icon">ⓘ</span> Insira um endereço de e-mail
+            válido para usar como seu endereço de e-mail principal.
+          </div>
+        </div>
+
+        <div class="password-group">
+          <div class="input-container">
+            <input
+              type="password"
+              id="password"
+              placeholder="Senha"
+              required
+              minlength="8"
+            />
+            <div class="error-msg-field">
+              <span class="error-icon">ⓘ</span> A senha deve ter pelo menos 8
+              caracteres.
+            </div>
+          </div>
+
+          <div class="input-container">
+            <input
+              type="password"
+              id="confirm_password"
+              placeholder="Confirmar senha"
+              required
+            />
+            <div class="error-msg-field">
+              <span class="error-icon">ⓘ</span> As senhas não coincidem.
+            </div>
+          </div>
+        </div>
 
         <div class="divider"></div>
 
-        <div class="informacoes">
-            <h4>Informações do evento:</h4>
-            <p><img src="img/data-limite.png" alt="icon-data" width="15x"> <strong>Data:</strong> 16/05/2026 às 22h</p>
-            <p><img src="img/mapa 2.png" alt="icon-mapa" width="14px"> <strong>Local: </strong> Automóvel Clube - Av.
-                Afonso
-                Pena, 1394, Centro - Belo Horizonte (MG)</p>
+        <div class="tel-container">
+          <input
+            type="tel"
+            placeholder="Número (WhatsApp)"
+            required
+            id="telefone"
+          />
+          <div class="error-msg-field">
+            <span class="error-icon">ⓘ</span> Insira um número de telefone
+            válido.
+          </div>
+        </div>
+        <p class="info-text">DDD + Telefone Ex: 31 99999-9999</p>
+
+        <div class="upload-container">
+          <input type="file" id="file-upload" class="hidden-input" />
+          <label for="file-upload" class="custom-upload">
+            <div class="content-left">
+              <span class="icon">📷</span>
+              <span class="text">Clique aqui e envie sua selfie</span>
+            </div>
+            <div class="button-right">Selecionar</div>
+          </label>
+        </div>
+        <br />
+        <div id="info-text">
+          <p>
+            <img src="img/em-formacao.png" alt="icon-inf" width="15px" />
+            <strong>Certifique-se de que a foto;</strong>
+          </p>
+          <p>• Tenha boa qualidade e boa iluminação.</p>
+          <p>• Mostre bem o rosto, na posição frontal.</p>
+          <p>• Seja infividual - apenas a pessoa cadastrada esteja na foto.</p>
+          <p>• Seja atual, sem óculos, máscara ou boné.</p>
         </div>
 
-        <form>
-            <div class="row">
-                <div class="nome_s">
-                    <div class="nome">
-                        <input type="text" placeholder="Nome" required class="camp" id="nome">
-                        <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira o seu nome.</div>
-                    </div>
-                    <div class="sobre">
-                        <input type="text" placeholder="Sobrenome" required class="camp" id="sobrenome">
-                        <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira o seu sobrenome.</div>
-                    </div>
-                </div>
-            </div>
+        <div class="privacy-container">
+          <h3>
+            Política de Privacidade <small>(clique para aceitar) *</small>
+          </h3>
 
-            <div class="custom-select-container">
-                <div class="floating-label-group">
-                    <label for="country-list">País/região</label>
-                    <select id="country-list" required>
-                        <option value="" disabled selected hidden></option>
-                        <!-- Países serão inseridos pelo JavaScript -->
-                    </select>
-                    <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira o seu país/região.</div>
-                    <div class="select-arrow"></div>
-                </div>
-            </div>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" required />
+            <span class="label-text">
+              Aceito a <strong>política de privacidade</strong> da plataforma e
+              o tratamento dos meus dados pessoais de acordo com os artigos 7° e
+              11° da Lei n° 13.709/2018 com as finalidades de controle de
+              entrada e futuras comunicações deste evento. Estou de acordo com o
+              compartilhamento dos meus dados única e exclusivamente com o
+              organizador do evento. A entrada do evento só será permitida
+              através de apresentação de QR Code Único que será enviado por
+              e-mail e whatsapp após aprovação do anfitrião. Após o evento, os
+              dados serão excluídos desta plataforma.
+            </span>
+          </label>
+          <p class="required-msg">* campos obrigatórios</p>
+        </div>
 
-            <div class="birth-date-section">
-                <label>Data de nascimento</label>
-                <div class="date-selectors">
-                    <div class="date-field-wrapper">
-                        <select id="day" class="date-input" required>
-                            <option value="" disabled selected>Dia</option>
-                        </select>
-                        <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira um dia válido.</div>
-                    </div>
+        <div class="captcha-section">
+          <div class="captcha-box">
+            <!-- O código gerado aparecerá aqui -->
+            <div id="captcha-display" class="captcha-code"></div>
+            <input
+              type="text"
+              id="captcha-input"
+              placeholder="Insira os caracteres da imagem"
+              required
+            />
+          </div>
+          <div class="captcha-links">
+            <a href="javascript:void(0)" onclick="generateCaptcha()"
+              >Novo código</a
+            >
+            |
+            <a href="#">Deficiência visual</a>
+          </div>
+          <span class="error-msg" id="captcha-error"
+            >Código incorreto. Tente novamente.</span
+          >
+        </div>
 
-                    <div class="date-field-wrapper">
-                        <select id="month" class="date-input" required>
-                            <option value="" disabled selected>Mês</option>
-                            <option value="1">Janeiro</option>
-                            <option value="2">Fevereiro</option>
-                            <option value="3">Março</option>
-                            <option value="4">Abril</option>
-                            <option value="5">Maio</option>
-                            <option value="6">Junho</option>
-                            <option value="7">Julho</option>
-                            <option value="8">Agosto</option>
-                            <option value="9">Setembro</option>
-                            <option value="10">Outubro</option>
-                            <option value="11">Novembro</option>
-                            <option value="12">Dezembro</option>
-                        </select>
-                        <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira um mês válido.</div>
-                    </div>
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
 
-                    <div class="date-field-wrapper">
-                        <select id="year" class="date-input" required>
-                            <option value="" disabled selected>Ano</option>
-                        </select>
-                        <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira um ano válido.</div>
-                    </div>
-                </div>
-                <div id="date-error-msg" class="error-container">
-                    <span class="error-icon">ⓘ</span> Insira uma data de nascimento válida.
-                </div>
-            </div>
-            <div class="divider"></div>
+      <section class="footer-section">
+        <!-- Botão de Envio Principal -->
 
-            <div class="email-container">
-                <input type="email" placeholder="nome@example.com" required id="email">
-                <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira um endereço de e-mail válido para usar como seu endereço de e-mail principal.</div>
-            </div>
+        <!-- Seção de Suporte e Idioma -->
+        <div class="support-info">
+          <p>Problemas ao enviar o formulário?</p>
+          <p>
+            Confira se todos os campos estão preenchidos ou reinicie a página e
+            envie os dados novamente.
+          </p>
+          <p>
+            Caso o problema persista, clique no balão de chat que se encontra no
+            canto inferior direito
+          </p>
+          <p>
+            ou envie um e-mail para
+            <a href="mailto:contato@codemyparty.com.br"
+              >contato@codemyparty.com.br</a
+            >.
+          </p>
+          <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+        </div>
 
-            <div class="password-group">
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Senha" required minlength="8">
-                    <div class="error-msg-field"><span class="error-icon">ⓘ</span> A senha deve ter pelo menos 8 caracteres.</div>
-                </div>
+        <!-- Faixa de Encerramento com Logo -->
+        <footer class="bottom-bar">
+          <img
+            src="img/code my party.png"
+            alt="Code My Party"
+            class="footer-logo"
+          />
+        </footer>
 
-                <div class="input-container">
-                    <input type="password" id="confirm_password" placeholder="Confirmar senha" required>
-                    <div class="error-msg-field"><span class="error-icon">ⓘ</span> As senhas não coincidem.</div>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="tel-container">
-                <input type="tel" placeholder="Número (WhatsApp)" required id="telefone">
-                <div class="error-msg-field"><span class="error-icon">ⓘ</span> Insira um número de telefone válido.</div>
-            </div>
-            <p class="info-text">DDD + Telefone Ex: 31 99999-9999</p>
-
-
-
-            <div class="upload-container">
-                <input type="file" id="file-upload" class="hidden-input">
-                <label for="file-upload" class="custom-upload">
-                    <div class="content-left">
-                        <span class="icon">📷</span>
-                        <span class="text">Clique aqui e envie sua selfie</span>
-                    </div>
-                    <div class="button-right">Selecionar</div>
-                </label>
-            </div>
-            <br>
-            <div id="info-text">
-                <p> <img src="img/em-formacao.png" alt="icon-inf" width="15px"> <strong>Certifique-se de que a
-                        foto;</strong></p>
-                <p>• Tenha boa qualidade e boa iluminação.</p>
-                <p>• Mostre bem o rosto, na posição frontal.</p>
-                <p>• Seja infividual - apenas a pessoa cadastrada esteja na foto.</p>
-                <p>• Seja atual, sem óculos, máscara ou boné.</p>
-            </div>
-
-            <div class="privacy-container">
-                <h3>Política de Privacidade <small>(clique para aceitar) *</small></h3>
-
-                <label class="checkbox-wrapper">
-                    <input type="checkbox" required>
-                    <span class="label-text">
-                        Aceito a <strong>política de privacidade</strong> da plataforma e o tratamento dos meus dados
-                        pessoais de acordo com os artigos 7° e 11° da Lei n° 13.709/2018 com as finalidades de controle
-                        de entrada e futuras comunicações deste evento. Estou de acordo com o compartilhamento dos meus
-                        dados única e exclusivamente com o organizador do evento. A entrada do evento só será permitida
-                        através de apresentação de QR Code Único que será enviado por e-mail e whatsapp após aprovação
-                        do anfitrião. Após o evento, os dados serão excluídos desta plataforma.
-                    </span>
-                </label>
-                <p class="required-msg">* campos obrigatórios</p>
-            </div>
-
-            <div class="captcha-section">
-                <div class="captcha-box">
-                    <!-- O código gerado aparecerá aqui -->
-                    <div id="captcha-display" class="captcha-code"></div>
-                    <input type="text" id="captcha-input" placeholder="Insira os caracteres da imagem" required>
-                </div>
-                <div class="captcha-links">
-                    <a href="javascript:void(0)" onclick="generateCaptcha()">Novo código</a> |
-                    <a href="#">Deficiência visual</a>
-                </div>
-                <span class="error-msg" id="captcha-error">Código incorreto. Tente novamente.</span>
-                <!-- Container do reCAPTCHA com sua Chave de Site -->
-                <div class="g-recaptcha" data-sitekey="6LdSXdksAAAAAPXQ0B5jYP90m8sxEbrZOt1Wy-Dw"></div>
-            </div>
-
-            <button type="submit" class="btn-submit">Enviar</button>
-        </form>
-
-        <section class="footer-section">
-            <!-- Botão de Envio Principal -->
-
-            <!-- Seção de Suporte e Idioma -->
-            <div class="support-info">
-                <p>Problemas ao enviar o formulário?</p>
-                <p>Confira se todos os campos estão preenchidos ou reinicie a página e envie os dados novamente.</p>
-                <p>Caso o problema persista, clique no balão de chat que se encontra no canto inferior direito</p>
-                <p>ou envie um e-mail para <a href="mailto:contato@codemyparty.com.br">contato@codemyparty.com.br</a>.
-                </p>
-                <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
-            </div>
-
-            <!-- Faixa de Encerramento com Logo -->
-            <footer class="bottom-bar">
-                <img src="img/code my party.png" alt="Code My Party" class="footer-logo">
-            </footer>
-
-            <!-- Botão Flutuante de WhatsApp -->
-            <a href="https://wa.me/seunumero" class="whatsapp-btn" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-        </section>
+        <!-- Botão Flutuante de WhatsApp -->
+        <a href="https://wa.me/seunumero" class="whatsapp-btn" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
+        </a>
+      </section>
     </div>
     <script src="estilos/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
-</body>
-
-
+  </body>
 </html>

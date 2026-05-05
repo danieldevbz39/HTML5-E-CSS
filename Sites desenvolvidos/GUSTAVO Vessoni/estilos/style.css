@@ -32,7 +32,7 @@ h1 {
 }
 
 .informacoes {
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 30px;
   line-height: 0.5;
   text-align: left;
@@ -460,11 +460,6 @@ select {
     padding: 12px;
     border: 1px solid #d2d2d7;[cite: 2]
     border-radius: 8px;[cite: 2]
-}
-.g-recaptcha {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
 }
 
 .btn-submit {
