@@ -95,20 +95,48 @@ select {
   margin: 0;
   height: 25px;
 }
-
-.birth-date-group {
+.birth-date-section {
     text-align: left;
     margin-bottom: 20px;
 }
 
-.birth-date-group label {
-    display: block;
-    font-size: 14px;
-    color: #1d1d1f;
-    margin-bottom: 8px;
-    font-weight: 500;
+.date-selectors {
+    display: flex; /* Alinha horizontalmente */
+    gap: 10px;
+    margin-top: 8px;
 }
 
+.date-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d2d2d7; /* Cor padrão[cite: 2] */
+    border-radius: 12px; /* Borda arredondada da imagem */
+    font-size: 16px;
+    background-color: #fff;
+    color: #1d1d1f;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Classe de Erro (aplicada via JS) */
+.date-input.invalid {
+    border-color: #ff3b30; /* Vermelho da imagem */
+    background-color: #fff2f2; /* Fundo rosado leve */
+    color: #ff3b30;
+}
+
+.error-container {
+    display: none; /* Escondido por padrão */
+    color: #ff3b30;
+    font-size: 13px;
+    margin-top: 8px;
+    align-items: center;
+    gap: 4px;
+}
+
+.error-icon {
+    font-size: 14px;
+}
 .help-icon {
     display: inline-block;
     width: 16px;
@@ -298,30 +326,40 @@ select {
   color: red;
   margin-top: 10px;
 }
-.checkbox-group {
-  display: flex;
-  gap: 10px;
-  font-size: 12px;
-  color: #1d1d1f;
-  margin-top: 20px;
-}
 
-.captcha-section {
-  margin: 30px 0;
-  text-align: center;
+.captcha-code {
+    background-color: #f2f2f2; /* Cor de fundo similar ao rodapé[cite: 2] */
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;[cite: 2]
+    user-select: none; /* Impede que o robô copie o texto com o mouse */
+    text-decoration: line-through; /* Dificulta a leitura automática */
+    font-style: italic;
+    display: inline-block;
 }
 
 .captcha-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;[cite: 2]
+    margin-bottom: 10px;
 }
 
-.captcha-links {
-  font-size: 14px;
-  color: #0066cc;
-  margin-top: 10px;
+#captcha-input {
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #d2d2d7;[cite: 2]
+    border-radius: 8px;[cite: 2]
+}
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .btn-submit {
@@ -525,10 +563,67 @@ select {
     width: 100%; /* Botão ocupa a largura toda no celular */
     padding: 15px;
   }
-  
+  .custom-select-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.floating-label-group {
+    position: relative;
+    border: 1px solid #d2d2d7;[cite: 2]
+    border-radius: 8px;[cite: 2]
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+/* Estado de foco (Borda azul da imagem) */
+.floating-label-group:focus-within {
+    border-color: #0071e3;
+    border-width: 2px;
+}
+
+.floating-label-group select {
+    width: 100%;[cite: 2]
+    border: none;
+    background: transparent;
+    padding: 20px 16px 10px 16px; /* Espaço para o label no topo */
+    font-size: 17px;[cite: 2]
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.floating-label-group label {
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    font-size: 12px;[cite: 2]
+    color: #6e6e73;[cite: 2]
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+/* Seta customizada do select */
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #6e6e73;
+    border-bottom: 2px solid #6e6e73;
+    transform: translateY(-70%) rotate(-45deg);
+    pointer-events: none;
+}
   .informacoes {
     line-height: 1.4; /* Melhora o espaçamento das infos no celular */
   }
+  .g-recaptcha {
+        transform: scale(0.85); /* Reduz levemente o tamanho para caber em telas estreitas */
+        transform-origin: center;
+    }
 }
 
 /* TABLET (Telas entre 481px e 768px) */

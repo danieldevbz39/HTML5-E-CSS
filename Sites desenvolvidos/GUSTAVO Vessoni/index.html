@@ -7,7 +7,9 @@
     <title>formulário</title>
     <link rel="stylesheet" href="estilos/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css">
 </head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <body>
 
@@ -35,39 +37,49 @@
                 </div>
             </div>
 
-            <div class="select-group">
-                <label>País/Região</label>
-                <select>
-                    <option>+55 (Brasil)</option>
-                </select>
-            </div>
-
-            <div class="birth-date-group">
-                <label>Data de nascimento <span class="help-icon">?</span></label>
-                <div class="date-selectors">
-                    <select name="day" required>
-                        <option value="" disabled selected>Dia</option>
-                        <!-- Você pode adicionar os dias de 1 a 31 aqui -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+            <div class="custom-select-container">
+                <div class="floating-label-group">
+                    <label for="country-list">País/região</label>
+                    <select id="country-list" required>
+                        <option value="" disabled selected hidden></option>
+                        <!-- Países serão inseridos pelo JavaScript -->
                     </select>
-
-                    <select name="month" required>
-                        <option value="" disabled selected>Mês</option>
-                        <option value="1">Janeiro</option>
-                        <option value="2">Fevereiro</option>
-                        <!-- ... outros meses -->
-                    </select>
-
-                    <select name="year" required>
-                        <option value="" disabled selected>Ano</option>
-                        <!-- Adicione os anos desejados -->
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                    </select>
+                    
+                    <div class="select-arrow"></div>
                 </div>
             </div>
 
+            <div class="birth-date-section">
+                <label>Data de nascimento</label>
+                <div class="date-selectors">
+                    <select id="day" class="date-input" required>
+                        <option value="" disabled selected>Dia</option>
+                    </select>
+
+                    <select id="month" class="date-input" required>
+                        <option value="" disabled selected>Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <select id="year" class="date-input" required>
+                        <option value="" disabled selected>Ano</option>
+                    </select>
+                </div>
+                <div id="date-error-msg" class="error-container">
+                    <span class="error-icon">ⓘ</span> Insira uma data de nascimento válida.
+                </div>
+            </div>
             <div class="divider"></div>
 
             <input type="email" placeholder="nome@example.com" required>
@@ -85,11 +97,11 @@
             </div>
 
             <div class="divider"></div>
-            
+
             <input type="tel" placeholder="Número (WhatsApp)" required>
             <p class="info-text">DDD + Telefone Ex: 31 99999-9999</p>
 
-            
+
 
             <div class="upload-container">
                 <input type="file" id="file-upload" class="hidden-input">
@@ -130,12 +142,17 @@
 
             <div class="captcha-section">
                 <div class="captcha-box">
-                    <img src="https://via.placeholder.com/120x50?text=9RDJ" alt="Captcha">
-                    <input type="text" placeholder="Insira os caracteres da imagem">
+                    <!-- O código gerado aparecerá aqui -->
+                    <div id="captcha-display" class="captcha-code"></div>
+                    <input type="text" id="captcha-input" placeholder="Insira os caracteres da imagem" required>
                 </div>
                 <div class="captcha-links">
-                    <a href="#">Novo código</a> | <a href="#">Deficiência visual</a>
+                    <a href="javascript:void(0)" onclick="generateCaptcha()">Novo código</a> |
+                    <a href="#">Deficiência visual</a>
                 </div>
+                <span class="error-msg" id="captcha-error">Código incorreto. Tente novamente.</span>
+                <!-- Container do reCAPTCHA com sua Chave de Site -->
+                <div class="g-recaptcha" data-sitekey="6LdSXdksAAAAAPXQ0B5jYP90m8sxEbrZOt1Wy-Dw"></div>
             </div>
 
             <button type="submit" class="btn-submit">Enviar</button>
@@ -169,8 +186,9 @@
             </a>
         </section>
     </div>
-
+    <script src="estilos/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
 </body>
-<script src="estilos/scripts.js"></script>
+
 
 </html>
