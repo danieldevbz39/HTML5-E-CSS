@@ -473,10 +473,16 @@ select {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
+  margin-top: 30px;
 }
 
 .btn-submit:hover {
   background-color: #0077ed;
+}
+
+.privacyimg {
+  width: 70px;
+  margin-top: 30px;
 }
 
 .footer-container {
@@ -566,8 +572,8 @@ select {
   /* Cria o efeito de sombra suave no topo da faixa cinza */
   background: linear-gradient(to bottom, 
     rgba(0, 0, 0, 0.05) 0%,   /* Sombra bem leve no início */
-    #f2f2f2 15%,              /* Cor cinza sólida logo após */
-    #f2f2f2 100%
+    #fdfdfd 15%,              /* Cor cinza sólida logo após */
+    #d4d3d3 100%
   );
   
   padding: 60px 0;
@@ -739,6 +745,11 @@ select {
         transform: scale(0.85); /* Reduz levemente o tamanho para caber em telas estreitas */
         transform-origin: center;
     }
+    
+.privacyimg {
+  width: 50px;
+  margin: 15px 0 -50;
+}
 }
 
 /* TABLET (Telas entre 481px e 768px) */
