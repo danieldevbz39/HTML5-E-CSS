@@ -59,20 +59,34 @@ select {
   font-size: 17px;
   box-sizing: border-box;
   outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .nome_s {
   display: flex;
   gap: 10px;
-  max-width: 78vw;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
-.nome {
-  width: 50%;
-}
-
+.nome,
 .sobre {
-  width: 50%;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.nome input,
+.sobre input {
+  width: 100%;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.nome .error-msg-field,
+.sobre .error-msg-field {
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 .select-group {
@@ -156,6 +170,21 @@ select {
     gap: 10px;     /* Espaço entre os campos */
 }
 
+.date-field-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-field-wrapper .date-input {
+    margin-bottom: 0;
+}
+
+.date-field-wrapper .error-msg-field {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 .date-selectors select {
     flex: 1;       /* Faz cada campo ocupar o mesmo espaço */
     padding: 12px;
@@ -184,34 +213,110 @@ select {
 
 .input-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .password-group input {
-    width: 95%;
+    width: 100%;
     padding: 12px 16px;
     border: 1px solid #d2d2d7;
     border-radius: 8px;
-    font-size: 17px;[cite: 2]
-    box-sizing: border-box;[cite: 2]
+    font-size: 17px;
+    box-sizing: border-box;
     outline: none;
+    margin-bottom: 0;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
 /* Estilo para quando a validação falha */
-.password-group input.invalid {
+.password-group input.input-error {
     border-color: #ff3b30; /* Vermelho para erro */
     background-color: #fff2f2;
 }
 
-.error-msg {
+.input-container .error-msg-field {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Estilos para mensagens de erro dos campos */
+.error-msg-field {
     color: #ff3b30;
     font-size: 12px;
     margin-top: 5px;
-    display: none; /* Escondido por padrão */
+    display: none;
+    align-items: center;
+    gap: 4px;
     text-align: left;
 }
 
-.password-group input.invalid + .error-msg {
-    display: block;
+.error-msg-field.show {
+    display: flex;
+}
+
+.error-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 415px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .row,
+  .nome_s,
+  .date-selectors,
+  .password-group,
+  .captcha-box,
+  .custom-upload {
+    flex-direction: column;
+  }
+
+  .nome,
+  .sobre,
+  .input-container,
+  .date-field-wrapper,
+  .custom-upload,
+  .captcha-box {
+    width: 100%;
+  }
+
+  .nome_s,
+  .date-selectors,
+  .password-group {
+    gap: 12px;
+  }
+
+  .custom-upload {
+    align-items: stretch;
+  }
+
+  .button-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  .custom-upload {
+    width: 100%;
+  }
+}
+
+/* Classe para aplicar erro em inputs */
+.input-error {
+    border-color: #ff3b30 !important;
+    background-color: #fff2f2 !important;
 }
 
 .info-text {
@@ -430,6 +535,7 @@ select {
   text-align: center;
   padding-top: 40px;
   color: #666;
+  background: linear-gradient(180deg, #f2f2f2 0%, #ffffff 50%, #ffffff 100%);
 }
 
 /* Botão Preto Arredondado */
@@ -449,19 +555,6 @@ select {
   font-size: 13px;
   margin: 5px 0;
   line-height: 1.5;
-}
-
-.lang-switch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.lang-switch a {
-  color: #4a90e2;
-  text-decoration: none;
 }
 
 .privacy-link {
@@ -512,6 +605,33 @@ select {
 
 .whatsapp-btn img {
   width: 35px;
+}
+
+/* Containers para campos com validação */
+.email-container,
+.tel-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.email-container input,
+.tel-container input {
+  margin-bottom: 0;
+}
+
+.custom-select-container .floating-label-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.custom-select-container select {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.custom-select-container .error-msg-field {
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 
