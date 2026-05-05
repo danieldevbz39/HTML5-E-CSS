@@ -253,22 +253,6 @@ select {
   color: #666; /* Cor cinza suave do texto */
 }
 
-/* Botão Enviar estilo "Pill" */
-.btn-enviar {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 12px 60px;
-  font-size: 16px;
-  border-radius: 50px; /* Deixa as pontas totalmente arredondadas */
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: opacity 0.2s;
-}
-
-.btn-enviar:hover {
-  opacity: 0.8;
-}
 
 /* Link de Idioma */
 .language-switch {
@@ -427,12 +411,12 @@ select {
 /* CELULAR (Telas menores que 480px) */
 @media (max-width: 480px) {
   h1 {
-    font-size: 24px; /* Diminui o título no celular */
+    font-size: 20px; /* Diminui o título no celular */
   }
   
   .row {
-    flex-direction: column; /* Empilha Nome e Sobrenome um em cima do outro */
-    gap: 10px;
+    flex-direction: row; /* Empilha Nome e Sobrenome um em cima do outro */
+    gap: 5px;
   }
 
   .btn-enviar {
