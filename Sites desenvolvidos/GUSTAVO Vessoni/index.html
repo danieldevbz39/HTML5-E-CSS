@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulário</title>
-    <link rel="stylesheet" href="stilo/style.css">
+    <link rel="stylesheet" href="estilos/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,7 +16,9 @@
             <h1>Confirmação de Presença</h1>
             <p class="subtitle">Você vai comparecer ao evento? <br>Complete o formuário abaixo.</p>
         </DIV>
+
         <div class="divider"></div>
+
         <div class="informacoes">
             <h4>Informações do evento:</h4>
             <p><img src="img/data-limite.png" alt="icon-data" width="15x"> <strong>Data:</strong> 16/05/2026 às 22h</p>
@@ -27,25 +29,67 @@
 
         <form>
             <div class="row">
-                <input type="text" placeholder="Nome" required class="camp">
-                <input type="text" placeholder="Sobrenome" required class="camp">
+                <div class="nome_s">
+                    <div class="nome"><input type="text" placeholder="Nome" required class="camp"></div>
+                    <div class="sobre"><input type="text" placeholder="Sobrenome" required class="camp"></div>
+                </div>
+            </div>
+
+            <div class="select-group">
+                <label>País/Região</label>
+                <select>
+                    <option>+55 (Brasil)</option>
+                </select>
+            </div>
+
+            <div class="birth-date-group">
+                <label>Data de nascimento <span class="help-icon">?</span></label>
+                <div class="date-selectors">
+                    <select name="day" required>
+                        <option value="" disabled selected>Dia</option>
+                        <!-- Você pode adicionar os dias de 1 a 31 aqui -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
+                    <select name="month" required>
+                        <option value="" disabled selected>Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <!-- ... outros meses -->
+                    </select>
+
+                    <select name="year" required>
+                        <option value="" disabled selected>Ano</option>
+                        <!-- Adicione os anos desejados -->
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
             </div>
 
             <div class="divider"></div>
 
             <input type="email" placeholder="nome@example.com" required>
 
-            <div class="select-group">
-                <label>País</label>
-                <select>
-                    <option>+55 (Brasil)</option>
-                </select>
+            <div class="password-group">
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Senha" required minlength="8">
+                    <span class="error-msg" id="pass-error">A senha deve ter pelo menos 8 caracteres.</span>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="confirm_password" placeholder="Confirmar senha" required>
+                    <span class="error-msg" id="confirm-error">As senhas não coincidem.</span>
+                </div>
             </div>
 
+            <div class="divider"></div>
+            
             <input type="tel" placeholder="Número (WhatsApp)" required>
             <p class="info-text">DDD + Telefone Ex: 31 99999-9999</p>
 
-            <div class="divider"></div>
+            
 
             <div class="upload-container">
                 <input type="file" id="file-upload" class="hidden-input">
@@ -98,33 +142,35 @@
         </form>
 
         <section class="footer-section">
-  <!-- Botão de Envio Principal -->
+            <!-- Botão de Envio Principal -->
 
-  <!-- Seção de Suporte e Idioma -->
-  <div class="support-info">
-    <div class="lang-switch">
-      <img src="https://flagcdn.com/w20/us.png" alt="USA Flag">
-      <a href="#">English Version</a>
-    </div>
-    <p>Problemas ao enviar o formulário?</p>
-    <p>Confira se todos os campos estão preenchidos ou reinicie a página e envie os dados novamente.</p>
-    <p>Caso o problema persista, clique no balão de chat que se encontra no canto inferior direito</p>
-    <p>ou envie um e-mail para <a href="mailto:contato@codemyparty.com.br">contato@codemyparty.com.br</a>.</p>
-    <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
-  </div>
+            <!-- Seção de Suporte e Idioma -->
+            <div class="support-info">
+                <div class="lang-switch">
+                    <img src="https://flagcdn.com/w20/us.png" alt="USA Flag">
+                    <a href="#">English Version</a>
+                </div>
+                <p>Problemas ao enviar o formulário?</p>
+                <p>Confira se todos os campos estão preenchidos ou reinicie a página e envie os dados novamente.</p>
+                <p>Caso o problema persista, clique no balão de chat que se encontra no canto inferior direito</p>
+                <p>ou envie um e-mail para <a href="mailto:contato@codemyparty.com.br">contato@codemyparty.com.br</a>.
+                </p>
+                <a href="#" class="privacy-link">POLÍTICA DE PRIVACIDADE</a>
+            </div>
 
-  <!-- Faixa de Encerramento com Logo -->
-  <footer class="bottom-bar">
-    <img src="img/code my party.png" alt="Code My Party" class="footer-logo" >
-  </footer>
+            <!-- Faixa de Encerramento com Logo -->
+            <footer class="bottom-bar">
+                <img src="img/code my party.png" alt="Code My Party" class="footer-logo">
+            </footer>
 
-  <!-- Botão Flutuante de WhatsApp -->
-  <a href="https://wa.me/seunumero" class="whatsapp-btn" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
-</section>
+            <!-- Botão Flutuante de WhatsApp -->
+            <a href="https://wa.me/seunumero" class="whatsapp-btn" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </section>
     </div>
 
 </body>
+<script src="estilos/scripts.js"></script>
 
 </html>
