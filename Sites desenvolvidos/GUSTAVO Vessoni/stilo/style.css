@@ -384,15 +384,15 @@ select {
 
 .container {
   /* No celular ele usa 90% da tela, no PC trava em 460px */
-  width: 90%; 
-  max-width: 460px; 
+  width: 100%; 
+  max-width: 560px; 
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Ajuste das linhas do formulário (Nome/Sobrenome, etc) */
 .row {
-  display: flex;
+  display: flexbox;
   flex-wrap: wrap; /* Permite que os campos "quebrem" para a linha de baixo */
   gap: 15px;
   margin-bottom: 15px;
@@ -415,8 +415,14 @@ select {
   }
   
   .row {
-    flex-direction: row; /* Empilha Nome e Sobrenome um em cima do outro */
-    gap: 5px;
+    display: flex;
+    gap: 10px;
+     column-count: 3; /* Divide em 3 colunas */
+  column-gap: 20px; /* Espaço entre elas */
+  column-rule: 1px solid #ccc; /* Linha divisória */
+  }
+  .camp {
+    flex: 1;
   }
 
   .btn-enviar {
