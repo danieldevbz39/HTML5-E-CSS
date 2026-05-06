@@ -582,6 +582,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .footer-logo {
@@ -622,7 +623,8 @@ select {
 
 .custom-select-container .floating-label-group {
   position: relative;
-  margin-bottom: 15px;
+  margin: 12px 0 16px;
+  
 }
 
 .custom-select-container select {
