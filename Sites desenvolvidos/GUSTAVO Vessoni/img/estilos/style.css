@@ -1,0 +1,769 @@
+@charset "UTF-8";
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #1d1d1f;
+}
+
+.container {
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #1d1d1f;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.informacoes {
+  font-size: 11px;
+  margin-bottom: 30px;
+  line-height: 0.5;
+  text-align: left;
+}
+
+.login-link a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+form {
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  font-size: 17px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.nome_s {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.nome,
+.sobre {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.nome input,
+.sobre input {
+  width: 100%;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.nome .error-msg-field,
+.sobre .error-msg-field {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.select-group {
+  position: relative;
+  border: 1px solid #d2d2d7;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 5px 16px;
+}
+
+.select-group label {
+  font-size: 12px;
+  color: #6e6e73;
+  display: block;
+}
+
+.select-group select {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 25px;
+}
+.birth-date-section {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.date-selectors {
+    display: flex; /* Alinha horizontalmente */
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.date-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d2d2d7; /* Cor padrão[cite: 2] */
+    border-radius: 12px; /* Borda arredondada da imagem */
+    font-size: 16px;
+    background-color: #fff;
+    color: #1d1d1f;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Classe de Erro (aplicada via JS) */
+.date-input.invalid {
+    border-color: #ff3b30; /* Vermelho da imagem */
+    background-color: #fff2f2; /* Fundo rosado leve */
+    color: #ff3b30;
+}
+
+.error-container {
+    display: none; /* Escondido por padrão */
+    color: #ff3b30;
+    font-size: 13px;
+    margin-top: 8px;
+    align-items: center;
+    gap: 4px;
+}
+
+.error-icon {
+    font-size: 14px;
+}
+.help-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #86868b;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 5px;
+    cursor: help;
+}
+
+.date-selectors {
+    display: flex; /* Alinha os selects lado a lado */
+    gap: 10px;     /* Espaço entre os campos */
+}
+
+.date-field-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-field-wrapper .date-input {
+    margin-bottom: 0;
+}
+
+.date-field-wrapper .error-msg-field {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.date-selectors select {
+    flex: 1;       /* Faz cada campo ocupar o mesmo espaço */
+    padding: 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;       
+    font-size: 16px;
+    background-color: white;
+    appearance: none; /* Remove a seta padrão para estilizar (opcional) */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path fill="%23666" d="M2 3l3 3 3-3z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.divider {
+  height: 1px;
+  background-color: #d2d2d7;
+  margin: 25px 0;
+}
+
+.password-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os campos como na imagem f37641.png */
+    margin-bottom: 20px;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 17px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 0;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Estilo para quando a validação falha */
+.password-group input.input-error {
+    border-color: #ff3b30; /* Vermelho para erro */
+    background-color: #fff2f2;
+}
+
+.input-container .error-msg-field {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Estilos para mensagens de erro dos campos */
+.error-msg-field {
+    color: #ff3b30;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    align-items: center;
+    gap: 4px;
+    text-align: left;
+}
+
+.error-msg-field.show {
+    display: flex;
+}
+
+.error-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 415px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .row,
+  .nome_s,
+  .date-selectors,
+  .password-group,
+  .captcha-box,
+  .custom-upload {
+    flex-direction: column;
+  }
+
+  .nome,
+  .sobre,
+  .input-container,
+  .date-field-wrapper,
+  .custom-upload,
+  .captcha-box {
+    width: 100%;
+  }
+
+  .nome_s,
+  .date-selectors,
+  .password-group {
+    gap: 12px;
+  }
+
+  .custom-upload {
+    align-items: stretch;
+  }
+
+  .button-right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  .custom-upload {
+    width: 100%;
+  }
+}
+
+/* Classe para aplicar erro em inputs */
+.input-error {
+    border-color: #ff3b30 !important;
+    background-color: #fff2f2 !important;
+}
+
+.info-text {
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 1.2;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+#info-text {
+  font-size: 12px;
+  color: #6e6e73;
+  line-height: 0.8;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.upload-container {
+  width: 100%;
+}
+/* Esconde o input original de forma acessível */
+.hidden-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.custom-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif;
+  max-width: 600px;
+  overflow: hidden; /* Garante que o botão lateral respeite o border-radius */
+}
+
+.content-left {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.button-right {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  border-left: 1px solid #ccc;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.custom-upload:hover .button-right {
+  background-color: #e0e0e0;
+}
+
+.file-upload {
+  display: flex;
+  gap: 10px;
+}
+
+.file-upload button {
+  padding: 0 15px;
+  height: 45px;
+  border: 1px solid #d2d2d7;
+  background: #f5f5f7;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.privacy-container {
+  font-family: sans-serif;
+  max-width: 600px;
+  color: #333;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start; /* Alinha o checkbox com o topo da primeira linha */
+  gap: 12px; /* Espaço entre o quadrado e o texto */
+  cursor: pointer;
+  line-height: 1.5; /* Melhora a leitura do texto longo */
+}
+
+/* Ajuste fino para o checkbox não ficar colado no topo absoluto */
+.checkbox-wrapper input[type="checkbox"] {
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0; /* Impede que o checkbox esmague em telas menores */
+}
+
+.label-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.required-msg {
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+}
+
+.captcha-code {
+    background-color: #f2f2f2; /* Cor de fundo similar ao rodapé[cite: 2] */
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;[cite: 2]
+    user-select: none; /* Impede que o robô copie o texto com o mouse */
+    text-decoration: line-through; /* Dificulta a leitura automática */
+    font-style: italic;
+    display: inline-block;
+}
+
+.captcha-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;[cite: 2]
+    margin-bottom: 10px;
+}
+
+#captcha-input {
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #d2d2d7;[cite: 2]
+    border-radius: 8px;[cite: 2]
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 30px;
+}
+
+.btn-submit:hover {
+  background-color: #0077ed;
+}
+
+.privacyimg {
+  width: 70px;
+  margin-top: 30px;
+}
+
+.footer-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666; /* Cor cinza suave do texto */
+}
+
+
+/* Link de Idioma */
+.language-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.language-switch a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+/* Ajustes do bloco de texto */
+.info-text p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.info-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Link de Política lá no final */
+.privacy-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #999;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.footer-section {
+  font-family: 'Helvetica', Arial, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  color: #666;
+  background: linear-gradient(180deg, #f2f2f2 0%, #ffffff 50%, #ffffff 100%);
+}
+
+/* Botão Preto Arredondado */
+.btn-enviar {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* Bloco de Texto de Ajuda */
+.support-info p {
+  font-size: 13px;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.privacy-link {
+  display: block;
+  font-size: 11px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* Faixa Cinza Inferior */
+.bottom-bar {
+  /* Cria o efeito de sombra suave no topo da faixa cinza */
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0.05) 0%,   /* Sombra bem leve no início */
+    #fdfdfd 15%,              /* Cor cinza sólida logo após */
+    #d4d3d3 100%
+  );
+  
+  padding: 60px 0;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0; /* Linha fina para definir o limite */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer-logo {
+  height: 45px;
+}
+
+/* Botão do WhatsApp Flutuante */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+}
+
+/* Containers para campos com validação */
+.email-container,
+.tel-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.email-container input,
+.tel-container input {
+  margin-bottom: 0;
+}
+
+.custom-select-container .floating-label-group {
+  position: relative;
+  margin: 12px 0 16px;
+  
+}
+
+.custom-select-container select {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.custom-select-container .error-msg-field {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+
+/* --- Ajustes Gerais de Responsividade --- */
+
+.container {
+  /* No celular ele usa 90% da tela, no PC trava em 460px */
+  width: 100%; 
+  max-width: 560px; 
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Ajuste das linhas do formulário (Nome/Sobrenome, etc) */
+.row {
+  flex-wrap: wrap; /* Permite que os campos "quebrem" para a linha de baixo */
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.row input {
+  /* Faz com que cada input ocupe o máximo de espaço possível */
+  flex: 1 1 200px; 
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho final */
+}
+
+/* --- Media Queries --- */
+
+/* CELULAR (Telas menores que 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px; /* Diminui o título no celular */
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+     column-count: 3; /* Divide em 3 colunas */
+  column-gap: 20px; /* Espaço entre elas */
+  column-rule: 1px solid #ccc; /* Linha divisória */
+  }
+  .camp {
+    flex: 1;
+  }
+
+  .btn-enviar {
+    width: 100%; /* Botão ocupa a largura toda no celular */
+    padding: 15px;
+  }
+  .custom-select-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.floating-label-group {
+    position: relative;
+    border: 1px solid #d2d2d7;[cite: 2]
+    border-radius: 8px;[cite: 2]
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+/* Estado de foco (Borda azul da imagem) */
+.floating-label-group:focus-within {
+    border-color: #0071e3;
+    border-width: 2px;
+}
+
+.floating-label-group select {
+    width: 100%;[cite: 2]
+    border: none;
+    background: transparent;
+    padding: 20px 16px 10px 16px; /* Espaço para o label no topo */
+    font-size: 17px;[cite: 2]
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.floating-label-group label {
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    font-size: 12px;[cite: 2]
+    color: #6e6e73;[cite: 2]
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+/* Seta customizada do select */
+.select-arrow {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #6e6e73;
+    border-bottom: 2px solid #6e6e73;
+    transform: translateY(-70%) rotate(-45deg);
+    pointer-events: none;
+}
+  .informacoes {
+    line-height: 1.4; /* Melhora o espaçamento das infos no celular */
+  }
+  .g-recaptcha {
+        transform: scale(0.85); /* Reduz levemente o tamanho para caber em telas estreitas */
+        transform-origin: center;
+    }
+    
+.privacyimg {
+  width: 50px;
+  margin: 15px 0 -50;
+}
+}
+
+/* TABLET (Telas entre 481px e 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 600px; /* Dá um pouco mais de espaço no tablet */
+  }
+}
+
+/* PC (Telas maiores que 1024px) */
+@media (min-width: 1024px) {
+  .footer-section {
+    padding: 60px 0; /* Mais respiro visual no monitor grande */
+  }
+}
