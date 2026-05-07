@@ -1,3 +1,31 @@
+// Menu Toggle
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  
+  const lines = document.querySelectorAll('.line');
+  if (mobileMenu.classList.contains('active')) {
+      lines[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+      lines[1].style.transform = 'rotate(-45deg) translate(0px, 0px)';
+  } else {
+      lines[0].style.transform = 'none';
+      lines[1].style.transform = 'none';
+  }
+});
+
+// Fecha o menu ao clicar em um link
+const menuLinks = mobileMenu.querySelectorAll("a");
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    const lines = document.querySelectorAll('.line');
+    lines[0].style.transform = 'none';
+    lines[1].style.transform = 'none';
+  });
+});
+
 const password = document.getElementById("password");
 const confirm_password = document.getElementById("confirm_password");
 

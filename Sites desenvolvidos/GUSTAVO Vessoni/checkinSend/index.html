@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta checkinsend - Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo"><img src="../checkinSend/formulário/img/chekin.jpg" alt="icon-check" class="log-check"></div>
+
+            <div class="nav-icons">
+                
+                <button class="hamburger" id="menuToggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-menu" id="mobileMenu">
+            <div class="menu-header">
+            </div>
+            <ul>
+                <li><a href="index.html">Iniciar sessão</a></li>
+                <li><a href="../checkinSend/formulário/index.html" class="conta">Crie sua Conta CheckinSend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-box">
+        <h1>Conta CheckinSend</h1>
+        <p class="subtitle">Gerencie sua Conta CheckinSend</p>
+
+        <form id="loginForm">
+            <div class="input-container">
+                <input type="email" id="emailInput" placeholder="E-mail ou número de telefone" required>
+                <div id="email-error" class="error-msg">ⓘ Insira um e-mail válido.</div>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="passwordInput" placeholder="Senha" required>
+                <div id="pass-error" class="error-msg">ⓘ A senha é obrigatória.</div>
+            </div>
+
+            <img src="img/icon_dataprivacy_2x.png" alt="icon-privacy" class="iconprivacy">
+
+            <div class="button-group">
+                <button type="submit" class="btn-continue" disabled>Continuar</button>
+                <button type="button" class="btn-sessao"><img src="img/icon_dataprivacy_2x.png" width="14">Inicie sessão
+                </button>
+            </div>
+
+            <hr class="divider">
+
+            <div class="social-auth">
+                <p>Ou acesse com:</p>
+                <div class="social-icons">
+                    <button type="button" class="btn-social google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" width="18">
+                        Google
+                    </button>
+                    <button type="button" class="btn-social">Outros</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="estilos/script.js"></script>
+</body>
+
+</html>
