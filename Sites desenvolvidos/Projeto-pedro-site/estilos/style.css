@@ -709,7 +709,7 @@ body {
   .carousel-slide {
     min-width: auto;
     width: 100%;
-    max-width: 280px;
+    max-width: 340px;
   }
 
   .testimonial-form {
@@ -717,6 +717,10 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 100%;
+  }
+
+  .camp {
+    width: 100%;
   }
 
   .testimonials .carousel-wrapper {
