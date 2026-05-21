@@ -12,7 +12,7 @@
 
 .head-linkbut {
     display: inline-block;
-    margin: 30px 0 150px 50px;
+    margin: 30px 0 150px 15px;
     font-weight: 800;
     font-size: 24px;
     color: dimgray;
@@ -21,6 +21,9 @@
 a {
     color: gray;
     margin-left: 30px;
+}
+a:hover {
+    color:  rgb(121, 202, 0);
 }
 
 .header-button {
@@ -36,9 +39,15 @@ a {
     
 }
 
+.header-button:hover {
+    background: white;
+    color: rgb(121, 202, 0) ;
+    border: 1px solid  rgb(121, 202, 0);
+}
+
 .textimg {
     display: flex;
-    margin-left: 120px;
+    margin-left: 60px;
 }
 
 img {
@@ -49,7 +58,7 @@ img {
 .dir {
     display: inline-block;
     width: 300px;
-    margin-left: 50px;
+    margin-left: 30px;
     margin-top: 100px;
 }
 
@@ -68,12 +77,12 @@ h1 {
 
 p {
     margin-bottom: 20px;
-    width: 400px;
+    width: 300px;
     text-align: justify;
 }
 
 .dirbut {
-    width: 100px;
+    width: 493;
     font-weight: 600;
     color: rgb(83, 138, 0);
     margin-left: 0;

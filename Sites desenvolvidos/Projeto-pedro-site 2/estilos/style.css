@@ -1,53 +1,110 @@
+/* RESET E DEFINIÇÕES GERAIS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "montserraf", sans-serif, "Oswald";
+  color: white;
 }
 
+
 :root {
-  color-scheme: dark;
-  font-family: "Roboto", Arial, sans-serif;
-  --bg: #080808;
-  --surface: #111117;
-  --surface-strong: #1e1e24;
-  --text: #f5f5f5;
-  --muted: #b0b0b8;
-  --accent: #e63946;
-  --accent-soft: rgba(230, 57, 70, 0.18);
-  --border: rgba(255, 255, 255, 0.08);
+  --primary-color: #e61919;
+  /* Vermelho Taekwondo */
+  --bg-dark: rgba(10, 10, 10, 0.9);
+  --text-light: #ffffff;
+  --transition: all 0.3s ease;
 }
 
 body {
-  color: var(--text);
-  margin: 0;
-  min-height: 100vh;
-  background-image: url("../img/background.png");
+  background-color: #000;
+  background-image: url('../img/fundoprincipal.png');
+  background-repeat: no-repeat;       /* Evita que a imagem se multiplique */
+  background-size: cover;             /* Redimensiona a imagem para cobrir toda a tela */
+  background-position: center;        /* Centraliza a imagem */
+  background-attachment: fixed;       /* Mantém a imagem estática ao rolar a página */
+
+  background-size: cover;
   background-position: 
   top center,
   center center,
   center center,
-  center bottom;
+  center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  position: stati;
+  color: var(--text-light);
+  overflow-x: hidden;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
 
+/* VÍDEO DE FUNDO (BACKGROUND) */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Fica atrás de tudo */
+  overflow: hidden;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* máscara preta semitransparente */
+  pointer-events: none;
+  /* não bloqueia cliques */
+}
+
+/* Opcional: deixa uma suavidade maior no centro do vídeo */
+.video-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.75) 80%
+  );
+  pointer-events: none;
+}
 
 /* HEADER / NAVIGATION */
 .header-main {
-  margin-top: 110px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
   padding: 15px 5%;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid #333;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -60,6 +117,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.05rem;
+  text-decoration: none;
   color: inherit;
 }
 
@@ -71,9 +129,9 @@ body {
 }
 
 .logo-text {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-transform: uppercase;
@@ -97,14 +155,6 @@ body {
   display: block;
 }
 
-.camp {
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  margin-right: 90px;
-}
-
 .menu-toggle {
   display: none;
   background: transparent;
@@ -120,7 +170,7 @@ body {
 }
 
 .nav-menu {
-  font-family: "mont", sans-serif;
+  font-family: mont, sans-serif;
   display: flex;
   gap: 28px;
   flex-wrap: wrap;
@@ -131,12 +181,691 @@ body {
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  margin: 0;
+  font-size: 17px;
   font-weight: 600;
-  padding: 0px 10px;
+  padding: 5px 20px;
   transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+  border-radius: 8px;
+}
+.dest {
+  padding: 0 20px 0 20px;
+  background: rgba(255, 0, 0, 0.212);
+  border-radius: 30px;
+}
+.nav-menu .dest:hover {
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  color: white;
+  box-shadow: 1px 1px 7px rgba(153, 205, 50, 0.541);
 }
 
 .alvo {
   transition: 0.5s;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 50px 5%;
+  min-height: 90vh;
+  flex-direction: row;
+}
+
+.hero-left {
+  max-width: 700px;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-left p {
+  font-size: 1.7rem;
+}
+
+.btn-cta {
+  display: ruby-text;
+  background: var(--primary-color);
+  color: white;
+  padding: 18px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 30px 0;
+  transition: var(--transition);
+}
+
+.btn-cta:hover {
+  background: #ff0000;
+  border: 2px solid rgb(253, 112, 112);
+  transform: scale(1.05);
+}
+
+.hero-numbers {
+  line-height: 1.2; /* Reduz o espaço entre as linhas de texto */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(550px, 450px));
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 960px;
+  padding: 16px;
+  height: auto;
+}
+
+.hero-number-card {
+  border-radius: 18px;
+  padding: 22px 20px;
+  text-align: center;
+}
+
+.hero-number-card strong {
+  display: block;
+  font-size: 2.55rem;
+  color: #ffffff;
+  margin-bottom: 0.55rem;
+}
+
+.hero-number-card span {
+  display: block;
+  font-size: 1.85rem;
+  color: #ffffff;
+  margin-bottom: 0.55rem;
+}
+
+.hero-photo {
+  width: 90%;
+  max-width: 650px;
+}
+
+/* CARROSSEL / SERVICES SECTION */
+.services,
+.testimonials {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: none;
+  /* Esconde scroll no Firefox */
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 50px 0 50px ;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease 0.2;
+  font-family: "Oswald";
+  align-items: center;
+}
+
+.carousel-slide:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-form {
+  margin: 25px auto 0;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 18px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  max-width: 920px;
+  /* largura alinhada com 3 cards de 280 + gaps */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.testimonials .carousel-wrapper {
+  margin: 0 auto;
+  width: 30%;
+  max-width: 30%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+}
+
+.circle-desc h3 {
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.circle-desc p {
+  font-size: 1.2rem;
+}
+
+.testimonial-form h3 {
+  margin-bottom: 12px;
+}
+
+.testimonial-form input,
+.testimonial-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+.file-label {
+  display: inline-block;
+  margin-top: 8px;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.testimonial-form button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.circle-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 20px;
+  border: 3px solid var(--primary-color);
+}
+
+.circle-photo.treinos {
+  background-image: url("../img/pedro-med.png");
+}
+
+.circle-photo.cursos {
+  background-image: url("../img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg");
+}
+
+.circle-photo.competicoes {
+  background-image: url("../img/PEDRO MOREIRA LOGO-cabecario 2.png");
+}
+
+.circle-photo.quarentreinos {
+  background-image: url("../img/log.png");
+}
+
+.circle-photo.pedro {
+  background-image: url("../img/pedro-med.png");
+}
+
+.circle-photo.lauany {
+  background-image: url("../img/WhatsApp Image 2026-03-18 at 21.47.17.jpeg");
+}
+
+.circle-photo.claudio {
+  background-image: url("../img/PEDRO MOREIRA LOGO-cabecario 2.png");
+}
+
+/* CONTACT SECTION */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 80px 10%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: start;
+}
+
+.contact-left,
+.contact-right {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.contact-right video {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo Geral do Footer */
+.site-footer {
+  background-color: #000; /* Fundo preto conforme a imagem */
+  color: #ffffff;
+  padding: 10px 10% 10px;
+  font-family: "Arial", sans-serif;
+  border-top: 1px solid #333;
+}
+
+.footer-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  justify-content: space-between; /* Espaça o contato do mapa */
+  align-items: flex-start;
+  max-width: 1200px;
+  padding: 16px;
+  height: auto;
+  flex-wrap: wrap; /* Responsividade para telas menores */
+}
+
+/* Coluna de Informações */
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-transform: none;
+  display: block;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  background: #a31a2a; /* Vermelho escuro do logo */
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #ff0000;
+}
+
+/* Mapa */
+.footer-map {
+  justify-self: end;
+  text-align: right;
+}
+
+.footer-map iframe {
+  border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-map {
+    margin-top: 30px;
+  }
+}
+
+/* --- AJUSTES DE RESPONSIVIDADE ADICIONAIS --- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Garante que nenhum elemento estoure a largura da tela */
+.content-wrapper,
+.hero,
+.services,
+.testimonials,
+.contact,
+.site-footer,
+.footer-container {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Ajuste para evitar rolagem lateral em carrossel */
+.carousel-track {
+  max-width: 100%;
+}
+
+/* Ajuste para botões em telas pequenas */
+@media (max-width: 480px) {
+  .btn-cta {
+    font-size: 0.95rem;
+    padding: 12px 8px;
+  }
+  .hero-photo {
+    max-width: 95vw;
+  }
+  .carousel-slide {
+    min-width: 180px;
+    padding: 18px;
+  }
+  .testimonial-form {
+    padding: 10px;
+  }
+}
+
+/* Menu mobile: garantir que o menu hamburguer funcione */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    line-height: 80px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.3 ease 0s;
+  }
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Fontes menores para títulos em telas muito pequenas */
+@media (max-width: 400px) {
+  .hero-left h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* RESPONSIVE */
+/* ==========================================================================
+   AJUSTE PARA CELULAR E TABLET (CENTRALIZAÇÃO TOTAL)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .header-inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    padding: 8px 0;
+    border-bottom: 2px solid var(--primary-color);
+    z-index: 999;
+  }
+
+  .nav-menu a {
+    padding: 8px 16px;
+    font-size: 1rem;
+    line-height: 1.2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5%;
+    min-height: auto;
+    gap: 30px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 2.4rem;
+    margin: 0 auto 20px auto;
+  }
+
+  .hero-left p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    max-width: 520px;
+  }
+
+  .hero-numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .hero-number-card {
+    max-width: 100%;
+  }
+
+  .hero-photo {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .services,
+  .testimonials {
+    padding: 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carousel-track {
+    justify-content: center;
+    padding: 20px 10px;
+    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-slide {
+    min-width: auto;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .testimonial-form {
+    margin: 25px auto 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .camp {
+    width: 100%;
+  }
+
+  .testimonials .carousel-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .circle-desc h3 {
+    font-size: 1.7rem;
+  }
+
+  .circle-desc p {
+    font-size: 1.2rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .contact-right video {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  iframe {
+    width: 100% !important;
+    max-width: 100%;
+    min-height: 260px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-main {
+    padding: 12px 4%;
+  }
+
+  .logo-img {
+    height: 44px;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1.1rem;
+  }
+
+  .btn-cta {
+    width: 100%;
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+
+  .hero-numbers {
+    gap: 14px;
+  }
+
+  .carousel-slide {
+    min-width: 240px;
+  }
+
+  .circle-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .circle-desc p {
+    font-size: 1rem;
+  }
+
+  .testimonial-form {
+    padding: 18px;
+  }
+
+  .contact {
+    padding: 30px 4%;
+  }
+
+  .contact-right video {
+    max-height: 320px;
+  }
+}
+
+/* Ajustes finos para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .btn-cta {
+    padding: 10px 10px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+
+  .header-main {
+    padding: 5px 3%;
+  }
 }
