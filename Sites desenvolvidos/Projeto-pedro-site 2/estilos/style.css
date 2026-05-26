@@ -149,7 +149,7 @@ body {
 }
 
 .nav-menu a:hover {
-  color: var(--primary-color);
+  color: yellow;
   border-radius: 8px;
   text-decoration: underline;
   text-underline-offset: 8px; /* Controla o espaço entre a letra e o traço */
@@ -177,9 +177,8 @@ body {
 }
 
 .esq a:hover {
-  color: var(--primary-color);
+  color: yellow;
   border-radius: 8px;
-  color: #000;
   text-decoration: underline;
   text-underline-offset: 8px; /* Controla o espaço entre a letra e o traço */
   text-decoration-thickness: 3px; /* Controla a espessura do traço */
