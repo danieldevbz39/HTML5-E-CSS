@@ -18,24 +18,82 @@
 }
 
 .img-mk {
-    width: 200px;
-    position: absolute;
-    left: 580px;
-    top: 50px;
+  width: 200px;
+  position: absolute;
+  left: 580px;
+  top: 50px;
 }
 
-.img-lateral-sup{
-    width: 200px;
-    position: absolute;
-    left: 52px;
-    top: 600px;
+.img-pedro {
+  width: 400px;
+  position: static;
+  right: -30px;
+}
+
+.caixamae {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -640px;
+}
+.containerbtn {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+
+.containerbtn img {
+  display: block;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.containerbtn p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.containerbtn p:hover {
+  color: yellow;
+}
+
+.txt-bot {
+  width: 650px;
+  color: rgb(255, 255, 255);
+}
+
+.txt-bot h1 {
+  font-size: 50px;
+  margin-left: 70px;
+}
+
+.img-pedro-lut {
+  width: 400px;
+  margin-top: -10px;
+}
+
+.img-lateral-sup {
+  width: 200px;
+  position: absolute;
+  left: 52px;
+  top: 600px;
 }
 
 .img-lateral-dir {
-    width: 80px;
-    position: absolute;
-    right: 36px;
-    top: 620px;
+  width: 80px;
+  position: absolute;
+  right: 36px;
+  top: 620px;
 }
 img,
 video {
@@ -61,19 +119,20 @@ body {
   min-height: 100vh;
   width: 100%;
   max-width: 1360px;
-  margin: 2rem auto;
   padding: 2rem 1.5rem 4rem;
-  background: url("../img/fundoprincipal.png") center top / cover no-repeat scroll;
+  background: url("../img/fundoprincipal.png") center top / cover no-repeat
+    scroll;
   overflow: hidden;
-  margin: -10px 0;
+  z-index: -1;
 }
 .video-container {
-  max-width: 1197px;
+  max-width: 1210px;
   width: 100%;
   display: block;
-  margin-top: -60px;
   margin-left: 55px;
   margin-right: auto;
+  position: relative;
+  z-index: -1;
 }
 
 .video-container video {
@@ -86,8 +145,8 @@ body {
 }
 
 .latesq {
-    height: 1050px;
-    margin-left: 10px;
+  height: 1050px;
+  margin-left: 10px;
 }
 /* HEADER / NAVIGATION */
 .header-main {
@@ -125,7 +184,7 @@ body {
 }
 
 .menu-toggle:hover {
-  color: var(--primary-color);
+  color: yellow;
 }
 
 .nav-menu {
@@ -157,6 +216,36 @@ body {
   text-decoration-color: #690505;
 }
 
+/* Regras globais de links: define cor padrão e estados */
+/* Regras globais de links: define cor padrão e estados */
+a,
+a:link {
+  color: #ff6262 ; /* cor padrão dos links - ajuste conforme desejar */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #c94f4f ;
+}
+
+a:hover,
+a:focus {
+  color: yellow !important;
+  text-decoration: underline !important;
+}
+
+a:active {
+  color: #ff3b3b ;
+}
+
+/* Priorizar cores específicas de menus/headers quando necessário */
+.nav-menu a {
+  color: white !important;
+}
+.esq a {
+  color: white !important;
+}
+
 .esq {
   color: white;
   margin: 0;
@@ -170,7 +259,7 @@ body {
 .esq a {
   color: white;
   text-decoration: none;
-  margin-left: -30px;
+  margin-left: -56px;
   font-weight: 100;
   padding: 5px 20px;
   transition: var(--transition);
