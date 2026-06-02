@@ -16,6 +16,10 @@
   letter-spacing: 1px; /* Um leve espaçamento entre as letras ajuda a dar o efeito do modelo */
   text-transform: uppercase;
 }
+h1,
+p {
+  color: antiquewhite;
+}
 
 .img-mk {
   width: 200px;
@@ -81,15 +85,22 @@
   width: 400px;
   margin-top: -10px;
 }
+.group-img {
+  display: flex; /* Coloca as imagens lado a lado */
+  justify-content: space-between; /* Alinha o espaço entre elas */
+  align-items: center; /* Alinha as imagens verticalmente no centro */
+  gap: 20px; /* Adiciona um espaço de 20px entre as duas imagens */
+  width: 100%; /* Define que o contêiner ocupará toda a largura disponível */
+}
 
-.img-lateral-sup {
-  width: 200px;
+.img-lateral-left {
+  height: 200px;
   position: absolute;
   left: 52px;
   top: 600px;
 }
 
-.img-lateral-dir {
+.img-lateral-right {
   width: 80px;
   position: absolute;
   right: 36px;
@@ -220,12 +231,12 @@ body {
 /* Regras globais de links: define cor padrão e estados */
 a,
 a:link {
-  color: #ff6262 ; /* cor padrão dos links - ajuste conforme desejar */
+  color: #ff6262; /* cor padrão dos links - ajuste conforme desejar */
   text-decoration: none;
 }
 
 a:visited {
-  color: #c94f4f ;
+  color: #c94f4f;
 }
 
 a:hover,
@@ -235,7 +246,7 @@ a:focus {
 }
 
 a:active {
-  color: #ff3b3b ;
+  color: #ff3b3b;
 }
 
 /* Priorizar cores específicas de menus/headers quando necessário */
@@ -286,4 +297,19 @@ a:active {
   font-family: "FF Monteral 02";
   margin-top: 2rem;
   border-radius: 0;
+}
+
+.one {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section-left {
+  width: 240px;
+  margin: 0 15px;
+}
+
+.section-right {
+  margin: 0 150px;
 }
