@@ -92,6 +92,13 @@ p {
   gap: 20px; /* Adiciona um espaço de 20px entre as duas imagens */
   width: 100%; /* Define que o contêiner ocupará toda a largura disponível */
 }
+.group-img {
+  display: flex; /* Coloca as imagens lado a lado */
+  justify-content: space-between; /* Alinha o espaço entre elas */
+  align-items: center; /* Alinha as imagens verticalmente no centro */
+  gap: 20px; /* Adiciona um espaço de 20px entre as duas imagens */
+  width: 100%; /* Define que o contêiner ocupará toda a largura disponível */
+}
 
 .img-lateral-left {
   height: 200px;
@@ -316,4 +323,11 @@ a:active {
 }
 
 .section-right {
+.section-left {
+  width: 240px;
+  margin: 0 15px;
+}
+
+.section-right {
+  margin: 0 150px;
 }
