@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background-color: rgb(104, 218, 216);
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    margin: 3px 3px 3px ;
+    border-radius: 60px;
+}
+
+a {
+    color: black;
+    padding: 3px 3px 3px 0;
+}
+
+a:hover {
+    color: rgb(85, 85, 85);
+}
+
+h2, p {
+    padding: 7px;
+}
+
+header {
+    background-color: rgb(242, 184, 10);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;    
+}
+header h3 {
+    flex: 0 0 221px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.247);
+}
+
+header > nav {
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+main {
+    background-color: rgb(105, 41, 242) ;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 30px;
+    box-shadow: 2px 1px 5px rgba(27, 31, 0, 0.712);
+}
+
+main > p,strong {
+    color: rgb(236, 236, 5);
+}
+
+button {
+    align-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: block;
+    }
+    .container a {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 27px;
+        margin: 10px;
+    }
+    .nav {
+        border-radius: 50px;
+    }
+}
