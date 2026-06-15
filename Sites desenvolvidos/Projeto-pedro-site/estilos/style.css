@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "FF Monteral 02";
+  src: url("../TESTE/files/FF\ Monteral\ 02.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px; /* Um leve espaçamento entre as letras ajuda a dar o efeito do modelo */
+  text-transform: uppercase;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #000;
+  overflow-x: hidden;
+}
+
+.fundo {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1360px;
+  background: url("../img/background\ 1.png") center top / cover no-repeat
+    scroll;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1360px;
+}
+
+/* LOGO */
+.logo-img {
+  width: 190px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.img-mk {
+  width: 150px;
+  position: absolute;
+  left: 450px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.mk-bola {
+  width: 150px;
+}
+.img-pedro {
+  width: 400px;
+  position: static;
+  right: -30px;
+}
+
+.caixamae {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -640px;
+}
+.containerbtn {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+
+.containerbtn img {
+  display: block;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.containerbtn a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  font-weight: bold;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.containerbtn a:hover {
+  color: yellow;
+}
+
+.txt-bot {
+  width: 650px;
+  color: rgb(255, 255, 255);
+}
+
+.txt-bot h1 {
+  font-size: 50px;
+  margin-left: 70px;
+}
+
+.img-pedro-lut video {
+  width: 400px;
+  margin-top: 98px;
+}
+
+.imagem-frontal {
+  width: 410px;
+}
+
+.video-container {
+  max-width: 1249px;
+  width: 100%;
+  display: block;
+  margin-left: 51px;
+  position: relative;
+  z-index: -1;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* HEADER / NAVIGATION */
+.header-main {
+  position: relative; /* Já estava aqui, mas garante o funcionamento */
+  top: auto;
+  margin-left: 0;
+  width: 100%;
+  margin: 16px 14px;
+  z-index: 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.item-nav {
+  margin: 50px;
+  margin-right: 10px;
+}
+
+.item-nav a{
+  margin-right: 40px;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 22px;
+}
+
+.item-nav a:hover {
+  color: yellow;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  color: yellow;
+}
+
+.video-container {
+  margin-top: -35px;
+}
+
+.fundo-bottom {
+  width: 100%;
+  background: red;
+}
