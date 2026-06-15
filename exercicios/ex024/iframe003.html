@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframe</title>
+    <style>
+        body {
+            background-color: rgb(255, 254, 209);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            background-color: white;
+            width: 95vw;             /* Define a largura como 95% da largura da viewport */
+            height: 350px;           /* Define a altura fixa de 250 pixels */
+            border: 3px solid rgb(59, 59, 59); /* Borda sólida de 2px com cor preta semi-transparente */
+            border-radius: 16px;     /* Adiciona cantos arredondados de 16px */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.829); /* Adiciona sombra com deslocamento vertical e blur */
+            overflow: hidden;        /* Esconde o conteúdo que ultrapassar os limites do iframe */
+            display: block;          /* Define o iframe como elemento de bloco */
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint non iure nam delectus distinctio, impedit ea eveniet numquam dolores doloribus libero nostrum officiis excepturi minima pariatur, alias est. Culpa.</p>
+
+    <ul>
+    <li><a href="paginas-extras/primeirapg.html" target="frame">Primeira página</a></li>
+    <li><a href="paginas-extras/segundapg.html" target="frame">Segunda  página</a></li>
+    <li><a href="paginas-extras/terceirapg.html" target="frame">Terceira página</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis obcaecati neque, natus est, tempora saepe, vel qui iste quasi nam illum vero labore eos laborum nemo nihil sunt aut odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo assumenda et. In ad est, dicta autem repudiandae nemo id ipsa error quas, voluptas quasi dolores vitae architecto iusto dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt quaerat qui, quam quibusdam iste, quasi possimus ullam doloribus optio voluptates fugit dicta veritatis corporis sint harum! Quibusdam, ratione eaque.</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1> Escolha uma das opções acima</h1> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ad earum porro nisi saepe deleniti pariatur exercitationem illum modi ipsum. Facilis architecto illum porro rerum ipsa exercitationem aliquam, repellendus voluptatum.</p><img src ='img/lohg.jpg' >
+        <p>"Infelizmente seu navegador não é compatível com isso."</p> 
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit autem voluptatum eveniet. Sunt, odio blanditiis necessitatibus debitis cumque perspiciatis tempora quibusdam, sit nobis repudiandae ratione vitae, eligendi quaerat tenetur tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis sint doloribus et facere, eaque eligendi non reiciendis in, distinctio ducimus a earum aspernatur dolorum deserunt eius. Voluptas, inventore eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita delectus placeat nemo officiis architecto eaque. Similique harum quae et, dignissimos facere ex eaque commodi provident ad perspiciatis eius veniam qui. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, minima est, quo ipsam fugit consectetur quibusdam tempora autem quod illum, tempore harum quae at consequuntur enim? Consequatur nesciunt nam aliquam!</p>
+    
+</body>
+</html>

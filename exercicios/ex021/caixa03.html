@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+                text-align: center;
+                border: 17px solid rgb(255, 0, 0);
+                padding: 13px;
+                border-image-source: url(img/borda.png);
+                border-image-slice: 35;
+                border-image-repeat: unset;
+                text-shadow: 0px 0px 20px black;
+        }
+        footer {
+            background-color: rgb(0, 0, 0);
+            margin: -5px;
+        }
+        #borda {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;            
+        }
+        /* Estilos para os ícones sociais em bolas */
+        #borda a {
+            text-decoration: none;
+        }
+        #borda .social {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.15); /* Sombra leve para destaque */
+            transition: box-shadow 0.2s;
+        }
+        #borda .social:hover {
+            box-shadow: 2px 4px 12px 0px rgba(177, 0, 0, 0.25); /* Sombra ao passar o mouse */
+        }
+        #borda img {
+            max-width: 25%;
+            max-height: 35%;
+            padding: 5px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda</h1>
+    <footer>
+        <div id="borda">
+            <a href="https://www.facebook.com/daniel.siqueira.824510" target="_blank" rel="noopener">
+                <div id="social">
+                    <img src="img/facebook.png" alt="Facebook">
+                </div>
+            </a>
+            <a href="https://github.com/danieldevbz39" target="_blank" rel="noopener">
+                <div id="social">
+                    <img src="img/github.png" alt="GitHub">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/daniel.s.siqueira/" target="_blank" rel="noopener">
+                <div id="social">
+                    <img src="img/instagram.png" alt="instagram">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-santos-289ba0298/" target="_blank" rel="noopener">
+                <div id="social">
+                    <img src="img/linkedin.png" alt="linkedin">
+                </div>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

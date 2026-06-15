@@ -1,0 +1,121 @@
+@charse UTF-8;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+    text-align: center;
+}
+
+strong {
+    color: red
+}
+div.rownowrap {
+    background-color: rgb(36, 218, 0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: 100px;
+}
+
+div.ex1 {
+    background-color: rgb(124, 124, 124);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+}
+
+div.flex-start {
+    background-color: rgb(36, 218, 0);
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-start;
+    height: 100px;
+}
+
+div.ex2 {
+    background-color: rgb(24, 158, 202);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+    height: 50px;
+}
+
+div.flex-end {
+    background-color: rgb(36, 218, 0);
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+div.ex3 {
+    background-color: rgb(230, 52, 52);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+    height: 50px;
+}
+
+div.center {
+    background-color: rgb(36, 218, 0);
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div.ex4 {
+    height: 50px;
+    background-color: rgb(169, 172, 22);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+}
+
+div.space-between {
+    background-color: rgb(36, 218, 0);
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+div.ex5 {
+    height: 50px;
+    background-color: rgb(27, 197, 112);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+}
+
+div.space-evenly {
+    background-color: rgb(20, 214, 188);
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+div.ex6 {
+    background-color: rgb(20, 214, 188);
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+    height: 50px;
+}
+
+div.space-around {
+    background-color: rgb(36, 218, 0);
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 100px;
+}
+
+div.ex7 {
+    background-color: rgba(175, 75, 170, 0.733);/*fundo box*/
+    border: 1px solid rgb(255, 255, 255); /*cor contorno*/
+    text-align: center; /*centraliza texto*/
+}

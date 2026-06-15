@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Imagem de Fundo</title>
+    <style>
+        body {
+            background-image: url('imagens/wallpaper006.jpg'); /*inserindo imagem*/
+        }
+
+        div.quadrado {
+            display: inline-block; /*cada div, uma do lado da outra*/          
+            border: 2px solid black; /*contorno da div*/
+            border-radius: 10px; /*pontas redondas*/
+            background-color: lightgray; /*cor de fundo div*/
+            width: 300px; /*largura da div*/
+            height: 300px; /*altura da div*/
+            
+        }
+
+        div#q1 {
+            background-color: skyblue; /*cor de fundo div*/
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, rgb(199, 1, 182)); /*cor de fundo degradê div*/
+        }
+
+        div#q3 {
+            background-image: url('imagens/pattern003.png');/*imagem de fundo div*/
+        }
+
+        div#q4 {
+            background-image: url('imagens/pattern002.png'); /*imagem de fundo div*/
+        }
+
+        div.retangulo {
+            display: inline-block; /*quadrados em linha horizontal*/
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+
+        }
+
+        div#r1 {
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+
+        div#r2 {
+            background-image: url('imagens/wallpaper002.jpg');
+        }
+
+        div#r3 {
+            background-image: url('imagens/wallpaper003.jpg');
+        }
+
+        div#r4 {
+            background-image: url('imagens/wallpaper004.jpg');
+        }
+
+        div#r5 {
+            background-image: url('imagens/wallpaper005.jpg');
+        }
+
+        div#r6 {
+            background-image: url('imagens/wallpaper006.jpg');
+        }
+    </style>
+
+</head>
+<body>
+    <div class="quadrado" id="q1"></div> <!--cada div uma class e id-->
+
+    <div class="quadrado" id="q2"></div>
+
+    <div class="quadrado" id="q3"></div>
+
+    <div class="quadrado" id="q4"></div>
+
+    <div class="retangulo" id="r1"></div>
+
+    <div class="retangulo" id="r2"></div>
+
+    <div class="retangulo" id="r3"></div>
+
+    <div class="retangulo" id="r4"></div>
+
+    <div class="retangulo" id="r5"></div>
+
+    <div class="retangulo" id="r6"></div>
+    
+</body>
+</html>
