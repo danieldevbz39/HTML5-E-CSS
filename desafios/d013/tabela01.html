@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        table { /* Estiliza o elemento <table> */
+            border-collapse: separate; /* Mantém bordas separadas entre células */
+            border-spacing: 2px 2px; /* Espaçamento horizontal e vertical entre células */
+            width: min(100%, 320px); /* Limita a largura da tabela ao menor valor entre 100% e 320px */
+        }        
+        td { /* Estiliza cada célula <td> da tabela */
+            border: 1px solid black; /* Adiciona uma borda preta de 1px ao redor das células */
+            padding: 10px; /* Espaçamento interno de 10px em cada célula */
+            text-align: center; /* Centraliza o conteúdo das células */
+        }
+        td:hover {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td colspan="3">8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td rowspan="2">10</td>
+                <td colspan="2">11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+        </tr>
+    </table>
+</body>
+</html>
