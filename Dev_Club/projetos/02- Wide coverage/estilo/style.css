@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    color: #161A49;
+    background: #f7f9fc;
+}
+
+body > * {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 24px;
+    padding: 24px 32px;
+}
+
+header a,
+header button {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #17233d;
+}
+
+header a {
+    font-weight: 400;
+    cursor: pointer;
+}
+
+header button {
+    background: #6fbf44;
+    border: 1px solid #4cb538;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 24px;
+    font-weight: 600;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    padding: 48px 32px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main > img {
+    width: min(100%, 520px);
+    max-width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+main > div {
+    max-width: 560px;
+}
+
+h1 {
+    font-weight: 850;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    color: #161a49;
+    margin-bottom: 28px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
+    color: #4b505a;
+    margin-bottom: 32px;
+}
+
+.link-learn-more {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #6fbf44;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.link-learn-more:hover {
+    border-color: #6fbf44;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 18px 24px;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 32px 24px 60px;
+    }
+
+    main > div {
+        width: 100%;
+    }
+
+    main > img {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    header {
+        gap: 16px;
+        padding: 16px 18px;
+    }
+
+    .link-menu,
+    header button {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
