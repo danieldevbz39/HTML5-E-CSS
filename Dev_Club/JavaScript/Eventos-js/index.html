@@ -12,15 +12,24 @@
         button {
             background: greenyellow;
         }
+
+        #meuParagrafo {
+            font-weight: bold;
+            color: red;
+        }
     </style>
 </head>
 <body>
         <h1>JavaScript</h1>
-        <input onkeypress="digiteiNoInput()" id="main-input" placeholder="Digite aqui" name="nome-completo">
+
+        <input type="text" id="meuCampo" placeholder="Digite aqui">
+
         <p class="paragraph-js">Começando nossa <b>jornada</b> para aprender</p>
         <p class="paragraph-js">A linguagem de programação</p>
 
-        <button onclick="cliqueiNoBotao()" class="main-button paragraph-js">Clique aqui</button>
+        <button onclick="exibirInformacao()">Exibir texto</button>
+
+        <p id="meuParagrafo">Texto aparecerá aqui</p>
 
     <script src="./java.js"></script>
 </body>

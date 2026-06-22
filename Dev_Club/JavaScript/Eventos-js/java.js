@@ -61,12 +61,20 @@
 //     console.log(input.value)
 // }
 
-const input = document.querySelector("#main-input")
+// const input = document.querySelector("#main-input")
 
-function cliqueiNoBotao(){
-    console.log(input.value)
-}
+// function cliqueiNoBotao(){
+//     alert("Botão click")
+// }
 
-function digiteiNoInput(){
-    console.log("Digitei no input")
+// function digiteiNoInput(){
+//     console.log(input.value)
+// }
+
+function exibirInformacao(){
+    var textoDigitado = document.getElementById("meuCampo").value;
+
+    var paragrafo = document.getElementById("meuParagrafo");
+
+    paragrafo.innerText = textoDigitado;
 }
