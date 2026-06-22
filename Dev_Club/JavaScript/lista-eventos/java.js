@@ -10,3 +10,9 @@ const button = document.querySelector(".main-button")
 //     console.log("Troquei de valor")
 // })
 
+function troqueiValor (event) {
+    console.log(event)
+}
+
+
+button.addEventListener("click", troqueiValor)
