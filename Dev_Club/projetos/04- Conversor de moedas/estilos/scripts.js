@@ -38,4 +38,21 @@ function convertValues() {
   console.log(convertedValue);
 }
 
+function changeCurrency(){
+    const currencyName = document.getElementById("currency-name")
+    const currencyimg = document.querySelector(".currency-img")
+
+    if (currencySelect.value == "dolar"){
+        currencyName.innerHTML = "Dólar americano"
+        currencyimg.src = "./assets/dolar.png"
+    }
+
+    if (currencySelect.value == "euro"){
+        currencyName.innerHTML = "Euro"
+        currencyimg.src = "./assets/euro.png"
+    }
+    convertValues()
+}
+
+currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues);
