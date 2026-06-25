@@ -694,3 +694,165 @@ video {
   display: block;
   position: relative;
 }
+
+@media (max-width: 768px) {
+  body {
+    align-items: stretch;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .fundo {
+    min-height: auto;
+  }
+
+  .header-main {
+    margin: 20px 0 30px;
+    padding: 10px 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-img {
+    width: 180px;
+  }
+
+  .link-head {
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 0;
+    gap: 6px;
+  }
+
+  .left-link a,
+  .right-link a {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    min-height: auto;
+    margin-top: 0;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .hero-container-left,
+  .caixamae {
+    margin-top: 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tx,
+  .txt-bot {
+    width: 100%;
+    background: transparent;
+  }
+
+  .tx h1,
+  .txt-bot h1 {
+    margin-left: 0;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .img-mk,
+  .img-pedro,
+  .img-pedro-lut {
+    width: min(260px, 80vw);
+    position: relative;
+    margin: 0 auto;
+    right: auto;
+  }
+
+  .containerbtn {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .containerbtn img {
+    margin-left: 0;
+  }
+
+  .containerbtn span {
+    font-size: 20px;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .video-container {
+    margin: 1rem auto 30px;
+  }
+
+  .video-container video {
+    margin: 0;
+  }
+
+  .combat-section {
+    padding: 40px 10px;
+  }
+
+  .combat-header,
+  .combat-grid,
+  .testimonials-container,
+  .champions-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .combat-grid {
+    gap: 20px;
+  }
+
+  .combat-card {
+    min-width: 100%;
+  }
+
+  .champions-section {
+    margin: 0 auto;
+    background: transparent;
+  }
+
+  .champions-content {
+    max-width: 100%;
+  }
+
+  .img-lateral-left,
+  .img-lateral-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 0 10px;
+  }
+
+  .logo-img {
+    width: 150px;
+  }
+
+  .tx h1,
+  .txt-bot h1 {
+    font-size: 24px;
+  }
+
+  .combat-header h2 {
+    font-size: 2rem;
+  }
+
+  .containerbtn span {
+    font-size: 16px;
+  }
+}
