@@ -29,24 +29,41 @@
 
 html,
 body {
-  width: 100vw;
-  min-height: 100vw;
+  width: 100%;
+  min-height: 100%;
   overflow-x: hidden;
 }
 
 body {
   background: #000;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .fundo {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  max-width: 1360px;
+  max-width: 100%;
   background: url("../img/fundo-principal.png") center top / cover no-repeat scroll;
   overflow: hidden;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: min(100%, 1400px);
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .log {
@@ -55,6 +72,7 @@ body {
 }
 
 .div-container {
+  width: 100%;
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -136,11 +154,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 91vw;
+  width: 100%;
+  max-width: 1200px;
   min-height: 100vh;
-  margin-top: -30px;
-  margin-left: 55px;
-  margin-right: 50px;
+  margin: -30px auto 0;
+  padding: 0 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .vide-hero {
@@ -279,10 +299,7 @@ video {
   max-width: 1200px;
   width: 100%;
   display: block;
-  margin-left: 55px;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 50px;
+  margin: 2rem auto 50px;
   position: relative;
   z-index: -1;
   border-radius: 0;
@@ -405,9 +422,9 @@ video {
 }
 
 .combat-header h2 {
-  font-family: "Bebas Neue", "Oswald", sans-serif;
+  font-family: "BystanderSans";
   /* Fontes robustas */
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #bfa88f;
@@ -416,6 +433,11 @@ video {
   margin: 0;
   flex: 1;
   min-width: 280px;
+}
+
+.combat-header h2:hover {
+  color: white;
+  font-size: 3.4rem;
 }
 
 /* Wrapper do Carrossel (Alinha as setas nas pontas e o conteúdo no centro) */
@@ -657,8 +679,9 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   max-width: 1214px;
-  margin: 0 0 0 50px;
+  margin: 0 auto;
   position: relative;
   gap: 20px;
   background: red;
