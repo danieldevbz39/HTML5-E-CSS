@@ -1,9 +1,24 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'test'; /* Dê um nome para a sua fonte */
+    src: url('./fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 200vw;
     height: 200vh;
+}
+
+h1 {
+    font-family: 'test';
 }
 
 
