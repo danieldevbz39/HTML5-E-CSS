@@ -55,8 +55,8 @@ body {
 }
 
 .content-wrapper {
-  width: min(100%, 1400px);
-  margin: 0 auto;
+  width: min(100%, 1450px);
+  margin: 3px auto;
   min-height: 100vh;
   position: relative;
   z-index: 2;
@@ -68,7 +68,7 @@ body {
 
 .log {
   width: 170px;
-  margin: 10px 0 0 80px;
+  margin: 10px 50px 0 80px;
 }
 
 .div-container {
@@ -76,6 +76,7 @@ body {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
+  margin: 5px;
 }
 
 .div-container a {
@@ -102,7 +103,7 @@ body {
 .link-left a {
   color: white;
   margin-left: 40px;
-  margin-right: 20px;
+  margin-right: 50px;
   display: flex;
   align-items: center;
   gap: 25px;
