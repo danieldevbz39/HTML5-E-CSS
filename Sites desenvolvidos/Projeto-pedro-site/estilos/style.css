@@ -47,7 +47,8 @@ body {
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
-  background: url("../img/fundo-principal.png") center top / cover no-repeat scroll;
+  background: url("../img/fundo-principal.png") center top / cover no-repeat
+    scroll;
   overflow: hidden;
   z-index: 1;
   display: flex;
@@ -60,7 +61,7 @@ body {
   min-height: 100vh;
   position: relative;
   z-index: 2;
-  padding: 0 20px;
+  padding: 0 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +69,7 @@ body {
 
 .log {
   width: 170px;
-  margin: 10px 50px 0 80px;
+  margin: 10px 0 0 20px;
 }
 
 .div-container {
@@ -76,7 +77,6 @@ body {
   display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 5px;
 }
 
 .div-container a {
@@ -86,7 +86,7 @@ body {
 }
 
 .mk-bola {
-  width: 150px;
+  width: 140px;
   margin-top: 10px;
   z-index: 10;
 }
@@ -109,7 +109,9 @@ body {
   gap: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
   position: relative;
   padding: 5px 0;
 }
@@ -121,7 +123,9 @@ body {
   gap: 25px;
   text-transform: capitalize;
   letter-spacing: 0.5px;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
   position: relative;
   padding: 5px 0;
 }
@@ -130,17 +134,12 @@ body {
   color: yellow;
   filter: drop-shadow(0px 5px 10px rgba(196, 199, 0, 0.308));
   transition: all 0.3s ease-in-out;
-  
 }
-
 
 /* Linha vermelha discreta por baixo do item ativo (ex: "Sobre Nós") */
-.div-container a.active {
-  color: #ffffff;
-}
 
 .div-container a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -225,7 +224,6 @@ body {
   width: fit-content;
 }
 
-
 .containerbtn img {
   display: block;
   width: 100%;
@@ -252,10 +250,10 @@ body {
   color: yellow;
   filter: drop-shadow(0px 5px 10px rgba(255, 0, 0, 0.863));
   transition: all 0.3s ease-in-out;
-
 }
 
-.containerbtnc, a:hover {
+.containerbtnc,
+a:hover {
   color: yellow;
   filter: drop-shadow(0px 5px 10px rgba(196, 199, 0, 0.308));
   transition: all 0.3s ease-in-out;
@@ -272,7 +270,6 @@ body {
   font-family: "BystanderSans";
   font-size: 50px;
   text-align: center;
-  
 }
 
 .img-pedro-lut {
@@ -311,7 +308,7 @@ video {
   height: auto;
   display: block;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-  margin: -50px 0;
+  margin: -55px 0;
 }
 
 .latesq {
@@ -402,6 +399,7 @@ video {
 /* Configurações Gerais da Seção */
 .combat-section {
   color: white;
+  width: 100%;
   padding: 60px 20px;
   font-family: "Arial", sans-serif;
   text-align: center;
@@ -414,6 +412,8 @@ video {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
+  height: auto;
   gap: 30px;
   margin-bottom: 50px;
   max-width: 1200px;
@@ -490,9 +490,10 @@ video {
 
 /* Títulos dos Cards (Treinos, Cursos, etc) */
 .combat-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
+  font-family:"BystanderSans" ;
   text-transform: uppercase;
-  color: white;
+  color: #cccccc;
   margin: 10px 0 8px 0;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -500,8 +501,9 @@ video {
 
 /* Descrições dos Cards */
 .combat-card p {
-  font-size: 1.2rem;
-  color: white;
+  font-size: 1.4rem;
+  font-family:"BystanderSans" ;
+  color: #bfa88f;
   line-height: 1.4;
   margin: 0;
   max-width: 220px;
@@ -693,145 +695,6 @@ video {
   margin-right: auto;
   display: block;
   position: relative;
-}
-
-@media (max-width: 768px) {
-  body {
-    align-items: stretch;
-  }
-
-  .content-wrapper {
-    width: 100%;
-    padding: 0 15px;
-  }
-
-  .fundo {
-    min-height: auto;
-  }
-
-  .header-main {
-    margin: 20px 0 30px;
-    padding: 10px 0;
-  }
-
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo-img {
-    width: 180px;
-  }
-
-  .link-head {
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-    margin-right: 0;
-    gap: 6px;
-  }
-
-  .left-link a,
-  .right-link a {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .hero-section {
-    flex-direction: column;
-    min-height: auto;
-    margin-top: 0;
-    padding: 20px 0;
-    gap: 20px;
-  }
-
-  .hero-container-left,
-  .caixamae {
-    margin-top: 0;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .tx,
-  .txt-bot {
-    width: 100%;
-    background: transparent;
-  }
-
-  .tx h1,
-  .txt-bot h1 {
-    margin-left: 0;
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .img-mk,
-  .img-pedro,
-  .img-pedro-lut {
-    width: min(260px, 80vw);
-    position: relative;
-    margin: 0 auto;
-    right: auto;
-  }
-
-  .containerbtn {
-    width: 100%;
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  .containerbtn img {
-    margin-left: 0;
-  }
-
-  .containerbtn span {
-    font-size: 20px;
-    margin-left: 0;
-    padding: 0 10px;
-  }
-
-  .video-container {
-    margin: 1rem auto 30px;
-  }
-
-  .video-container video {
-    margin: 0;
-  }
-
-  .combat-section {
-    padding: 40px 10px;
-  }
-
-  .combat-header,
-  .combat-grid,
-  .testimonials-container,
-  .champions-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .combat-grid {
-    gap: 20px;
-  }
-
-  .combat-card {
-    min-width: 100%;
-  }
-
-  .champions-section {
-    margin: 0 auto;
-    background: transparent;
-  }
-
-  .champions-content {
-    max-width: 100%;
-  }
-
-  .img-lateral-left,
-  .img-lateral-right {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
