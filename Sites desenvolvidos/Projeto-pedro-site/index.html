@@ -1,161 +1,396 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Moreira Taekwondo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark"></span>
+          <span class="brand-text">
+            <strong>Pedro Moreira</strong>
+            <small>Taekwondo</small>
+          </span>
+        </a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedro-moreira</title>
-    <link rel="stylesheet" href="./estilos/style.css">
-</head>
+        <button class="mobile-toggle" type="button" aria-label="Abrir menu">☰</button>
 
-<body>
-    <div class="fundo">
-        <div class="content-wrapper">
-            <header>
-                <div class="div-container">
-                    <img class="log" src="./img/log.png" alt="Logo Pedro Moreira">
-                    <nav class="link-left">
-                        <a href="#">Sobre Nós</a>
-                    </nav>
-                    <img class="mk-bola" src="./img/mk bola.png" alt="Símbolo MK">
-                    <nav class="link-right">
-                        <a href="#">Metodologia</a>
-                        <a href="#">Treinos</a>
-                        <a href="#">Competições</a>
-                        <a href="#">Colaboradores</a>
-                    </nav>
-                </div>
-            </header>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#treinos">Treinos</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#competicoes">Competições</a></li>
+            <li><a href="#parcerias">Parcerias</a></li>
+          </ul>
+        </nav>
 
-            <main class="container-block">
-                <div class="video-container">
-                    <video controls autoplay muted loop playsinline>
-                        <source src="../Projeto-pedro-site/img/lutadores.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeo HTML5.
-                    </video>
-                </div>
-                <div class="caixamae">
-                    <div class="txt-bot">
-                        <h1>CONQUISTE MAIS <br>QUE MEDALHAS. <br>TRANSFORME SUA VIDA.</h1>
-                        <a href="#" class="containerbtn">
-                            <img src="../Projeto-pedro-site/img/botao 2.png" alt="" aria-hidden="true">
-                            <span>AGENDE SUA AULA EXPERIMENTAL GRATUITA</span>
-                        </a>
-                    </div>
-                    <div class="img-pedro-lut">
-                        <img src="../Projeto-pedro-site/img/pedro.png" alt="Imagem Pedro" class="imagem-frontal">
-                    </div>
-                </div>
-            </main>
+        <button class="btn btn-primary header-cta" type="button" data-book data-day="Segunda-feira" data-time="18:00">Agendar aula</button>
+      </div>
+    </header>
 
-            <section class="combat-section">
-                <div class="combat-header">
-                    <h2>Liderando Campeões<br>há mais de 11 anos</h2>
-                    <h2>Mais de 1.400 vidas<br>transformadas</h2>
-                </div>
-                <div class="combat-carousel">
-                    <div class="combat-grid">
-                        <div class="combat-card">
-                            <div class="icon-wrapper">
-                                <img src="../Projeto-pedro-site/img/kids.png" alt="Ícone de kids" class="kids-img">
-                            </div>
-                            <h3>Treinos</h3>
-                            <p>Aulas para todos os níveis, do iniciante ao avançado.</p>
-                        </div>
-                        <div class="combat-card">
-                            <div class="icon-wrapper">
-                                <img src="../Projeto-pedro-site/img/lutador trofel.png" alt="Ícone de Livro">
-                            </div>
-                            <h3>Cursos</h3>
-                            <p>Workshops e especializações em Taekwondo.</p>
-                        </div>
-                        <div class="combat-card">
-                            <div class="icon-wrapper">
-                                <img src="../Projeto-pedro-site/img/Competições.png" alt="Ícone de lutadores">
-                            </div>
-                            <h3>Competições</h3>
-                            <p>Destaque-se em torneios nacionais e internacionais.</p>
-                        </div>
-                        <div class="combat-card">
-                            <div class="icon-wrapper">
-                                <img src="../Projeto-pedro-site/img/Quarentreinos.png" alt="Ícone de Competições">
-                            </div>
-                            <h3>Quarentreinos</h3>
-                            <p>Treinos online e conteúdos digitais para manter a forma onde quer que você esteja.</p>
-                        </div>
-                        <div class="combat-card">
-                            <div class="icon-wrapper">
-                                <img src="../Projeto-pedro-site/img/treinadoress.png" alt="Ícone de Competições">
-                            </div>
-                            <h3>Parcerias</h3>
-                            <p>Projetos colaborativos e benefícios exclusivos para alunos da nossa rede.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <main id="home">
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Liderando Campeões da Vida</span>
+            <h1>Conquiste mais que <span>medalhas</span>. Transforme sua vida.</h1>
+            <p>Disciplina, foco e alta performance com quem entende de formação de campeões. Descubra a metodologia que constrói líderes dentro e fora do tatame.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-book data-day="Segunda-feira" data-time="18:00">Agendar aula experimental gratuita</button>
+              <a class="btn btn-outline" href="#sobre">Conhecer a Academia</a>
+            </div>
+            <div class="hero-badges">
+              <div>🛡️ Ambiente seguro & familiar</div>
+              <div>✅ Instrutores certificados</div>
+            </div>
+          </div>
 
-
-            <!-- 
-
-        4. Carrossel de Serviços (Categorias)
-        Treinos: Aulas para todos os níveis, do iniciante ao avançado, focadas em técnica e condicionamento.
-
-        Cursos: Workshops e especializações exclusivas em Taekwondo para quem busca ir além do básico.
-
-        Competições: Preparação de elite para destaque em torneios nacionais e internacionais.
-
-        Quarentreinos: Treinos online e conteúdos digitais para manter a forma onde quer que você esteja.
-
-        Parcerias: Projetos colaborativos e benefícios exclusivos para alunos da nossa rede.
-
-        5. Depoimentos (Campeões da Vida)
-        Depoimento 1: "O Taekwondo mudou minha disciplina e foco nos estudos. Hoje sou muito mais confiante." – Pedro M.
-
-        Depoimento 2: "A metodologia do Pedro Moreira é diferenciada. Ele não ensina só a lutar, ensina a viver." –
-        Lauany E.
-
-        Depoimento 3: "Encontrei uma família e um propósito. Treinar aqui foi a melhor decisão que tomei." – Cláudio S.
-
-        6. Formulário de Conversão
-        Título: Junte-se à nossa Família
-
-        Campos:
-
-        Nome Completo
-
-        E-mail
-
-        Telefone (com WhatsApp)
-
-        Mensagem (Opcional)
-
-        Botão: ENVIAR MINHA INSCRIÇÃO
-
-        7. Rodapé (Contato e Localização)
-        Contato Info:
-
-        📞 (51) 9XXXX-XXXX
-
-        🔗 bit.ly/moreirataekwondo
-
-        Redes Sociais: (Ícones de Instagram, YouTube e WhatsApp)
-
-        Localização: (Mapa integrado mostrando o endereço da academia)
-
-        Rodapé Final: © 2024 Pedro Moreira Taekwondo - Formando Campeões da Vida.
-
-        Dica de Implementação:
-        Para o site ficar idêntico à imagem, utilize uma paleta de cores Dark Mode:
-
-        Fundo: Preto fosco (#121212)
-
-        Destaques: Vermelho vibrante (#E63946) e Branco para legibilidade.
-
-        Fontes: Use fontes sem serifa modernas (como Montserrat ou Roboto) para passar um ar esportivo e tecnológico.
-        -->
-
+          <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&w=850&q=80" alt="Taekwondo em ação" />
+            <div class="hero-caption">
+              <strong>Mais que esporte, um estilo de vida</strong>
+              <p>Desenvolvimento físico e mental liderado por profissionais de elite.</p>
+            </div>
+          </div>
         </div>
-    </div>
-</body>
+      </section>
 
+      <section id="sobre" class="section about-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Nossos Resultados em Números</span>
+            <h2>Autoridade que transforma vidas</h2>
+            <p>Acreditamos que a prática do Taekwondo molda o caráter, desenvolve a inteligência emocional e promove uma saúde inabalável.</p>
+          </div>
+
+          <div class="about-grid">
+            <article class="metric-card amber">
+              <div class="metric-icon">🥇</div>
+              <h3>11 ANOS</h3>
+              <h4>Liderando campeões</h4>
+              <p>Há mais de 11 anos ensinando Taekwondo com excelência pedagógica, dedicação individualizada e paixão.</p>
+            </article>
+
+            <article class="photo-card">
+              <img src="https://images.unsplash.com/photo-1517438476312-10d79c07750d?auto=format&fit=crop&w=800&q=80" alt="Alunos celebrando vitória" />
+              <div class="photo-label">Espírito de União & Conquista</div>
+            </article>
+
+            <article class="metric-card sky">
+              <div class="metric-icon">💗</div>
+              <h3>+1.400</h3>
+              <h4>Vidas transformadas</h4>
+              <p>Através do esporte, disciplina consciente e um programa focado no desenvolvimento integral do ser humano.</p>
+            </article>
+
+            <article class="photo-card reverse">
+              <img src="https://images.unsplash.com/photo-1544033527-b192daee1f5b?auto=format&fit=crop&w=800&q=80" alt="Grupo de alunos no tatame" />
+              <div class="photo-label">Treinando líderes do futuro</div>
+            </article>
+
+            <article class="metric-card emerald">
+              <div class="metric-icon">✅</div>
+              <h3>100%</h3>
+              <h4>Metodologia validada</h4>
+              <p>Desenvolvida e supervisionada diretamente por um Faixa Preta especialista de renome oficial.</p>
+            </article>
+
+            <article class="photo-card">
+              <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=80" alt="Faixas pretas e metodologia em foco" />
+              <div class="photo-label">Metodologia validada por especialistas</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="metodologia" class="section methodology-section">
+        <div class="container methodology-grid">
+          <div class="methodology-list">
+            <button class="pill-btn active" data-id="espirito_marcial" data-title="Espírito Marcial" data-description="Desafiamos nossos alunos a superarem seus próprios limites a cada treino, fortalecendo a resiliência, o respeito e a autodisciplina dentro e fora do tatame." data-image="https://images.unsplash.com/photo-1544033527-b192daee1f5b?auto=format&fit=crop&w=800&q=80">
+              <span class="pill-icon">🔥</span>
+              <span class="pill-text">Espírito Marcial</span>
+            </button>
+            <button class="pill-btn" data-id="autoconfianca" data-title="Autoconfiança Elevada" data-description="Superar metas e dominar técnicas complexas gera uma autoconfiança inabalável que se reflete no dia a dia, no trabalho e nos estudos." data-image="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=80">
+              <span class="pill-icon">📈</span>
+              <span class="pill-text">Autoconfiança</span>
+            </button>
+            <button class="pill-btn" data-id="preparo_fisico" data-title="Preparo Físico de Elite" data-description="Aulas intensas desenvolvendo resistência muscular, velocidade de reação impressionante, flexibilidade extrema e alto gasto calórico." data-image="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80">
+              <span class="pill-icon">🛡️</span>
+              <span class="pill-text">Preparo Físico</span>
+            </button>
+            <button class="pill-btn" data-id="comunidade_forte" data-title="Comunidade Forte" data-description="Um ambiente respeitoso e familiar, onde todos se apoiam mutuamente. Aqui criamos laços, parcerias e amizades que duram uma vida inteira." data-image="https://images.unsplash.com/photo-1517438476312-10d79c07750d?auto=format&fit=crop&w=800&q=80">
+              <span class="pill-icon">👥</span>
+              <span class="pill-text">Comunidade Forte</span>
+            </button>
+          </div>
+
+          <div class="methodology-panel">
+            <img id="methodology-image" src="https://images.unsplash.com/photo-1544033527-b192daee1f5b?auto=format&fit=crop&w=800&q=80" alt="Pilar ativo" />
+            <div class="methodology-content">
+              <span class="section-label">Nossa Essência</span>
+              <h3 id="methodology-title">Espírito Marcial</h3>
+              <p id="methodology-description">Desafiamos nossos alunos a superarem seus próprios limites a cada treino, fortalecendo a resiliência, o respeito e a autodisciplina dentro e fora do tatame.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="treinos" class="section schedule-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Quadro de Horários</span>
+            <h2>Escolha seu treino ideal</h2>
+            <p>Oferecemos turmas divididas criteriosamente por faixa etária e nível de rendimento para que você se desenvolva no seu próprio ritmo.</p>
+          </div>
+
+          <div class="category-tabs">
+            <button class="tab-btn active" data-category="Infantil">Infantil</button>
+            <button class="tab-btn" data-category="Adolescentes">Adolescentes</button>
+            <button class="tab-btn" data-category="Adultos">Adultos</button>
+            <button class="tab-btn" data-category="Alto Rendimento">Alto Rendimento</button>
+          </div>
+
+          <div class="schedule-highlight" id="schedule-highlight">
+            <div>
+              <span class="section-label">FAIXA ETÁRIA / PÚBLICO</span>
+              <h3>Adultos (16+ anos)</h3>
+              <p>Defesa pessoal avançada, alívio do estresse diário, queima calórica intensa e condicionamento de elite.</p>
+            </div>
+            <span class="schedule-badge">1 Aula Experimental Grátis</span>
+          </div>
+
+          <div class="schedule-grid">
+            <article class="schedule-card">
+              <span class="day-label">Segunda-feira</span>
+              <div class="time">18:00 - 19:00</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Segunda-feira" data-time="18:00">Reservar esta aula</button>
+            </article>
+            <article class="schedule-card">
+              <span class="day-label">Terça-feira</span>
+              <div class="time">19:00 - 20:30</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Terça-feira" data-time="19:00">Reservar esta aula</button>
+            </article>
+            <article class="schedule-card">
+              <span class="day-label">Quarta-feira</span>
+              <div class="time">20:30 - 21:30</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Quarta-feira" data-time="20:30">Reservar esta aula</button>
+            </article>
+            <article class="schedule-card">
+              <span class="day-label">Quinta-feira</span>
+              <div class="time">18:00 - 19:00</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Quinta-feira" data-time="18:00">Reservar esta aula</button>
+            </article>
+            <article class="schedule-card">
+              <span class="day-label">Sexta-feira</span>
+              <div class="time">19:00 - 20:30</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Sexta-feira" data-time="19:00">Reservar esta aula</button>
+            </article>
+            <article class="schedule-card">
+              <span class="day-label">Sábado</span>
+              <div class="time">20:30 - 21:30</div>
+              <p>Mestre Pedro Moreira</p>
+              <button type="button" data-book data-day="Sábado" data-time="20:30">Reservar esta aula</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cursos" class="section courses-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Cursos & Especializações</span>
+            <h2>Programas e treinamentos especiais</h2>
+            <p>Além das turmas regulares, oferecemos programas especializados focados em autodefesa prática, liderança de caráter e exames oficiais.</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="info-card">
+              <img src="https://images.unsplash.com/photo-1507398941214-572c25f4b1dc?auto=format&fit=crop&w=800&q=80" alt="Defesa pessoal feminina" />
+              <div class="card-content">
+                <h3>Defesa Pessoal Feminina</h3>
+                <p>Curso prático e focado no desenvolvimento de técnicas eficientes de autodefesa para mulheres, controle emocional e postura preventiva diante de situações de risco.</p>
+                <ul>
+                  <li>✓ Técnicas de desvencilhamento rápido</li>
+                  <li>✓ Uso de pontos de pressão e alavancas corporais</li>
+                </ul>
+                <button type="button" data-book data-day="Segunda-feira" data-time="18:00">Inscrever-se</button>
+              </div>
+            </article>
+            <article class="info-card">
+              <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=800&q=80" alt="Preparatório para faixa preta" />
+              <div class="card-content">
+                <h3>Preparatório para Faixa Preta</h3>
+                <p>Treinamento avançado focado na excelência técnica, mentalidade de liderança, filosofia de combate e preparação rigorosa para exames oficiais de graduação.</p>
+                <ul>
+                  <li>✓ Refinamento de poomsaes avançados</li>
+                  <li>✓ Treino físico de resistência extrema</li>
+                </ul>
+                <button type="button" data-book data-day="Quarta-feira" data-time="20:30">Consultar</button>
+              </div>
+            </article>
+            <article class="info-card">
+              <img src="https://images.unsplash.com/photo-1517438476312-10d79c07750d?auto=format&fit=crop&w=800&q=80" alt="Liderança e caráter infantil" />
+              <div class="card-content">
+                <h3>Liderança e Caráter Infantil</h3>
+                <p>Programa integrado às aulas regulares focado em promover foco escolar, disciplina consciente, controle da impulsividade e respeito extremo aos pais e educadores.</p>
+                <ul>
+                  <li>✓ Foco e concentração aprimorados</li>
+                  <li>✓ Combate direto ao sedentarismo e telas</li>
+                </ul>
+                <button type="button" data-book data-day="Sábado" data-time="20:30">Saiba mais</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="competicoes" class="section competitions-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Competições & Glórias</span>
+            <h2>Formando campeões de verdade</h2>
+            <p>Nossos atletas participam ativamente de campeonatos oficiais e trazem para casa conquistas que validam a seriedade do nosso trabalho técnico.</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-pill">45+ Medalhas de Ouro</div>
+            <div class="stat-pill">30+ Medalhas de Prata</div>
+            <div class="stat-pill">18+ Medalhas de Bronze</div>
+            <div class="stat-pill">12 Troféus de Equipe</div>
+          </div>
+
+          <div class="competitions-list">
+            <article class="competition-item">
+              <img src="https://images.unsplash.com/photo-1578269174936-2709b5a8c0e3?auto=format&fit=crop&w=800&q=80" alt="Campeonato Brasileiro" />
+              <div>
+                <span class="competition-year">2025</span>
+                <h3>Campeonato Brasileiro de Taekwondo</h3>
+                <p>3 Medalhas de Ouro, 2 Medalhas de Prata e vice-campeão geral por equipes.</p>
+              </div>
+            </article>
+            <article class="competition-item reverse">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80" alt="Copa Regional" />
+              <div>
+                <span class="competition-year">2024</span>
+                <h3>Copa Regional Sul-Americana</h3>
+                <p>1 Medalha de Ouro, 3 de Bronze e destaque técnico da competição.</p>
+              </div>
+            </article>
+            <article class="competition-item">
+              <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Open Internacional" />
+              <div>
+                <span class="competition-year">2024</span>
+                <h3>Open Internacional de Artes Marciais</h3>
+                <p>5 atletas no Top 3 do ranking de faixas pretas e troféu de disciplina.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="parcerias" class="section partners-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Nossa Rede de Apoio</span>
+            <h2>Parceiros & patrocinadores</h2>
+            <p>Trabalhamos em conjunto com marcas e instituições que compartilham de nossa paixão por esportes, saúde e educação de excelência.</p>
+          </div>
+
+          <div class="partners-grid">
+            <article class="partner-card">
+              <h3>Federação Estadual de Taekwondo</h3>
+              <p>Afiliado oficial com chancela para competições.</p>
+            </article>
+            <article class="partner-card">
+              <h3>NutriSport Suplementos</h3>
+              <p>Suporte nutricional e descontos exclusivos.</p>
+            </article>
+            <article class="partner-card">
+              <h3>Colégio Futuro Líder</h3>
+              <p>Integração educacional e descontos mútuos.</p>
+            </article>
+            <article class="partner-card">
+              <h3>FisioMover Reabilitação</h3>
+              <p>Parceria de saúde para prevenção de lesões.</p>
+            </article>
+          </div>
+
+          <div class="partner-cta">
+            <span class="section-label">Seja um Parceiro</span>
+            <h3>Quer apoiar nosso projeto social e de alto rendimento?</h3>
+            <p>Dispomos de cotas de patrocínio empresarial, suporte educacional para escolas e acordos de saúde recíprocos. Junte sua marca a um dos esportes olímpicos mais praticados do mundo.</p>
+            <a href="mailto:parcerias@pedromoreirataekwondo.com">Solicitar Proposta de Parceria</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Pedro Moreira</strong>
+          <p>Mais de 11 anos de tradição, formando faixas pretas de caráter exemplar, campeões estaduais e promovendo qualidade de vida para todas as idades.</p>
+        </div>
+        <div>
+          <h3>Menu institucional</h3>
+          <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#metodologia">Metodologia</a></li>
+            <li><a href="#treinos">Horários de Treino</a></li>
+            <li><a href="#cursos">Cursos & Especializações</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contato & Localização</h3>
+          <ul>
+            <li>Av. do Contorno, 1400 - Savassi, Belo Horizonte - MG</li>
+            <li>(31) 98765-4321</li>
+            <li>contato@pedromoreirataekwondo.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true">
+        <div class="modal-header">
+          <h3>Agendar aula</h3>
+          <button type="button" data-close-modal>✕</button>
+        </div>
+        <form id="booking-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <select id="day" required>
+            <option value="">Selecione o dia</option>
+            <option value="Segunda-feira">Segunda-feira</option>
+            <option value="Quarta-feira">Quarta-feira</option>
+            <option value="Sábado">Sábado</option>
+          </select>
+          <input id="time" type="text" placeholder="Horário" required />
+          <textarea rows="4" placeholder="Conte um pouco sobre sua meta"></textarea>
+          <div class="modal-actions">
+            <button class="btn btn-outline" type="button" data-close-modal>Cancelar</button>
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
+
