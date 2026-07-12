@@ -13,31 +13,38 @@ const methodologyImage = document.querySelector('#methodology-image');
 const tabButtons = document.querySelectorAll('.tab-btn');
 const scheduleHighlight = document.querySelector('#schedule-highlight');
 
-menuButton?.addEventListener('click', () => {
-  navigation?.classList.toggle('active');
-});
+function safeOpenModal(day = '', time = '') {
+  if (dayField) dayField.value = day;
+  if (timeField) timeField.value = time;
+  if (modalBackdrop) modalBackdrop.classList.add('active');
+}
+
+function safeCloseModal() {
+  if (modalBackdrop) modalBackdrop.classList.remove('active');
+  if (bookingForm) bookingForm.reset();
+}
+
+if (menuButton && navigation) {
+  menuButton.addEventListener('click', () => {
+    navigation.classList.toggle('active');
+  });
+}
 
 bookingButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const day = button.dataset.day || '';
     const time = button.dataset.time || '';
-    if (dayField) dayField.value = day;
-    if (timeField) timeField.value = time;
-    modalBackdrop?.classList.add('active');
+    safeOpenModal(day, time);
   });
 });
 
 closeModalButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    modalBackdrop?.classList.remove('active');
-    bookingForm?.reset();
-  });
+  button.addEventListener('click', safeCloseModal);
 });
 
 modalBackdrop?.addEventListener('click', (event) => {
   if (event.target === modalBackdrop) {
-    modalBackdrop.classList.remove('active');
-    bookingForm?.reset();
+    safeCloseModal();
   }
 });
 
@@ -50,8 +57,7 @@ bookingForm?.addEventListener('submit', (event) => {
     setTimeout(() => {
       submitButton.textContent = 'Enviar mensagem';
       submitButton.disabled = false;
-      modalBackdrop?.classList.remove('active');
-      bookingForm.reset();
+      safeCloseModal();
     }, 1400);
   }
 });

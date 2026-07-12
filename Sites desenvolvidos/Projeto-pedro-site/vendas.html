@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página de vendas da Academia Pedro Moreira Taekwondo com CTA para aula experimental gratuita." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Aula Experimental Gratuita | Pedro Moreira Taekwondo" />
+    <meta property="og:description" content="Comece hoje a transformação com uma aula experimental gratuita para todas as idades." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?auto=format&fit=crop&w=1200&q=80" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;" />
+    <title>Vendas | Pedro Moreira Taekwondo</title>
+    <link rel="canonical" href="http://127.0.0.1:8000/vendas.html" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"></span>
+          <span class="brand-text">
+            <strong>Pedro Moreira</strong>
+            <small>Taekwondo</small>
+          </span>
+        </a>
+        <a class="btn btn-primary header-cta" href="index.html#treinos">Voltar ao site</a>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container sales-layout">
+        <section class="sales-copy">
+          <span class="eyebrow">Oferta especial de abertura</span>
+          <h1>Comece hoje com uma aula experimental gratuita</h1>
+          <p>Descubra um ambiente seguro, metodologia comprovada e uma caminhada que transforma corpo, mente e autoestima.</p>
+          <ul class="sales-list">
+            <li>✓ Aula guiada por instrutor especialista</li>
+            <li>✓ Ambiente acolhedor para crianças e adultos</li>
+            <li>✓ Plano de desenvolvimento com acompanhamento</li>
+          </ul>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-book data-day="Sábado" data-time="10:00">Quero reservar minha vaga</button>
+            <a class="btn btn-outline" href="mailto:contato@pedromoreirataekwondo.com">Falar com a equipe</a>
+          </div>
+        </section>
+
+        <aside class="sales-card">
+          <h2>Por que escolher a Pedro Moreira?</h2>
+          <p>Mais de 11 anos de experiência e resultados reais em disciplina, condicionamento e autoconfiança.</p>
+          <div class="sales-metric">11 anos de experiência</div>
+          <div class="sales-metric">+1.400 alunos impactados</div>
+          <div class="sales-metric">100% metodologia validada</div>
+        </aside>
+      </div>
+    </main>
+
+    <div class="modal-backdrop" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true">
+        <div class="modal-header">
+          <h3>Agendar aula</h3>
+          <button type="button" data-close-modal>✕</button>
+        </div>
+        <form id="booking-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <select id="day" required>
+            <option value="">Selecione o dia</option>
+            <option value="Segunda-feira">Segunda-feira</option>
+            <option value="Quarta-feira">Quarta-feira</option>
+            <option value="Sábado">Sábado</option>
+          </select>
+          <input id="time" type="text" placeholder="Horário" required />
+          <textarea rows="4" placeholder="Conte um pouco sobre sua meta"></textarea>
+          <div class="modal-actions">
+            <button class="btn btn-outline" type="button" data-close-modal>Cancelar</button>
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script defer src="./script.js"></script>
+  </body>
+</html>

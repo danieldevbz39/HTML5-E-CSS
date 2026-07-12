@@ -1,0 +1,10 @@
+{
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 400,
+  "liveServer.settings.root": "${workspaceFolder}/Sites desenvolvidos/Projeto-pedro-site",
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.fullReload": true,
+  "liveServer.settings.ignoreFiles": ["**/.git/**", "**/node_modules/**"]
+}
