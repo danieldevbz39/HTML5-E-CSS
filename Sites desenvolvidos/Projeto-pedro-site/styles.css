@@ -173,7 +173,7 @@ textarea {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.02fr 0.98fr;
+    grid-template-columns: 3.02fr 0.98fr;
     gap: 3rem;
     align-items: center;
 }
@@ -241,11 +241,23 @@ textarea {
     overflow: hidden;
     box-shadow: var(--shadow);
     border: 6px solid #fff;
+    max-width: 760px;
+    margin-left: auto;
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
+    width: 100%;
     height: 620px;
     object-fit: cover;
+    display: block;
+}
+
+.hero-visual video {
+    max-height: 520px;
+    height: auto;
+    object-fit: contain;
+    margin-left: auto;
 }
 
 .hero-caption {
@@ -966,8 +978,18 @@ textarea {
         padding-top: 3rem;
     }
 
-    .hero-visual img {
+    .hero-visual {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-visual img,
+    .hero-visual video {
         height: 460px;
+    }
+
+    .hero-visual video {
+        max-height: 380px;
     }
 
     .cards-grid,
