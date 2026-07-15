@@ -11,6 +11,8 @@ function convertValues() {
   console.log(currencySelect.value);
   const dolarToday = 5.2;
   const euroToday = 6.2;
+  const libraToday = 6.81;
+  const btcToday = 328487.71;
 
   const convertedValue = inputCurrencyValue / dolarToday;
 
@@ -28,6 +30,22 @@ function convertValues() {
       style: "currency",
       currency: "EUR"
     }).format(inputCurrencyValue/euroToday)
+  }
+
+  if (currencySelect.value == "libra") {
+    // Se o select estiver selecionado o valor de dolar, entre aqui
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "GBP"
+    }).format(inputCurrencyValue/libraToday)
+  }
+
+  if (currencySelect.value == "btc") {
+    // Se o select estiver selecionado o valor de dolar, entre aqui
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+      style: "currency",
+      currency: "BTC"
+    }).format(inputCurrencyValue/btcToday)
   }
 
   currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
