@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos online de Taekwondo com Pedro Moreira. Do iniciante ao avançado — técnicas, defesa pessoal, competição e preparação para exame de faixa.">
+    <title>Cursos Online | Pedro Moreira — Taekwondo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body class="courses-page">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <span class="top-bar-tag">Falcões Taekwondo · Minas Gerais</span>
+            <div class="top-bar-links">
+                <a href="https://instagram.com/pedro.moreiratkd" target="_blank" rel="noopener">Instagram</a>
+                <span>|</span>
+                <a href="https://wa.me/5531999999999" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">PM</div>
+                <span class="logo-text">PEDRO<span>MOREIRA</span></span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#sobre" class="nav-link">Sobre</a>
+                <a href="cursos.html" class="nav-link active">Cursos</a>
+                <a href="index.html#galeria" class="nav-link">Galeria</a>
+                <a href="index.html#contato" class="nav-link">Contato</a>
+                <a href="#cursos-grid" class="nav-link btn-nav">Ver Cursos</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Cursos -->
+    <section class="courses-hero">
+        <div class="courses-hero-bg"></div>
+        <div class="courses-hero-overlay"></div>
+        <div class="container courses-hero-content reveal">
+            <span class="hero-tag">Plataforma Online</span>
+            <h1>Aprenda Taekwondo<br><span>Onde Quiser</span></h1>
+            <p>Cursos completos gravados pelo Professor Pedro Moreira. Do básico à competição, com certificado digital e acesso vitalício.</p>
+            <div class="courses-hero-stats">
+                <div class="courses-stat">
+                    <strong>12+</strong>
+                    <span>Cursos</span>
+                </div>
+                <div class="courses-stat">
+                    <strong>200+</strong>
+                    <span>Aulas</span>
+                </div>
+                <div class="courses-stat">
+                    <strong>1.500+</strong>
+                    <span>Alunos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="courses-toolbar">
+        <div class="container">
+            <div class="toolbar-inner reveal">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="course-search" placeholder="Buscar curso..." aria-label="Buscar curso">
+                </div>
+                <div class="filter-tabs" id="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Todos</button>
+                    <button class="filter-tab" data-filter="iniciante">Iniciante</button>
+                    <button class="filter-tab" data-filter="intermediario">Intermediário</button>
+                    <button class="filter-tab" data-filter="avancado">Avançado</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaque -->
+    <section class="courses-featured">
+        <div class="container">
+            <div class="featured-card reveal">
+                <div class="featured-badge">Mais Vendido</div>
+                <div class="featured-image">
+                    <img src="images/treino.png" alt="Curso Fundamentos do Taekwondo">
+                    <button class="featured-play" data-trailer="Fundamentos do Taekwondo" aria-label="Assistir trailer">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+                <div class="featured-info">
+                    <span class="course-level">Iniciante</span>
+                    <h2>Fundamentos do Taekwondo</h2>
+                    <p>O curso completo para quem está começando. Posições, golpes básicos, alongamento e filosofia marcial — tudo com a metodologia Falcões.</p>
+                    <ul class="featured-meta">
+                        <li><i class="fa-solid fa-clock"></i> 8 horas</li>
+                        <li><i class="fa-solid fa-film"></i> 32 aulas</li>
+                        <li><i class="fa-solid fa-certificate"></i> Certificado</li>
+                        <li><i class="fa-solid fa-infinity"></i> Acesso vitalício</li>
+                    </ul>
+                    <div class="featured-footer">
+                        <div class="course-price">
+                            <span class="price-old">R$ 297</span>
+                            <span class="price-current">R$ 197</span>
+                        </div>
+                        <div class="featured-actions">
+                            <button class="btn btn-primary btn-buy" data-course="Fundamentos do Taekwondo" data-price="197">Comprar Agora</button>
+                            <button class="btn btn-secondary btn-trailer" data-trailer="Fundamentos do Taekwondo">Assistir Trailer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Cursos -->
+    <section class="courses-grid-section" id="cursos-grid">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Todos os <span>Cursos</span></h2>
+                <p class="section-subtitle">Escolha o programa ideal para o seu nível</p>
+            </div>
+            <div class="courses-grid" id="courses-grid"></div>
+            <p class="courses-empty" id="courses-empty" hidden>Nenhum curso encontrado para essa busca.</p>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="courses-benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <article class="benefit-item reveal">
+                    <div class="benefit-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>Certificado Digital</h3>
+                    <p>Receba certificado ao concluir cada curso, reconhecido pela metodologia Falcões.</p>
+                </article>
+                <article class="benefit-item reveal">
+                    <div class="benefit-icon"><i class="fa-solid fa-infinity"></i></div>
+                    <h3>Acesso Vitalício</h3>
+                    <p>Assista quantas vezes quiser, no seu ritmo, sem prazo de expiração.</p>
+                </article>
+                <article class="benefit-item reveal">
+                    <div class="benefit-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Multiplataforma</h3>
+                    <p>Acesse pelo celular, tablet ou computador — treine de onde estiver.</p>
+                </article>
+                <article class="benefit-item reveal">
+                    <div class="benefit-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <h3>Suporte Direto</h3>
+                    <p>Tire dúvidas diretamente com a equipe via WhatsApp.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="courses-cta">
+        <div class="container courses-cta-inner reveal">
+            <h2>Não sabe por onde <span>começar?</span></h2>
+            <p>Fale com o Professor Pedro e receba uma indicação personalizada de curso.</p>
+            <a href="https://wa.me/5531999999999?text=Olá!%20Gostaria%20de%20saber%20qual%20curso%20de%20Taekwondo%20é%20ideal%20para%20mim." class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Falar com o Professor
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Pedro Moreira — Falcões Taekwondo. Todos os direitos reservados.</p>
+            <p>Sejam campeões da vida.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5531999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal Detalhe do Curso -->
+    <div class="course-modal" id="course-modal">
+        <div class="course-modal-content">
+            <button class="course-modal-close" id="course-modal-close" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="course-modal-body" id="course-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cursos.js"></script>
+</body>
+</html>
