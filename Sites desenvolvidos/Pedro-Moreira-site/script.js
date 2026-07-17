@@ -10,32 +10,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const newsletterForm = document.getElementById("newsletter-form");
 
     // Mobile menu
-    menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        const icon = menuToggle.querySelector("i");
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-xmark");
-    });
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            const icon = menuToggle.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-xmark");
+        });
+    }
 
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            const icon = menuToggle.querySelector("i");
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+            if (navMenu) {
+                navMenu.classList.remove("active");
+            }
+            if (menuToggle) {
+                const icon = menuToggle.querySelector("i");
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            }
         });
     });
 
     // Header scroll effect
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 60) {
-            header.style.backgroundColor = "rgba(11, 11, 11, 0.97)";
-            header.style.boxShadow = "0 4px 30px rgba(0,0,0,0.4)";
-        } else {
-            header.style.backgroundColor = "rgba(11, 11, 11, 0.9)";
-            header.style.boxShadow = "none";
-        }
-    });
+    if (header) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 60) {
+                header.style.backgroundColor = "rgba(11, 11, 11, 0.97)";
+                header.style.boxShadow = "0 4px 30px rgba(0,0,0,0.4)";
+            } else {
+                header.style.backgroundColor = "rgba(11, 11, 11, 0.9)";
+                header.style.boxShadow = "none";
+            }
+        });
+    }
 
     // Active nav link on scroll
     const sections = document.querySelectorAll("section[id]");
@@ -102,37 +112,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Gallery lightbox
-    galleryItems.forEach(img => {
-        img.closest(".gallery-item").addEventListener("click", () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add("active");
-            document.body.style.overflow = "hidden";
+    if (lightbox && lightboxImg && lightboxClose) {
+        galleryItems.forEach(img => {
+            const galleryItem = img.closest(".gallery-item");
+            if (galleryItem) {
+                galleryItem.addEventListener("click", () => {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                });
+            }
         });
-    });
 
-    lightboxClose.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", e => {
-        if (e.target === lightbox) closeLightbox();
-    });
-    document.addEventListener("keydown", e => {
-        if (e.key === "Escape") closeLightbox();
-    });
+        lightboxClose.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", e => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener("keydown", e => {
+            if (e.key === "Escape") closeLightbox();
+        });
 
-    function closeLightbox() {
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "";
+        function closeLightbox() {
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+        }
     }
 
     // Newsletter form
-    newsletterForm.addEventListener("submit", e => {
-        e.preventDefault();
-        const input = newsletterForm.querySelector("input");
-        if (input.value.trim()) {
-            input.value = "";
-            alert("Obrigado! Você foi inscrito na nossa newsletter.");
-        }
-    });
+    if (newsletterForm) {
+        newsletterForm.addEventListener("submit", e => {
+            e.preventDefault();
+            const input = newsletterForm.querySelector("input");
+            if (input && input.value.trim()) {
+                input.value = "";
+                alert("Obrigado! Você foi inscrito na nossa newsletter.");
+            }
+        });
+    }
 
     // Parallax on hero
     const heroBg = document.querySelector(".hero-bg");
