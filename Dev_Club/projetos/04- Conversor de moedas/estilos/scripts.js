@@ -65,6 +65,18 @@ function changeCurrency(){
         currencyName.innerHTML = "Euro"
         currencyimg.src = "./assets/euro.png"
     }
+
+    if (currencySelect.value == "gbp"){
+        currencyName.innerHTML = "GBP"
+        currencyimg.src = "./assets/gbp.svg"
+    }
+
+    if (currencySelect.value == "btc"){
+        currencyName.innerHTML = "BTC"
+        currencyimg.src = "./assets/btc.png"
+    }
+
+
     convertValues()
 }
 
