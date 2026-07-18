@@ -68,7 +68,7 @@ function changeCurrency(){
 
     if (currencySelect.value == "gbp"){
         currencyName.innerHTML = "GBP"
-        currencyimg.src = "./assets/gbp.svg"
+        currencyimg.src = "./assets/gbp.png"
     }
 
     if (currencySelect.value == "btc"){
